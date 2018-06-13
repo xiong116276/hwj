@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/detail.css">
+    <!--加载轮播css样式-->
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .qualification{
+            width: 100%;
+            background-color: #f2f2f2;
+            padding: 0 .2rem;
+        }
+
+        .qualification-items{
+            position: relative;
+            float: left;
+            width: 25%;
+            padding: 0 .2rem;
+        }
+
+        .items-icon1{
+            width: 25%;
+            height: 2rem;
+            background: url("images/detail/qualification-01@2x.png") center no-repeat;
+            -webkit-background-size:contain;
+            background-size:contain;
+        }
+
+        .items-icon2{
+            width: 25%;
+            height: 2rem;
+            background: url("images/detail/qualification-02@2x.png") center no-repeat;
+            -webkit-background-size:contain;
+            background-size:contain;
+        }
+
+        .items-icon3{
+            width: 25%;
+            height: 2rem;
+            background: url("images/detail/qualification-03@2x.png") center no-repeat;
+            -webkit-background-size:contain;
+            background-size:contain;
+        }
+
+        .items-icon4{
+            width: 25%;
+            height: 2rem;
+            background: url("images/detail/qualification-04@2x.png") center no-repeat;
+            -webkit-background-size:contain;
+            background-size:contain;
+        }
+
+        .items-text{
+            width: 70%;
+            margin-left: 30%;
+            height: 3.5rem;
+            line-height: 3.5rem;
+            color: #2e2e2e;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<!--头部-->
+<header class="header">
+    <div class="back">
+        <img src="images/detail/icon_left.png" alt="">
+    </div>
+    <ul class="header_text center_elm">
+        <li><a class="header_text_active" href="#product">商品</a></li>
+        <li><a href="#detail">详情</a></li>
+        <li><a href="#evaluate">评价</a></li>
+    </ul>
+    <div class="more">
+        <ul class="more_elms after">
+            <li class="more_elm"><em class="center_elm more_em_bgcolor"></em></li>
+            <li class="more_elm"><em class="center_elm more_em_bgcolor"></em></li>
+            <li class="more_elm"><em class="center_elm more_em_bgcolor"></em></li>
+        </ul>
+        <div class="more_content hide">
+            <ul>
+                <li>
+                    <a class="center_elm" href="index-old.html">
+                        <em class="more_content_img">
+                            <img src="images/detail/icon_home.png" alt="">
+                        </em>
+                        首页
+                    </a>
+                </li>
+                <li>
+                    <a class="center_elm" href="#">
+                        <em class="more_content_img">
+                            <img src="images/detail/icon_msg.png" alt="">
+                        </em>
+                        通知
+                    </a>
+                </li>
+                <li>
+                    <a class="center_elm" href="#">
+                        <em class="more_content_img">
+                            <img src="images/detail/icon_search.png" alt="">
+                        </em>
+                        搜索
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="share">
+        <img src="images/detail/icon_share.png" alt="">
+    </div>
+</header>
+<!--中间内容-->
+<div class="content">
+    <div class="show" id="product">
+        <!--banner轮播-->
+        <div class="swiper-container swiper-container1">
+            <div class="product_type">
+                <img src="images/detail/icon_RX.png" alt="">
+            </div>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/detail/product_slider_01.png"/></div>
+                <div class="swiper-slide"><img src="images/detail/product_slider_01.png"/></div>
+                <div class="swiper-slide"><img src="images/detail/product_slider_01.png"/></div>
+                <div class="swiper-slide"><img src="images/detail/product_slider_01.png"/></div>
+                <div class="swiper-slide"><img src="images/detail/product_slider_01.png"/></div>
+            </div>
+            <!-- 分页器 （导航小圆点）-->
+            <div class="swiper-pagination"></div>
+        </div>
+        <!--产品文字介绍-->
+        <div class="product_detail_text">
+            <p class="product_name">
+                <span class="yaodian">自营</span>肾宝片(汇仁)
+            </p>
+            <p class="product-buying-point">利益点买点促销信息</p>
+            <p class="product_price">
+                <span class="product_price_new">
+                    <span class="sign_money">￥</span>59.5
+                </span>
+                <span class="product_price_old">￥78.99</span>
+                <span class="product_price_reduce">立省￥100.00</span>
+                <span class="product_sold">
+                    <em class="sold_img"><img src="images/detail/icon_sold.png" alt=""></em>
+                    已售1700件
+                </span>
+            </p>
+            <em class="line"></em>
+            <p class="product_function">
+                <span>药品功效:</span>
+                调和阴阳，温阳补肾，扶正固本，调和阴阳，温阳补肾，扶正固本
+            </p>
+            <p class="product_function">
+                <span>生产厂家: </span>
+                江西汇仁药业有限公司
+            </p>
+
+
+
+            <div class="qualification after">
+                <div class="qualification-items">
+                    <i class="items-icon1 vertical_center"></i>
+                    <div class="items-text">正品保障</div>
+                </div>
+                <div class="qualification-items">
+                    <i class="items-icon2 vertical_center"></i>
+                    <div class="items-text">实体连锁</div>
+                </div>
+                <div class="qualification-items">
+                    <i class="items-icon3 vertical_center"></i>
+                    <div class="items-text">药师服务</div>
+                </div>
+                <div class="qualification-items">
+                    <i class="items-icon4 vertical_center"></i>
+                    <div class="items-text">隐私发货</div>
+                </div>
+            </div>
+            <!--商品优惠活动-->
+            <div class="product-activity">
+                <span class="activity-title vertical_center">促销</span>
+
+                <div class="item-discount">
+                    <span class="discount-box"><!--
+                    --><span class="product-discount vertical_center">95折</span><!--
+                    --><span class="activity-detail">全场折扣回馈，7月限时购强势来袭！全场折扣回馈，7月限时购强势来袭！全场折扣回馈，7月限时购强势来袭！全场折扣回馈，7月限时购强势来袭！全场折扣回馈，7月限时购强势来袭！全场折扣回馈，7月限时购强势来袭！</span>
+                    </span>
+
+                    <span class="discount-box"><!--
+                    --><span class="product-discount vertical_center">限时</span><!--
+                    --><span class="activity-detail">全场包邮，截止到6.30全场包邮，截止到6.30全场包邮，截止到6.30</span>
+                    </span>
+                </div>
+            </div>
+            <em class="line"></em>
+        </div>
+
+        <!--产品规格-->
+        <div class="product_guige">
+            <p>规格参数</p>
+            <span class="icon_right">
+                <img src="images/detail/icon_right.png" alt="">
+            </span>
+        </div>
+        <!--产品商家-->
+        <div class="product_seller">
+            <div class="product_seller_top">
+                <div class="product_seller_img">
+                    <img src="images/detail/kangmei_logo.png" alt="">
+                </div>
+                <span class="product_seller_name">康美大药房</span>
+                <div class="product_seller_collection">
+                    <div class="vertical_center icon_collection">
+                        <img src="images/detail/icon_collection.png" alt="">
+                    </div>
+                    <span>收藏</span>
+                </div>
+            </div>
+            <em class="line"></em>
+            <div class="product_seller_bottom ">
+                <div class="center_elm">
+                    <div>
+                        <a href="#" class="product_seller_btn center_elm">全部商品</a>
+                    </div>
+                    <div>
+                        <a href="#" class="product_seller_btn center_elm">进入店铺</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--药师推荐-->
+        <div class="product_doctorTuijian">
+            <div class="product_doctorTuijian_top">
+                <div class="icon_doctor">
+                    <img src="images/detail/icon_doctor.png" alt="">
+                </div>
+                <p class="product_doctorTuijian_top_text">药师推荐</p>
+            </div>
+            <div class="product_doctorTuijian_content">
+                <ul class="product_doctorTuijian_elms after">
+                    <li class="product_doctorTuijian_elm">
+                        <div class="horizontal_center product_doctorTuijian_img">
+                            <img src="images/detail/detail_tuijian_01.png" alt="">
+                        </div>
+                        <div class="horizontal_center product_doctorTuijian_text">
+                            <p>中智草晶华淫羊藿破壁草本</p>
+                            <p>中智草精华</p>
+                            <p class="product_doctorTuijian_price">￥68</p>
+                        </div>
+                    </li>
+                    <li class="product_doctorTuijian_elm">
+                        <div class="horizontal_center product_doctorTuijian_img">
+                            <img src="images/detail/detail_tuijian_02.png" alt="">
+                        </div>
+                        <div class="horizontal_center product_doctorTuijian_text">
+                            <p>中智草晶华淫羊藿破壁草本</p>
+                            <p>中智草精华</p>
+                            <p class="product_doctorTuijian_price">￥68</p>
+                        </div>
+                    </li>
+                    <li class="product_doctorTuijian_elm">
+                        <div class="horizontal_center product_doctorTuijian_img">
+                            <img src="images/detail/detail_tuijian_03.png" alt="">
+                        </div>
+                        <div class="horizontal_center product_doctorTuijian_text">
+                            <p>中智草晶华淫羊藿破壁草本</p>
+                            <p>中智草精华</p>
+                            <p class="product_doctorTuijian_price">￥68</p>
+                        </div>
+                    </li>
+                    <li class="product_doctorTuijian_elm">
+                        <div class="horizontal_center product_doctorTuijian_img">
+                            <img src="images/detail/detail_tuijian_04.png" alt="">
+                        </div>
+                        <div class="horizontal_center product_doctorTuijian_text">
+                            <p>中智草晶华淫羊藿破壁草本</p>
+                            <p>中智草精华</p>
+                            <p class="product_doctorTuijian_price">￥68</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--返回顶部按钮-->
+        <div class="icon_totop hide">
+            <a href="#" class="icon_totop_img center_elm">
+                <img src="images/detail/icon_totop.png" alt="">
+            </a>
+        </div>
+        <!--商品搜索按钮-->
+        <div class="search-product">
+            <div class="btn-search-fixed">
+                <i class="icon-search center_elm"></i>
+            </div>
+
+            <div class="search-form">
+                <form action="">
+                    <input type="search" class="search-form-input" placeholder="搜索商品">
+                    <i class="icon-search-active vertical_center"></i>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <div class="hide" id="detail">
+        <div class="detail_top">
+            <ul class="detail_top_elms after">
+                <li class="detail_top_elm"><a class="detail_top_color detail_top_choose" href="#goodsDetail">商品详情</a>
+                </li>
+                <li class="detail_top_elm"><a class="detail_top_color" href="#goodsParameter">规格参数</a></li>
+                <li class="detail_top_elm"><a class="detail_top_color" href="#goodsService">包装售后</a></li>
+            </ul>
+        </div>
+        <div class="detail_content">
+            <div id="goodsDetail" class="hide show">
+                <img src="images/detail/detail_img.png" alt="">
+            </div>
+            <div id="goodsParameter" class="hide">
+                <div class="goodsParameter-box">
+                    <div class="goodsParameter-box-left">商品编号</div>
+                    <div class="goodsParameter-box-right">3045889153</div>
+                </div>
+                <div class="goodsParameter-box">
+                    <div class="goodsParameter-box-main">主体</div>
+                </div>
+                <div class="goodsParameter-box">
+                    <div class="goodsParameter-box-left">产品名称</div>
+                    <div class="goodsParameter-box-right">维D钙咀嚼片</div>
+                </div>
+                <div class="goodsParameter-box">
+                    <div class="goodsParameter-box-left">药品商品名</div>
+                    <div class="goodsParameter-box-right">迪巧</div>
+                </div>
+                <div class="goodsParameter-box">
+                    <div class="goodsParameter-box-left">药品通用名</div>
+                    <div class="goodsParameter-box-right">维D钙咀嚼片</div>
+                </div>
+                <div class="goodsParameter-box">
+                    <div class="goodsParameter-box-left">批准文字</div>
+                    <div class="goodsParameter-box-right">国药准字J20140154</div>
+                </div>
+                <div class="goodsParameter-box">
+                    <div class="goodsParameter-box-left">生产企业</div>
+                    <div class="goodsParameter-box-right">安士制药(中山)有限公司</div>
+                </div>
+                <div class="goodsParameter-box">
+                    <div class="goodsParameter-box-left">品牌</div>
+                    <div class="goodsParameter-box-right">迪巧</div>
+                </div>
+                <div class="goodsParameter-box">
+                    <div class="goodsParameter-box-left">药品类型</div>
+                    <div class="goodsParameter-box-right">西药</div>
+                </div>
+                <div class="goodsParameter-box">
+                    <div class="goodsParameter-box-left">商品编号</div>
+                    <div class="goodsParameter-box-right">3045889153</div>
+                </div>
+                <div class="goodsParameter-box">
+                    <div class="goodsParameter-box-left">剂型</div>
+                    <div class="goodsParameter-box-right">片剂</div>
+                </div>
+                <div class="goodsParameter-box">
+                    <div class="goodsParameter-box-left">适用人群</div>
+                    <div class="goodsParameter-box-right">成人</div>
+                </div>
+                <div class="goodsParameter-box">
+                    <div class="goodsParameter-box-left">产品规格</div>
+                    <div class="goodsParameter-box-right">每片含维生素D3 100IU（2.5μg）,碳酸钙750毫克（相当于钙300毫克）</div>
+                </div>
+            </div>
+            <div id="goodsService" class="hide">
+                这是包装售后内容。。。
+            </div>
+        </div>
+    </div>
+    <div class="hide" id="evaluate">
+        <div class="evaluate_top">
+            <ul class="evaluate_types">
+                <li class="evaluate_type evaluate_type_choose">
+                    <p class="evaluate_type_p1">全部评价</p>
+                    <p class="evaluate_type_p2">(999+)</p>
+                </li>
+                <li class="evaluate_type">
+                    <p class="evaluate_type_p1">好评</p>
+                    <p class="evaluate_type_p2">(980)</p>
+                </li>
+                <li class="evaluate_type">
+                    <p class="evaluate_type_p1">中评</p>
+                    <p class="evaluate_type_p2">(678)</p>
+                </li>
+                <li class="evaluate_type">
+                    <p class="evaluate_type_p1">差评</p>
+                    <p class="evaluate_type_p2">(1)</p>
+                </li>
+            </ul>
+        </div>
+        <div class="evaluate_content">
+            <ul class="evaluate_content_elms">
+                <li class="evaluate_content_elm">
+                    <div class="evaluate_elm_top">
+                        <div class="evaluate_user">
+                            <div class="vertical_center evaluate_user_img">
+                                <img src="images/detail/icon_member.png" alt="">
+                            </div>
+                            <p class="vertical_center evaluate_user_name">
+                                颜***8
+                            </p>
+                        </div>
+                        <p class="evaluate_time">
+                            2017.04.29&nbsp;&nbsp;11:42
+                        </p>
+                    </div>
+                    <div class="evaluate_elm_content">
+                        效果非常好啊！
+                    </div>
+                    <div class="evaluate_elm_stars">
+                        <i class="evaluate-star-gray evaluate-star-red"></i>
+                        <i class="evaluate-star-gray evaluate-star-red"></i>
+                        <i class="evaluate-star-gray evaluate-star-red"></i>
+                        <i class="evaluate-star-gray"></i>
+                        <i class="evaluate-star-gray"></i>
+                    </div>
+                </li>
+                <li class="evaluate_content_elm">
+                    <div class="evaluate_elm_top">
+                        <div class="evaluate_user">
+                            <div class="vertical_center evaluate_user_img">
+                                <img src="images/detail/icon_member.png" alt="">
+                            </div>
+                            <p class="vertical_center evaluate_user_name">
+                                颜***8
+                            </p>
+                        </div>
+                        <p class="evaluate_time">
+                            2017.04.29&nbsp;&nbsp;11:42
+                        </p>
+                    </div>
+                    <div class="evaluate_elm_content">
+                        效果非常好啊！
+                    </div>
+                    <div class="evaluate_elm_stars">
+                        <i class="evaluate-star-gray evaluate-star-red"></i>
+                        <i class="evaluate-star-gray evaluate-star-red"></i>
+                        <i class="evaluate-star-gray evaluate-star-red"></i>
+                        <i class="evaluate-star-gray"></i>
+                        <i class="evaluate-star-gray"></i>
+                    </div>
+                </li>
+                <li class="evaluate_content_elm">
+                    <div class="evaluate_elm_top">
+                        <div class="evaluate_user">
+                            <div class="vertical_center evaluate_user_img">
+                                <img src="images/detail/icon_member.png" alt="">
+                            </div>
+                            <p class="vertical_center evaluate_user_name">
+                                颜***8
+                            </p>
+                        </div>
+                        <p class="evaluate_time">
+                            2017.04.29&nbsp;&nbsp;11:42
+                        </p>
+                    </div>
+                    <div class="evaluate_elm_content">
+                        效果非常好啊！
+                    </div>
+                    <div class="evaluate_elm_stars">
+                        <i class="evaluate-star-gray evaluate-star-red"></i>
+                        <i class="evaluate-star-gray evaluate-star-red"></i>
+                        <i class="evaluate-star-gray evaluate-star-red"></i>
+                        <i class="evaluate-star-gray"></i>
+                        <i class="evaluate-star-gray"></i>
+                    </div>
+                </li>
+                <li class="evaluate_content_elm">
+                    <div class="evaluate_elm_top">
+                        <div class="evaluate_user">
+                            <div class="vertical_center evaluate_user_img">
+                                <img src="images/detail/icon_member.png" alt="">
+                            </div>
+                            <p class="vertical_center evaluate_user_name">
+                                颜***8
+                            </p>
+                        </div>
+                        <p class="evaluate_time">
+                            2017.04.29&nbsp;&nbsp;11:42
+                        </p>
+                    </div>
+                    <div class="evaluate_elm_content">
+                        效果非常好啊！
+                    </div>
+                    <div class="evaluate_elm_stars">
+                        <i class="evaluate-star-gray evaluate-star-red"></i>
+                        <i class="evaluate-star-gray evaluate-star-red"></i>
+                        <i class="evaluate-star-gray evaluate-star-red"></i>
+                        <i class="evaluate-star-gray"></i>
+                        <i class="evaluate-star-gray"></i>
+                    </div>
+                </li>
+                <li class="evaluate_content_elm">
+                    <div class="evaluate_elm_top">
+                        <div class="evaluate_user">
+                            <div class="vertical_center evaluate_user_img">
+                                <img src="images/detail/icon_member.png" alt="">
+                            </div>
+                            <p class="vertical_center evaluate_user_name">
+                                颜***8
+                            </p>
+                        </div>
+                        <p class="evaluate_time">
+                            2017.04.29&nbsp;&nbsp;11:42
+                        </p>
+                    </div>
+                    <div class="evaluate_elm_content">
+                        效果非常好啊！
+                    </div>
+                    <div class="evaluate_elm_stars">
+                        <i class="evaluate-star-gray evaluate-star-red"></i>
+                        <i class="evaluate-star-gray evaluate-star-red"></i>
+                        <i class="evaluate-star-gray evaluate-star-red"></i>
+                        <i class="evaluate-star-gray"></i>
+                        <i class="evaluate-star-gray"></i>
+                    </div>
+                </li>
+                <li class="evaluate_content_elm">
+                    <div class="evaluate_elm_top">
+                        <div class="evaluate_user">
+                            <div class="vertical_center evaluate_user_img">
+                                <img src="images/detail/icon_member.png" alt="">
+                            </div>
+                            <p class="vertical_center evaluate_user_name">
+                                颜***8
+                            </p>
+                        </div>
+                        <p class="evaluate_time">
+                            2017.04.29&nbsp;&nbsp;11:42
+                        </p>
+                    </div>
+                    <div class="evaluate_elm_content">
+                        效果非常好啊！
+                    </div>
+                    <div class="evaluate_elm_stars">
+                        <i class="evaluate-star-gray evaluate-star-red"></i>
+                        <i class="evaluate-star-gray evaluate-star-red"></i>
+                        <i class="evaluate-star-gray evaluate-star-red"></i>
+                        <i class="evaluate-star-gray"></i>
+                        <i class="evaluate-star-gray"></i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--规格页面-->
+<div class="modal_page hide guige_page">
+    <div class="modal_page_mask"></div>
+    <div class="horizontal_center guige_page_content">
+        <div class="guige_page_top">
+            <div class="guige_page_img">
+                <img src="images/detail/product01_guige.png" alt="">
+            </div>
+            <div class="guige_page_text">
+                <p class="product_name">
+                    肾宝片(汇仁) <span class="yaodian">自营</span>
+                </p>
+                <p class="product_price">
+                    <span class="product_price_new">
+                        <span class="sign_money">￥</span>59.5
+                    </span>
+                </p>
+            </div>
+        </div>
+        <em class="line"></em>
+        <div class="guige_page_middle">
+            <div class="guige_middle_elms">
+                <p>规格</p>
+                <ul class="guige_types after">
+                    <li class="guige_type">
+                        <a class="center_elm guige_btn_color" href="#">盒</a>
+                    </li>
+                    <li class="guige_type">
+                        <a class="center_elm guige_btn_choose" href="#">袋</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="guige_middle_elms">
+                <p>购买数量</p>
+                <div class="guige_middle_number">
+                    <span class="guige_number_icon">-</span>
+                    <input type="number" value="1" class="guige_buy_number">
+                    <span class="guige_number_icon">+</span>
+                </div>
+            </div>
+        </div>
+        <div class="guige_addCart">
+            加入购物车
+        </div>
+    </div>
+</div>
+<!--底部导航-->
+<div class="footer">
+    <div class="footer_left">
+        <ul class="footer_left_elms after">
+            <li class="footer_left_elm">
+                <a class="footer_left_img horizontal_center">
+                    <p class="icon-kefu"></p>
+                </a>
+                <p class="footer-text">客服</p>
+            </li>
+            <li class="footer_left_elm">
+                <a class="footer_left_img horizontal_center">
+                    <p class="icon-collect"></p>
+                </a>
+                <p class="footer-text">收藏</p>
+            </li>
+            <li class="footer_left_elm">
+                <a class="footer_left_img horizontal_center">
+                    <p class="icon-cart"></p>
+                </a>
+                <p class="footer-text">购物车</p>
+                <span class="icon_num">5</span>
+            </li>
+        </ul>
+    </div>
+    <div class="footer_right">
+        <a href="#" class="footer_right_elm footer_right_join">加入购物车</a>
+        <a href="#" class="footer_right_elm footer_right_buy">立即购买</a>
+    </div>
+</div>
+<!--加载轮播js插件,swiper滚动插件-->
+<script src="js/swiper-3.4.2.min.js"></script>
+<script src="http://m.360hwj.com/js/jquery/jquery-1.11.3.js"></script>
+<script>
+    $(function () {
+      var m =0;
+      $($(".footer_left_elm")[1]).on("click","a.footer_left_img",function () {
+        if(m ==0){
+          $(this).children("p").removeClass("icon-collect").addClass("icon-collected");
+          m++;
+        }else{
+          $(this).children("p").removeClass("icon-collected").addClass("icon-collect");
+          m--;
+        }
+      });
+    });
+
+    // 滚动图
+    var mySwiper1 = new Swiper('.swiper-container1', {
+        direction: 'horizontal',
+        loop: true,
+        autoplay: 3000, //自动播放
+        speed: 2000,    //播放速度
+        autoplayDisableOnInteraction: false,
+        effect: 'coverflow',
+        // 分页器
+        pagination: '.swiper-pagination'
+    });
+    //    返回顶部按钮
+    window.onscroll = function () {
+        var t = document.documentElement.scrollTop || document.body.scrollTop;
+        if (t >= 250) {
+            $(".icon_totop").removeClass("hide");
+        } else {
+            $(".icon_totop").addClass("hide");
+        }
+    };
+
+
+//    详情页搜索药品
+    $(function () {
+        $(".btn-search-fixed").on("click",function () {
+            if($(".search-form").css("right") < "0"){
+                $(".search-form").addClass("move-show");
+
+            }
+            if($(".search-form").css("right") > "0" ){
+                $(".search-form").removeClass("move-show");
+            }
+        });
+
+    });
+
+
+
+    //    更多页面
+    $(".more_elms").on("click", function (e) {
+        e.preventDefault();
+        $("ul.more_elms li.more_elm em").toggleClass("more_elm_active");
+        $(".more_content").toggleClass("show");
+    });
+    //    规格选择页面
+    $(".product_guige").on("click", function (e) {
+        e.preventDefault();
+        $(".guige_page").removeClass("hide").addClass('animation');
+        $('.guige_page').bind("touchmove", function (e) {
+            e.preventDefault();
+        });
+    });
+    $(".footer_right_join").on("click", function (e) {
+        e.preventDefault();
+        $(".guige_page").removeClass("hide").addClass('animation');
+        $('.guige_page').bind("touchmove", function (e) {
+            e.preventDefault();
+        });
+    });
+    $(".modal_page_mask").on("click", function (e) {
+        e.preventDefault();
+        $(this).parent("[class~=guige_page]").addClass("hide");
+    });
+    //    console.log(window.screen.availWidth);
+    //    console.log(window.screen.availHeight);
+    //    详情页面切换Tab页面
+    $(".header_text li").on("click", function (e) {
+        e.preventDefault();
+        //        获取对应页面id
+        var id = $(this).children("a").attr("href");
+        //        切换标题颜色
+        $(this).children("a").addClass("header_text_active");
+        $(this).siblings().children("a[class~='header_text_active']").removeClass("header_text_active");
+        //         切换对应页面
+        $(id).removeClass("hide").addClass("show").siblings("div[class~='show']").removeClass("show").addClass("hide");
+    });
+    //    图文详情页面切换Tab页面
+    $(".detail_top_elm").on("click", function (e) {
+        e.preventDefault();
+        //        获取对应页面id
+        var id = $(this).children("a").attr("href");
+        //        切换标题颜色
+        $(this).children("a").addClass("detail_top_choose");
+        $(this).siblings().children("a[class~='detail_top_choose']").removeClass("detail_top_choose");
+        //         切换对应页面
+        $(id).addClass("show").siblings("div[class~='show']").removeClass("show");
+    });
+    //    评价类型点击颜色切换
+    $(".evaluate_type").on("click", function () {
+        $(this).addClass("evaluate_type_choose").siblings("li[class~='evaluate_type_choose']").removeClass("evaluate_type_choose");
+    })
+</script>
+</body>
+</html>

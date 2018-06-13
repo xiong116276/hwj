@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <title>我的足迹</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/personal-my-footprint.css">
+</head>
+<body>
+    <!--中间内容-->
+    <div class="footprint-content">
+        <div class="footprint-content-item">
+            <div class="footprint-item-img vertical_center">
+                <img src="images/zhongxi_01.jpg" alt="">
+            </div>
+            <div class="footprint-item-text vertical_center">
+                <p class="footprint-item-name">尤得盼 玛咖片 (1.3g*30片)</p>
+                <p class="footprint-item-guige">规格: 盒</p>
+                <p class="footprint-item-price">￥59.5</p>
+            </div>
+        </div>
+        <div class="footprint-content-item">
+            <div class="footprint-item-img vertical_center">
+                <img src="images/zhongxi_02.png" alt="">
+            </div>
+            <div class="footprint-item-text vertical_center">
+                <p class="footprint-item-name">尤得盼 玛咖片 (1.3g*30片)</p>
+                <p class="footprint-item-guige">规格: 盒</p>
+                <p class="footprint-item-price">￥59.5</p>
+            </div>
+        </div>
+        <div class="footprint-content-item">
+            <div class="footprint-item-img vertical_center">
+                <img src="images/zhongxi_01.jpg" alt="">
+            </div>
+            <div class="footprint-item-text vertical_center">
+                <p class="footprint-item-name">尤得盼 玛咖片 (1.3g*30片)</p>
+                <p class="footprint-item-guige">规格: 盒</p>
+                <p class="footprint-item-price">￥59.5</p>
+            </div>
+        </div>
+        <div class="footprint-content-item">
+            <div class="footprint-item-img vertical_center">
+                <img src="images/zhongxi_02.png" alt="">
+            </div>
+            <div class="footprint-item-text vertical_center">
+                <p class="footprint-item-name">尤得盼 玛咖片 (1.3g*30片)</p>
+                <p class="footprint-item-guige">规格: 盒</p>
+                <p class="footprint-item-price">￥59.5</p>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+        //    清空按钮
+        $(".header-btn-clear").on("click",function (e) {
+            e.preventDefault();
+            $(".footprint-content").children("div").remove();
+        })
+    </script>
+</body>
+</html>

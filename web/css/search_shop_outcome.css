@@ -1,0 +1,142 @@
+.header {
+    position: fixed;
+    width: 100%;
+    max-width: 640px;
+    overflow: hidden;
+    height: 4rem;
+    line-height: 4rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    z-index: 500;
+}
+
+
+.header-left {
+    width: 10%;
+}
+
+.icon-back {
+    width: 1.3rem;
+    height: 1.3rem;
+    background: url("../images/icon_left.png") center no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    left: 5%;
+}
+
+.header-right {
+    position: relative;
+    width: 85%;
+    margin-left: 5%;
+    height: 4rem;
+    line-height: 4rem;
+    border: none;
+    outline: none;
+}
+
+.icon-search {
+    width: 1.5rem;
+    height: 1.5rem;
+    left: 0;
+    background: url("../images/search/search-active.png") center no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+}
+
+.header-right-search {
+    width: 85%;
+    height: 3rem;
+    margin-left: 10%;
+    margin-right: 5%;
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+}
+
+input[type=search]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    background: url("../images/search/icon-clean.png") center no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    position: relative;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+}
+
+.content {
+    padding: 5rem 0 0;
+    width: 100%;
+    max-width: 640px;
+}
+
+.shop-outcome {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    background-color: #fff;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.shop-outcome-left {
+    position: relative;
+    width: 25%;
+    height: 6rem;
+}
+
+.icon-shop-logo {
+    width: 4rem;
+    height: 4rem;
+    background: url("../images/search/shop-logo.png") center no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+}
+
+.shop-outcome-middle {
+    position: relative;
+    width: 65%;
+    height: 6rem;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.shop-outcome-middle-title{
+    height: 50%;
+    font-size: 1.5rem;
+}
+
+.shop-outcome-middle-text{
+    position: relative;
+    height: 50%;
+    line-height: 300%;
+    text-indent: 1.5rem;
+}
+
+.icon-shop-small {
+    position: absolute;
+    bottom:0;
+    width: 1.2rem;
+    height: 1.2rem;
+    left:0;
+    background: url("../images/search/icon-shop-small.png") center no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+}
+
+.shop-outcome-right{
+    position: relative;
+    width: 10%;
+    height: 6rem;
+}
+
+.icon-right{
+    width: 1.3rem;
+    height: 1.3rem;
+    right:30%;
+    background: url("../images/order-right.png") center no-repeat;
+    -webkit-background-size:contain;
+    background-size:contain;
+}

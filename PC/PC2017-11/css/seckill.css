@@ -1,0 +1,159 @@
+.swiper-container .pagination {
+  position: absolute;
+  z-index: 20;
+  bottom: 10px;
+  width: 100%;
+  text-align: center; }
+.swiper-container .swiper-pagination-switch {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #04aa58;
+  margin: 0 5px;
+  opacity: 0.2;
+  cursor: pointer; }
+.swiper-container .swiper-active-switch {
+  opacity: 1; }
+.swiper-container .swiper-button-next {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+  right: 0;
+  width: 28px;
+  height: 53px;
+  background: url(../images/next.png); }
+.swiper-container .swiper-button-prev {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  width: 28px;
+  height: 53px;
+  background: url(../images/prev.png); }
+
+.seckill {
+  width: 1200px;
+  height: 275px;
+  margin: 20px auto 0; }
+  .seckill > div {
+    height: 100%; }
+  .seckill .left {
+    position: relative;
+    float: left;
+    display: inline-block;
+    width: 200px;
+    height: 100%;
+    color: #fff;
+    background-color: #e83632;
+    text-align: center; }
+    .seckill .left .line-1 {
+      font-size: 34px;
+      margin-top: 42px; }
+    .seckill .left .line-2 {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 20px; }
+    .seckill .left .line-3 {
+      font-size: 16px;
+      margin-top: 10px; }
+    .seckill .left .seckill-time {
+      width: 180px;
+      margin: 20px auto 0;
+      text-align: center; }
+      .seckill .left .seckill-time .time-item {
+        display: inline-block;
+        position: relative;
+        float: left;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background-color: #2f3430;
+        margin-right: 5px;
+        font-weight: bold;
+        font-size: 20px; }
+        .seckill .left .seckill-time .time-item:last-child {
+          margin-right: 0; }
+        .seckill .left .seckill-time .time-item:after {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0;
+          width: 100%;
+          top: 50%;
+          height: 1px;
+          background: #e83632; }
+  .seckill .right {
+    float: left;
+    width: 1000px;
+    border: 1px solid #ccc;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    .seckill .right .seckill-goods {
+      height: 100%; }
+    .seckill .right .seckill-item {
+      float: left;
+      display: inline-block;
+      width: 200px;
+      height: 100%; }
+      .seckill .right .seckill-item .img {
+        width: 100%;
+        height: 200px;
+        line-height: 200px;
+        overflow: hidden; }
+        .seckill .right .seckill-item .img img {
+          vertical-align: middle;
+          max-width: 100%;
+          max-height: 100%; }
+      .seckill .right .seckill-item .name {
+        width: 160px;
+        margin: 0 auto;
+        line-height: 30px;
+        font-size: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box; }
+      .seckill .right .seckill-item .price {
+        width: 160px;
+        margin: 0 auto;
+        height: 20px;
+        padding: 1px;
+        background: #e6382f;
+        line-height: 20px; }
+        .seckill .right .seckill-item .price span {
+          display: inline-block;
+          float: left;
+          color: #fff;
+          width: 50%;
+          text-align: center;
+          font-size: 14px; }
+          .seckill .right .seckill-item .price span.price_n {
+            font-weight: bold; }
+          .seckill .right .seckill-item .price span.price_o {
+            font-size: 12px;
+            color: #b7bcb8;
+            text-decoration: line-through;
+            background-color: #fff;
+            border: 1px solid #e6382f;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            height: 100%; }
+
+.icon-seckill {
+  display: inline-block;
+  width: 20px;
+  height: 33px;
+  background: url("../images/icon-seckill.png") no-repeat center;
+  -webkit-background-size: contain;
+  background-size: contain; }
+
+/*# sourceMappingURL=seckill.css.map */

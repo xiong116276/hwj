@@ -1,0 +1,279 @@
+@charset "UTF-8";
+.slogan-top {
+  position: fixed;
+  max-width: 640px;
+  width: 100%;
+  z-index: 1000;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  background-color: #3e6ffe;
+  padding: 0 1rem;
+  font-family: "苹方 粗体";
+  font-size: 1.2rem;
+  color: #fff; }
+  .slogan-top .fr {
+    width: 30%;
+    height: 3rem;
+    margin-top: 0.25rem;
+    line-height: 3rem;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #f36313;
+    background-image: url("../images/slogan-collection/sign-up-bg-1@2x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: contain;
+    background-size: contain; }
+
+.slogan-banner {
+  margin-top: 3.5rem; }
+
+/*********参赛人数和累计投票**************/
+.slogan-total {
+  width: 100%;
+  height: 4.5rem;
+  background-color: #3e6ffe;
+  text-align: center; }
+  .slogan-total .total-item {
+    float: left;
+    width: 50%;
+    height: 4.1rem;
+    margin-top: 0.2rem;
+    position: relative;
+    z-index: 100;
+    font-family: "苹方 中等";
+    font-size: 1.3rem;
+    color: #fff; }
+    .slogan-total .total-item div {
+      width: 54%;
+      height: 3rem;
+      padding-left: 1.5rem;
+      background-repeat: no-repeat;
+      background-position: left top;
+      -webkit-background-size: 1.3rem 1.6rem;
+      background-size: 1.3rem 1.6rem; }
+  .slogan-total .total-item:not(:last-child) {
+    border-right: 1px solid #fff; }
+  .slogan-total .icon-people {
+    background-image: url("../images/slogan-collection/icon-people.png"); }
+  .slogan-total .icon-flower {
+    background-image: url("../images/slogan-collection/icon-flower.png"); }
+
+/**********活动介绍************/
+.slogan-description {
+  font-family: "苹方 中等";
+  font-size: 1.2rem;
+  color: #202020;
+  padding: 0 0.5rem;
+  background-color: #fff; }
+  .slogan-description .title {
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    padding-left: 0.5rem;
+    background-color: #fbe6f1; }
+  .slogan-description .description-text {
+    width: 100%;
+    height: 3rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden; }
+  .slogan-description .detail-btn {
+    font-size: 1.3rem;
+    color: #59acd9;
+    padding-right: 0.5rem; }
+
+/********参赛列表*********/
+.slogan-list-container {
+  width: 100%;
+  background-color: #fff;
+  padding: 0.5rem 1rem; }
+  .slogan-list-container .slogan-tab-bar {
+    width: 100%;
+    height: 3rem;
+    border-left: 1px solid #707070;
+    border-top: 1px solid #707070; }
+  .slogan-list-container .slogan-tab-item {
+    float: left;
+    width: 50%;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    border-right: 1px solid #707070;
+    border-bottom: 1px solid #707070;
+    font-family: "苹方 中等";
+    font-size: 1.2rem;
+    color: #202020; }
+  .slogan-list-container .active {
+    background-color: #3e6ffe;
+    color: #fff; }
+  .slogan-list-container .tab-detail {
+    padding-bottom: 1rem; }
+  .slogan-list-container .list-item {
+    margin-top: 1rem;
+    position: relative;
+    width: 100%;
+    font-family: "苹方 中等";
+    font-size: 1.1rem;
+    color: #474747; }
+    .slogan-list-container .list-item .user-img {
+      position: relative;
+      width: 17%;
+      margin-right: 0.5rem; }
+      .slogan-list-container .list-item .user-img span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1.7rem;
+        height: 1.5rem;
+        line-height: 1.5rem;
+        text-align: center;
+        color: #fff;
+        font-size: 0.9rem;
+        background-image: url("../images/slogan-collection/icon-num-bg@2x.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        -webkit-background-size: 100%;
+        background-size: 100%; }
+    .slogan-list-container .list-item .user-detail {
+      left: 20%; }
+    .slogan-list-container .list-item .slogan-content {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden; }
+    .slogan-list-container .list-item .user-praise-btn {
+      right: 0;
+      text-align: center;
+      font-size: 1.2rem;
+      margin-top: 0.2rem; }
+    .slogan-list-container .list-item .ballot {
+      padding: 0.3rem 0.8rem 0.3rem 2.2rem;
+      color: #fff;
+      background-color: #3e6ffe;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      background-image: url("../images/slogan-collection/icon-praise@2x.png");
+      background-repeat: no-repeat;
+      background-position: 0.5rem center;
+      -webkit-background-size: 1.3rem;
+      background-size: 1.3rem; }
+
+/************搜索按钮**************/
+.slogan-search {
+  position: fixed;
+  bottom: 0.5rem;
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem; }
+  .slogan-search .slogan-search-input {
+    position: absolute;
+    width: 12rem;
+    height: 4rem;
+    background-image: url("../images/slogan-collection/search-bg3@2x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    top: -3rem;
+    right: -13rem;
+    -webkit-transition: right .3s linear;
+    -moz-transition: right .3s linear;
+    -ms-transition: right .3s linear;
+    -o-transition: right .3s linear;
+    transition: right .3s linear; }
+    .slogan-search .slogan-search-input input {
+      width: 90%;
+      border: 0;
+      font-size: 1.1rem;
+      text-align: center;
+      margin-left: 0.3rem; }
+    .slogan-search .slogan-search-input :-moz-placeholder {
+      /* Mozilla Firefox 4 to 18 */
+      color: #212223;
+      opacity: 1;
+      text-align: center; }
+    .slogan-search .slogan-search-input ::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color: #212223;
+      opacity: 1;
+      text-align: center; }
+    .slogan-search .slogan-search-input input:-ms-input-placeholder {
+      color: #212223;
+      opacity: 1;
+      text-align: center; }
+    .slogan-search .slogan-search-input input::-webkit-input-placeholder {
+      color: #212223;
+      opacity: 1;
+      text-align: center; }
+  .slogan-search .search-show {
+    right: 0.5rem; }
+
+/***********报名页***************************************/
+.slogan-player {
+  position: fixed;
+  max-width: 640px;
+  width: 100%;
+  bottom: 0;
+  top: 3.5rem;
+  background-color: #fff;
+  overflow-y: scroll;
+  font-family: "苹方 中等";
+  font-size: 1.1rem;
+  color: #000; }
+  .slogan-player .form-group {
+    width: 100%;
+    position: relative;
+    margin-top: 1.5rem;
+    padding-left: 1.5rem; }
+    .slogan-player .form-group label {
+      float: left;
+      margin-right: 0.5rem;
+      display: inline-block;
+      width: 3rem; }
+    .slogan-player .form-group .form-group-input {
+      float: left;
+      width: 65%;
+      height: 1.5rem;
+      border: 1px solid #d7d7d7;
+      padding-left: 0.5rem; }
+    .slogan-player .form-group .form-group-textarea {
+      width: 65%;
+      overflow: hidden;
+      margin-left: 3.5rem;
+      resize: none;
+      padding: 0.5rem 0.5rem 0;
+      border: 1px solid #d7d7d7; }
+    .slogan-player .form-group span {
+      float: left;
+      margin-left: 0.5rem;
+      color: #ff0000;
+      font-size: 1rem; }
+  .slogan-player .img-upload-container {
+    width: 62%;
+    margin: 1.5rem 0 0.5rem 5rem; }
+    .slogan-player .img-upload-container .btn-upload {
+      position: relative;
+      width: 32%;
+      float: left;
+      margin-bottom: 0.5rem; }
+      .slogan-player .img-upload-container .btn-upload input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0; }
+    .slogan-player .img-upload-container .btn-upload:not(:nth-child(3n)) {
+      margin-right: 2%; }
+  .slogan-player .upload-prompt {
+    padding-left: 5rem;
+    font-size: 0.8rem;
+    color: #ff0000;
+    margin-bottom: 1rem; }
+
+/*# sourceMappingURL=slogan-collection.css.map */

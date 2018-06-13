@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <title>订单详情</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/order-detail.css">
+</head>
+<body>
+    <!--中间内容-->
+    <div class="order-detail-content">
+
+        <!--等待付款顶部-->
+        <div class="order-detail-top">
+            <img src="images/personal/detaile_bg@3x.png" alt="">
+            <div class="top-content horizontal_center">
+                <i class="icon-top vertical_center">
+                    <img src="images/personal/detaile_pay@3x.png" alt="">
+                </i>
+                <p class="top-text vertical_center">等待买家付款</p>
+            </div>
+        </div>
+        <!--交易取消顶部-->
+        <div class="order-detail-top hide">
+            <img src="images/personal/detaile_cancel_bg@3x.png" alt="">
+            <div class="top-content horizontal_center">
+                <i class="icon-top vertical_center">
+                    <img src="images/personal/detaile_cancel@3x.png" alt="">
+                </i>
+                <p class="top-text vertical_center">交易已取消</p>
+            </div>
+        </div>
+        <!--等待发货顶部-->
+        <div class="order-detail-top hide">
+            <img src="images/personal/detaile_bg@3x.png" alt="">
+            <div class="top-content horizontal_center">
+                <i class="icon-top vertical_center">
+                    <img src="images/personal/detaile_send-@3x.png" alt="">
+                </i>
+                <p class="top-text vertical_center">等待商家发货</p>
+            </div>
+        </div>
+        <!--等待收货顶部-->
+        <div class="order-detail-top hide">
+            <img src="images/personal/detaile_bg@3x.png" alt="">
+            <div class="top-content horizontal_center">
+                <i class="icon-top vertical_center">
+                    <img src="images/personal/detaile_take@3x.png" alt="">
+                </i>
+                <p class="top-text vertical_center">等待买家收货</p>
+            </div>
+        </div>
+        <!--等待买家评价顶部-->
+        <div class="order-detail-top hide">
+            <img src="images/personal/detaile_bg@3x.png" alt="">
+            <div class="top-content horizontal_center">
+                <i class="icon-top vertical_center">
+                    <img src="images/personal/detaile_appr@3x.png" alt="">
+                </i>
+                <p class="top-text vertical_center">等待买家评价</p>
+            </div>
+        </div>
+        <!--交易完成顶部-->
+        <div class="order-detail-top hide">
+            <img src="images/personal/detaile_bg@3x.png" alt="">
+            <div class="top-content horizontal_center">
+                <i class="icon-top vertical_center">
+                    <img src="images/personal/detaile_complete@3x.png"alt="">
+                </i>
+                <p class="top-text vertical_center">交易已完成</p>
+            </div>
+        </div>
+        <!--等待售后审核顶部-->
+        <div class="order-detail-top hide">
+            <img src="images/personal/service_bg_blue@3x.png" alt="">
+            <div class="top-content horizontal_center">
+                <i class="icon-top vertical_center">
+                    <img src="images/personal/servive_ev@3x.png" alt="">
+                </i>
+                <p class="top-text vertical_center">等待售后审核中</p>
+            </div>
+        </div>
+        <!--等待售后审核顶部-->
+        <div class="order-detail-top hide">
+            <img src="images/personal/service_bg_blue@3x.png" alt="">
+            <div class="top-content horizontal_center">
+                <i class="icon-top vertical_center">
+                    <img src="images/personal/detaile_send-@3x.png" alt="">
+                </i>
+                <p class="top-text vertical_center">等待买家退货</p>
+            </div>
+        </div>
+        <!--退货失败顶部-->
+        <div class="order-detail-top hide">
+            <img src="images/personal/service_bg_gray@3x.png" alt="">
+            <div class="top-content horizontal_center">
+                <i class="icon-top vertical_center">
+                    <img src="images/personal/service_fail@3x.png" alt="">
+                </i>
+                <p class="top-text vertical_center">退货失败</p>
+            </div>
+        </div>
+        <!--等待商家退款顶部-->
+        <div class="order-detail-top hide">
+            <img src="images/personal/service_bg_blue@3x.png" alt="">
+            <div class="top-content horizontal_center">
+                <i class="icon-top vertical_center">
+                    <img src="images/personal/service_wait@3x.png" alt="">
+                </i>
+                <p class="top-text vertical_center">等待商家退款中</p>
+            </div>
+        </div>
+        <!--退款成功顶部-->
+        <div class="order-detail-top hide">
+            <img src="images/personal/service_bg_blue@3x.png" alt="">
+            <div class="top-content horizontal_center">
+                <i class="icon-top vertical_center">
+                    <img src="images/personal/service_drawback@3x.png" alt="">
+                </i>
+                <p class="top-text vertical_center">退款成功</p>
+            </div>
+        </div>
+
+        <!--收货人，收货地址-->
+        <div class="order-detail-receiver">
+            <div class="order-receiver-name after">
+                <p class="fl">收货人: 小白君</p>
+                <p class="fr">185 8782 1563</p>
+            </div>
+            <div class="order-receiver-address">
+                收货地址: 广东省广州市天河区高新南三道中国科技开发院群楼C栋中科大厦22楼01室
+            </div>
+        </div>
+        <!--订单编号，下单时间-->
+        <div class="order-detail-number">
+            <div class="order-number-text"><i class="vertical_center"></i>订单编号: <span>15771414197856632</span></div>
+            <div class="order-number-text"><i class="vertical_center"></i>下单时间: <span>2017.05.08 22.50</span></div>
+            <div class="order-number-text"><i class="vertical_center"></i>订单状态: <span class="order-state">待付款</span></div>
+        </div>
+        <!--订单商品-->
+        <div class="order-detail-products">
+            <div class="products-shop">
+                <div class="shops-logo-img vertical_center">
+                    <img src="images/personal/shops-logo.png" alt="">
+                </div>
+                <p class="shops-name">好万家自营</p>
+                <i class="icon-top fr"></i>
+            </div>
+            <div class="order-detail-products-container">
+                <div class="products-items">
+                    <div class="products-item">
+                        <div class="products-item-img fl">
+                            <img src="images/product.png" alt="">
+                        </div>
+                        <div class="products-item-text">
+                            <div class="products-text-top">
+                                <p class="products-item-name">玛咖片 (1.3g*30片)</p>
+                                <p class="products-item-data">×2</p>
+                            </div>
+                            <p class="products-item-guige">规格: 盒</p>
+                            <p class="products-item-price">￥59.5</p>
+                            <!--待发货页面申请退款按钮,去掉hide class就可以-->
+                            <div class="products-btn-tuikuan hide">
+                                申请退款
+                            </div>
+                            <!--待评价页面申请售后按钮,去掉hide class就可以-->
+                            <div class="products-btn-tuikuan hide">
+                                申请售后
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products-item">
+                        <div class="products-item-img fl">
+                            <img src="images/product.png" alt="">
+                        </div>
+                        <div class="products-item-text">
+                            <div class="products-text-top">
+                                <p class="products-item-name">玛咖片 (1.3g*30片)</p>
+                                <p class="products-item-data">×2</p>
+                            </div>
+                            <p class="products-item-guige">规格: 盒</p>
+                            <p class="products-item-price">￥59.5</p>
+                            <!--代发货页面申请退款按钮,去掉hide class就可以-->
+                            <div class="products-btn-tuikuan hide">
+                                申请退款
+                            </div>
+                            <!--待评价页面申请售后按钮,去掉hide class就可以-->
+                            <div class="products-btn-tuikuan hide">
+                                申请售后
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products-item">
+                        <div class="products-item-img fl">
+                            <img src="images/product.png" alt="">
+                        </div>
+                        <div class="products-item-text">
+                            <div class="products-text-top">
+                                <p class="products-item-name">玛咖片 (1.3g*30片)</p>
+                                <p class="products-item-data">×2</p>
+                            </div>
+                            <p class="products-item-guige">规格: 盒</p>
+                            <p class="products-item-price">￥59.5</p>
+                            <!--代发货页面申请退款按钮,去掉hide class就可以-->
+                            <div class="products-btn-tuikuan hide">
+                                申请退款
+                            </div>
+                            <!--待评价页面申请售后按钮,去掉hide class就可以-->
+                            <div class="products-btn-tuikuan hide">
+                                申请售后
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="products-data">
+                    <p>共 <span>3</span>件商品 实付款: <span>￥255.0</span></p>
+                    <p class="products-data-yunfei">运费总额: +<span>￥10.0</span></p>
+                    <p>活动优惠(包含优惠券、积分抵扣): -<span>￥10.0</span></p>
+                </div>
+                <div class="products-total">
+                    本单合计:&nbsp; ￥255.0
+                </div>
+            </div>
+        </div>
+        <!--发票-->
+        <div class="order-detail-fapiao">
+            <p class="fl">发票信息</p>
+            <p class="fr">个人-明细</p>
+        </div>
+        <!--物流跟踪-->
+        <div class="order-detail-wuliu">
+            <div class="order-wuliu-top">
+                物流跟踪
+            </div>
+            <div class="wuliu-info">
+                <div class="wuliu-info-first">
+                    <i class="icon-sign icon-sign-red horizontal_center"></i>
+                    <div class="wuliu-first-text">支付成功</div>
+                </div>
+                <div class="wuliu-info-container">
+                    <div class="wuliu-info-item">
+                        <!--em标签添加wuliu-item-line-red 变红-->
+                        <em class="wuliu-item-line wuliu-item-line-red"></em>
+                        <div class="wuliu-item-text">
+                            <!--i标签添加icon-sign-red 变红-->
+                            <i class="icon-sign icon-sign-red horizontal_center"></i>
+                            <div class="wuliu-first-text">拣货出库</div>
+                        </div>
+                    </div>
+                    <div class="wuliu-info-item">
+                        <em class="wuliu-item-line"></em>
+                        <div class="wuliu-item-text">
+                            <i class="icon-sign horizontal_center"></i>
+                            <div class="wuliu-first-text">商品发货</div>
+                        </div>
+                    </div>
+                    <div class="wuliu-info-item">
+                        <em class="wuliu-item-line"></em>
+                        <div class="wuliu-item-text">
+                            <i class="icon-sign horizontal_center"></i>
+                            <div class="wuliu-first-text">包裹配送</div>
+                        </div>
+                    </div>
+                    <div class="wuliu-info-item">
+                        <em class="wuliu-item-line"></em>
+                        <div class="wuliu-item-text">
+                            <i class="icon-sign horizontal_center"></i>
+                            <div class="wuliu-first-text">包裹签收</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wuliu-info-list">
+                <div class="wuliu-list-items">
+                    <div class="wuliu-list-item">
+                        <i class="wuliu-list-icon"></i>
+                        <div class="wuliu-list-content">
+                            <div class="wuliu-list-text">
+                                快件已被签收，感谢您选择好万家，感谢使用中通快递，期待下次为您服务
+                            </div>
+                            <div class="wuliu-list-time">
+                                2017.05.08&nbsp;22:50
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wuliu-list-item">
+                        <i class="wuliu-list-icon"></i>
+                        <div class="wuliu-list-content">
+                            <div class="wuliu-list-text">
+                                【广州市】广州天河派件员: 谢明明 <span class="wuliu-text-num">18594562158 &nbsp;</span>正在为您派件
+                            </div>
+                            <div class="wuliu-list-time">
+                                2017.05.08&nbsp;22:50
+                            </div>
+                        </div>
+                        <!--物流运输信息-->
+                        <div class="wuliu-info-yunshu">
+                            <div class="wuliu-yunshu-item">
+                                <div class="wuliu-list-content">
+                                    <div class="wuliu-list-text">
+                                        【广州市】广州中心 已发出
+                                    </div>
+                                    <div class="wuliu-list-time">
+                                        2017.05.08&nbsp;22:50
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wuliu-yunshu-item">
+                                <div class="wuliu-list-content">
+                                    <div class="wuliu-list-text">
+                                        【普宁市】普宁市仓库中心 已发出
+                                    </div>
+                                    <div class="wuliu-list-time">
+                                        2017.05.08&nbsp;22:50
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wuliu-yunshu-item">
+                                <div class="wuliu-list-content">
+                                    <div class="wuliu-list-text">
+                                        【普宁市】快件已到达普宁市仓库中心
+                                    </div>
+                                    <div class="wuliu-list-time">
+                                        2017.05.08&nbsp;22:50
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wuliu-yunshu-item">
+                                <div class="wuliu-list-content">
+                                    <div class="wuliu-list-text">
+                                        【普宁市市】好万家仓库 已发出
+                                    </div>
+                                    <div class="wuliu-list-time">
+                                        2017.05.08&nbsp;22:50
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wuliu-list-item">
+                        <i class="wuliu-list-icon"></i>
+                        <div class="wuliu-list-content">
+                            <div class="wuliu-list-text">
+                                商品正在仓库拣货，等待出库
+                            </div>
+                            <div class="wuliu-list-time">
+                                2017.05.08&nbsp;22:50
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wuliu-list-item">
+                        <i class="wuliu-list-icon"></i>
+                        <div class="wuliu-list-content">
+                            <div class="wuliu-list-text">
+                                买家已付款
+                            </div>
+                            <div class="wuliu-list-time">
+                                2017.05.08&nbsp;22:50
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wuliu-list-item">
+                        <i class="wuliu-list-icon"></i>
+                        <div class="wuliu-list-content">
+                            <div class="wuliu-list-text">
+                                订单等待买家付款中
+                            </div>
+                            <div class="wuliu-list-time">
+                                2017.05.08&nbsp;22:50
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wuliu-info-last hide">
+                <div class="wuliu-list-content">
+                    <div class="wuliu-list-text">
+                        快件已被签收，感谢您选择好万家，感谢使用中通快递，期待下次为您服务
+                    </div>
+                    <div class="wuliu-list-time">
+                        2017.05.08&nbsp;22:50
+                    </div>
+                </div>
+            </div>
+            <!--收起列表按钮-->
+            <div class="wuliu-list-retract">
+                <div class="wuliu-btn-retract horizontal_center">
+                    <span class="wuliu-btn-text">收起列表</span> <i class="icon-top vertical_center"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--取消订单modal-->
+    <div class="order-detail-modal hide">
+        <div class="modal-content center_elm">
+            <div class="modal-text">是否取消订单?</div>
+            <div class="modal-btn-container">
+                <div class="modal-btn modal-btn-cancel fl">取消</div>
+                <div class="modal-btn modal-btn-sure fl">确定</div>
+            </div>
+        </div>
+    </div>
+    <!--待付款footer-->
+    <footer class="footer">
+        <div class="footer-btn footer-btn-cancel fl">取消订单</div>
+        <div class="footer-btn footer-btn-pay fl">立即支付</div>
+    </footer>
+    <!--待发货和待评价,待收货 footer-->
+    <footer class="footer footer-send hide">
+        提醒发货
+    </footer>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+        //        icon-top切换上下
+        $(".products-shop").on("click",function (e) {
+            e.preventDefault();
+            $(this).siblings("div").toggleClass("hide");
+            $(this).children(".icon-top").toggleClass("icon-top-active");
+        });
+        //        取消订单modal
+        $(".footer-btn-cancel").on("click",function (e) {
+            e.preventDefault();
+            $(".order-detail-modal").removeClass("hide");
+            $(".order-detail-modal").bind("touchmove",function (e) {
+                e.preventDefault();
+            })
+        });
+        $(".modal-btn-cancel").on("click",function (e) {
+            e.preventDefault();
+            $(".order-detail-modal").addClass("hide");
+        });
+        //        收起物流列表
+        $(".wuliu-list-retract").on("click",function (e) {
+            e.preventDefault();
+            $(".wuliu-list-retract .icon-top").toggleClass("icon-top-active");
+            var html = $(".wuliu-btn-text").html();
+            if(html === '收起列表'){
+                $(".wuliu-btn-text").html("展开列表");
+            }else {
+                $(".wuliu-btn-text").html("收起列表");
+            }
+            $(".wuliu-info-list").toggleClass("hide");
+            $(".wuliu-info-last").toggleClass("hide");
+        })
+    </script>
+</body>
+</html>

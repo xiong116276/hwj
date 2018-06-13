@@ -1,0 +1,428 @@
+@charset "utf-8";
+@import "../base/_minxins.scss";
+body{
+  max-width: 750px;
+}
+//文字溢出省略
+%overflow-ellipsis{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.integral-top{
+  background-color: #fff;
+}
+.top-bar{
+  @include position-template(fixed,0,auto,auto,auto);
+  width: 100%;
+  height: 0.92rem;
+  border-bottom: 0.01rem solid rgb(233,234,234);
+  background-color: #fff;
+  z-index: 200;
+  div{
+    float: left;
+    @include fontSet("苹方 常规",0.28rem,#666);
+    width: 3.75rem;
+    text-align: center;
+    height: 0.92rem;
+    line-height: 0.92rem;
+    i{
+      display: inline-block;
+      width: 0.3rem;
+      height: 0.3rem;
+      margin-bottom: -0.05rem;
+      margin-right: 0.18rem;
+    }
+  }
+  .top-bar-left{
+    span{
+      font-family: "苹方 粗体";
+      color: #fc4048;
+    }
+    i{
+      @include bg-img("../images/integral-shop/integra_icon@2x.png",no-repeat,center,contain);
+    }
+    border-right: 0.01rem solid rgb(233,234,234);
+  }
+  .top-bar-right{
+    i{
+      @include bg-img("../images/integral-shop/record_icon@2x.png",no-repeat,center,contain);
+    }
+  }
+}
+.top-banner{
+  padding-top: 0.92rem;
+}
+//商品积分兑换
+.goods-integral-change{
+  position: relative;
+  background-color: #fff;
+  .change-top{
+    width: 70%;
+    height: 0.86rem;
+    line-height: 0.86rem;
+    @include fontSet("苹方 常规",0.3rem,#2f2f2f);
+
+    i{
+      float: left;
+      width: 0.15rem;
+      height: 0.86rem;
+      margin: 0 0.14rem;
+      @include bg-img("../images/integral-shop/goods-change_icon@2x.png",no-repeat,center,contain);
+    }
+  }
+  .integral-rule{
+    @include fontSet("苹方 常规",0.25rem,#2f2f2f);
+    right: 0.4rem;
+    padding-right: 0.3rem;
+    @include bg-img("../images/integral-shop/integral-icon@2x.png",no-repeat,center right,0.23rem);
+
+  }
+}
+//积分规则弹屏
+.integral-rule-bomb-screen{
+  @include position-template(fixed,0,auto,0,auto);
+  background-color: rgba(0,0,0,0.8);
+  width: 100%;
+  z-index: 300;
+  .horizontal_center{
+    top: 15%;
+    width: 75%;
+    max-width: 390px;
+  }
+}
+.close-btn{
+  @include position-template(absolute,-10%,0,auto,auto);
+  width: 0.5rem;
+  height: 0.5rem;
+  @include bg-img("../images/integral-shop/close-button@2x.png",no-repeat,center,contain);
+}
+
+.goods-integral-content{
+  padding: 0.1rem 0.1rem 0 0;
+  .goods-integral-item{
+    float: left;
+    position: relative;
+    width: 3.6rem;
+    height: 4.48rem;
+    margin: 0 0 0.1rem 0.1rem;
+    font-family: "苹方 常规";
+    font-size: 0.3rem;
+    background-color: #fff;  }
+  .goods-integral-img{
+    width: 65%;
+    margin: 0.3rem auto;
+  }
+  .goods-integral-name{
+    color: #343434;
+    font-size: 0.25rem;
+    padding: 0 0.1rem;
+    margin-bottom: 0.20rem;
+    @extend %overflow-ellipsis;
+  }
+  .goods-integral-price{
+    padding-left: 0.12rem;
+    .integral-num{
+      color: #fc4048;
+      font-family: "苹方 粗体";
+      margin-right: 0.24rem;
+    }
+    .money-num{
+      color: #a7a7a7;
+    }
+  }
+  .goods-integral-btn{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    text-align: center;
+    color: #fff;
+    border-bottom-right-radius: 0.1rem;
+    border-bottom-left-radius: 0.1rem;
+  }
+  .goods-change{
+    background-color: #3069db;
+  }
+  .goods-change-empty{
+    background-color: #c6c6c6;
+  }
+}
+//积分兑换记录
+.record-empty{
+  @include position-template(fixed,0.92rem,auto,0,auto);
+  width: 100%;
+  background-color: #fff;
+  .record-empty-img{
+    width: 35%;
+    top: 2rem;
+  }
+  .record-empty-text{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 4.5rem;
+    font-size: 0.4rem;
+  }
+}
+.change-record-item{
+  position: relative;
+  width: 6.72rem;
+  margin: 0 auto;
+
+  img{
+    position: relative;
+    z-index: 10;
+  }
+
+  .icon-point{
+    width: 0.2rem;
+    height: 0.2rem;
+    z-index: 1;
+    @include bg-img("../images/integral-shop/-integra_point@2x.png",no-repeat,center,contain);
+  }
+
+  &:nth-child(odd) .icon-point{
+    background-image: url("../images/integral-shop/-integra_point@2x.png");
+  }
+  &:nth-child(even) .icon-point{
+    background-image: url("../images/integral-shop/-integra_point_gold@2x.png");
+  }
+
+  .change-goods-img{
+    @include position-template(absolute,0,auto,auto,1rem);
+    width: 16%;
+    z-index: 100;
+    margin-right: 0.32rem;
+  }
+  .change-goods-text{
+    @include position-template(absolute,0.4rem,0.7rem,auto,auto);
+    z-index: 100;
+    p:nth-child(1){
+      @include fontSet("苹方 中等",0.28rem,#2f2f2f);
+      margin-bottom: 0.1rem;
+      @extend %overflow-ellipsis;
+    }
+    p:nth-child(2){
+      @include fontSet("苹方 常规",0.24rem,#a5a5a5);
+    }
+  }
+}
+
+/**积分商品详情**/
+
+.integral-goods-top-text{
+  width: 100%;
+  height: 5.7rem;
+  border-top: 0.01rem solid #ececec;
+  background-color: #fff;
+  padding: 0 1rem;
+  .goods-name{
+    @include fontSet("苹方 中等",1.2rem,#000);
+    margin: 1rem 0 2rem;
+  }
+  .goods-price{
+    position: relative;
+    height: 0.5rem;
+    span{
+      position: absolute;
+      bottom: 0;
+    }
+    .goods-integral{
+      @include fontSet("苹方 粗体",1.8rem,#ff0000);
+      left: 0;
+    }
+    .goods-money{
+      @include fontSet("苹方 常规",0.8rem,#6b6b6b);
+      left: 8rem;
+    }
+    .goods-freight{
+      @include fontSet("苹方 中等",0.8rem,#6b6b6b);
+      right: 0;
+    }
+  }
+}
+.delivery-address{
+  margin: -0.5rem 0 0.3rem;
+  position: relative;
+  img{
+    float: left;
+  }
+  .address-text{
+    width: 83%;
+    left: 2.5rem;
+    @include fontSet("苹方 中等",1rem,#6b6b6b);
+    input{
+      width: 80%;
+      margin-left: 0.1rem;
+      border: 0;
+      @include fontSet("苹方 中等",1rem,#6b6b6b);
+    }
+    //改变input-placeholder字体颜色
+    @include placeholder-color(#6b6b6b);
+  }
+}
+.icon-triangle{
+  width: 1rem;
+  height: 1rem;
+  @include bg-img("../images/integral-shop/icon-triangle@2x.png",no-repeat,center,contain);
+  left: 1rem;
+}
+
+//详情说明
+.integral-goods-detail{
+  background-color: #fff;
+  margin-bottom: 8rem;
+  .detail-title{
+    position: relative;
+    height: 2rem;
+    @include fontSet("苹方 中等",1rem,#6b6b6b);
+    span{
+      left: 2.5rem;
+    }
+  }
+
+  .detail-text-content{
+    width: 90%;
+    margin: 0 5%;
+    padding: 1rem 0;
+    border-top: 0.01rem solid #ebebeb;
+    .activity-rule-title{
+      @include fontSet("苹方 中等",1rem,#000);
+      margin-bottom: 0.5rem;
+    }
+    .activity-rule-text{
+      @include fontSet("苹方 中等",0.8rem,#494949);
+    }
+    .activity-goods-name{
+      margin-bottom: 0.5rem;
+    }
+    .activity-goods-integral{
+      color: #ff0000;
+    }
+    .activity-goods-effect{
+      margin-bottom: 0.5rem;
+    }
+    .activity-goods-count{
+      color: #ff0000;
+      margin-bottom: 0.5rem;
+    }
+    .goods-detail{
+      .detail-list-item{
+        @include fontSet("苹方 中等",0.8rem,#494949);
+        margin-bottom: 0.2rem;
+      }
+    }
+  }
+}
+
+//底部兑换按钮
+.change-submit{
+  background-color: #fff;
+  width: 100%;
+  height: 7rem;
+  padding-top: 2rem;
+  @include position-template(fixed,auto,auto,0,auto);
+
+
+  %submit-btn{
+    width: 90%;
+    margin: 0 auto ;
+    position: relative;
+  }
+
+  //积分不足
+  .integral-not-enough-text{
+    @include fontSet("苹方 中等",1rem,#6d6d6d);
+    top: 5%;
+    padding-left: 1.2rem;
+    @include bg-img("../images/integral-shop/icon-exclamatory-mark@2x.png",no-repeat, left center,1rem);
+
+  }
+  .integral-not-enough-btn{
+    @extend %submit-btn;
+  }
+  //积分充足
+  .change-submit-btn{
+    @extend %submit-btn;
+  }
+  .change-submit-btn-text{
+    @include fontSet("苹方 粗体",1.4rem,#fff);
+  }
+}
+
+//兑换提交弹屏
+.change-bomb-screen{
+  @include position-template(fixed,0,auto,0,auto);
+  background-color: rgba(0,0,0,0.8);
+  width: 100%;
+}
+.change-bomb-screen-content{
+  width: 70%;
+}
+
+/*****积分兑换结果*******/
+.integral-change-result{
+  @include position-template(fixed,0,auto,0,auto);
+  width: 100%;
+  background-color: #fff;
+  font-family: "苹方 常规";
+  .change-result-img{
+    width: 35%;
+    margin: 15% auto 0.5rem;
+  }
+  .change-result-text{
+    text-align: center;
+    margin-bottom: 0.94rem;
+    p:nth-child(1){
+      font-size: 0.4rem;
+      color: #2f2f2f;
+      margin-bottom: 0.24rem;
+    }
+    p:nth-child(2){
+      font-size: 0.28rem;
+      color: #6f6f6f;
+    }
+  }
+  .change-result-btn{
+    width: 4.84rem;
+    font-size: 0.32rem;
+    color: #fff;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

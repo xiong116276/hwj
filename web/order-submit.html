@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>提交订单</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/order-submit.css">
+</head>
+<body>
+<header class="submit_header">
+    <p class="submit_top">
+        <span class="submit_back vertical_center" onclick="history.go(-1)">
+            <img src="images/icon_left.png" alt="">
+        </span>
+        提交订单
+    </p>
+</header>
+
+<div class="content">
+    <!--用户信息-->
+    <div class="user">
+        <div class="user-border-top"></div>
+        <div class="user-info">
+            <div class="user-info-contact">
+                <p class="user-info-name">赵敏敏</p>
+                <p class="user-info-status">默认</p>
+            </div>
+            <div class="user-info-other">
+                <p class="user-info-tel">182****5420</p>
+                <p class="user-info-address">
+                    广东省广州市天河区科韵路信息港C1903广东省广州市天河区科韵路信息港C1903</p>
+            </div>
+        </div>
+
+        <div class="user-detail">
+            <i class="icon-detail vertical_center"></i>
+        </div>
+    </div>
+
+    <!--订单基本信息-->
+    <div class="user-order">
+        <div class="user-order-header">
+            <i class="icon-top-left"></i>
+            <i class="icon-shop vertical_center"></i>
+            <div class="user-shop-name">好万家自营</div>
+            <i class="icon-top vertical_center"></i>
+        </div>
+        <div class="user-order-product">
+            <div class="user-order-product-img"></div>
+            <div class="user-order-product-info">
+                <div class="user-order-product-name">玛咖片(1.3g*30片)</div>
+                <div class="user-order-product-specification">
+                    规格：盒
+                    <p class="user-order-product-specification-price">￥59.5</p>
+                </div>
+            </div>
+            <div class="user-order-product-num">×2</div>
+        </div>
+        <div class="user-order-memu">
+            <div class="user-order-memu-left">优惠券</div>
+            <div class="user-order-memu-right">暂无可用优惠券<i class="icon-right-tran vertical_center"></i></div>
+        </div>
+
+        <div class="user-order-memu">
+            <div class="user-order-memu-left">商品合计</div>
+            <div class="user-order-memu-right">
+                <div class="user-order-memu-right-price">￥96.5</div>
+            </div>
+        </div>
+
+        <div class="user-order-memu">
+            <div class="user-order-memu-left">运费</div>
+            <div class="user-order-memu-right">
+                <div class="user-order-memu-right-price">￥0.00</div>
+            </div>
+        </div>
+
+        <div class="user-order-memu">
+            <div class="user-order-memu-left">备注</div>
+            <div class="user-order-memu-right"><i class="icon-right vertical_center"></i></div>
+        </div>
+    </div>
+
+    <!--  1元加购玫瑰花茶-->
+    <div class="user-order-activity after">
+        <div class="user-order-activity-left">1元加购玫瑰花茶</div>
+        <div class="user-order-activity-right"><input type="checkbox" class="activity-checkbox vertical_center"><i class="icon-select-false vertical_center"></i></div>
+    </div>
+
+    <div class="user-order">
+        <div class="user-order-header">
+            <i class="icon-top-left"></i>
+            <i class="icon-shop vertical_center"></i>
+            <div class="user-shop-name">好万家自营</div>
+            <i class="icon-top vertical_center"></i>
+        </div>
+        <div class="user-order-product">
+            <div class="user-order-product-img"></div>
+            <div class="user-order-product-info">
+                <div class="user-order-product-name">玛咖片(1.3g*30片)</div>
+                <div class="user-order-product-specification">规格：盒
+                    <p class="user-order-product-specification-price">￥59.5</p>
+                </div>
+            </div>
+            <div class="user-order-product-num">×2</div>
+        </div>
+        <div class="user-order-memu">
+            <div class="user-order-memu-left">优惠券</div>
+            <div class="user-order-memu-right text">满300减100<i class="icon-right vertical_center"></i></div>
+        </div>
+
+        <div class="user-order-memu">
+            <div class="user-order-memu-left">商品合计</div>
+            <div class="user-order-memu-right">
+                <div class="user-order-memu-right-price">￥96.5</div>
+            </div>
+        </div>
+
+        <div class="user-order-memu">
+            <div class="user-order-memu-left">运费</div>
+            <div class="user-order-memu-right">
+                <div class="user-order-memu-right-price">￥0.00</div>
+            </div>
+        </div>
+
+        <div class="user-order-memu">
+            <div class="user-order-memu-left">备注</div>
+            <div class="user-order-memu-right"><i class="icon-right vertical_center"></i></div>
+        </div>
+    </div>
+
+
+</div>
+
+
+<div class="footer">
+    <div class="footer-order-price">合计：<p>￥859.5</p></div>
+    <div class="footer-order-submit-btn">确认提交</div>
+</div>
+
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+    $(".user-order-header").on("click",function (e) {
+        e.preventDefault();
+        $(".icon-top").toggleClass("icon-top-rotate");
+    });
+
+
+//    1元加购玫瑰花茶
+    $(".activity-checkbox").on("click",function (e) {
+        e.preventDefault();
+        $(".icon-select-false").toggleClass("icon-select-true");
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/integral-shop.css">
+</head>
+<body>
+  <div class="integral-goods-top">
+    <img src="images/integral-shop/goods-item-banner-01.png" alt="">
+    <div class="integral-goods-top-text">
+      <div class="goods-name">隆力奇 乳木果VE护手霜 50g</div>
+      <div class="goods-price">
+        <span class="goods-integral">1000积分</span><!--
+        --><span class="goods-money">￥9.90</span>
+        <span class="goods-freight">运费: 5元</span>
+      </div>
+    </div>
+    <div class="delivery-address after">
+      <img src="images/integral-shop/icon-peisong@2x.png" alt="">
+      <i class="icon-triangle vertical_center"></i>
+      <div class="address-text vertical_center">
+        配送至: <input type="text" placeholder="您还未填写收货信息，马上填写。">
+      </div>
+    </div>
+  </div>
+  <!--详情说明-->
+  <div class="integral-goods-detail">
+    <div class="detail-title">
+      <i class="icon-triangle vertical_center"></i>
+      <span class="vertical_center">详情说明:</span>
+    </div>
+    <div class="detail-text-content">
+      <div class="activity-rule">
+        <p class="activity-rule-title">活动规则:</p>
+        <div class="activity-rule-text">
+          <p class="activity-goods-name">
+            三金 西瓜霜润喉片 12片*2板，
+            <span class="activity-goods-integral">特惠5000积分限量抢</span>
+          </p>
+          <p class="activity-goods-effect">
+            清音利咽、消肿止痛。用于咽喉肿痛、声音嘶哑、口舌生疮、急、
+            慢性咽喉炎、急、慢性扁桃体炎、口腔溃疡、牙龈肿痛。
+          </p>
+          <p class="activity-goods-count">
+            每天限量50份抢完即止，<br>先到先得！
+          </p>
+        </div>
+      </div>
+      <div class="goods-detail">
+        <p class="activity-rule-title">详情说明:</p>
+        <div class="detail-list">
+          <p class="detail-list-item">
+            【药品名称】西瓜霜润喉片
+          </p>
+          <p class="detail-list-item">
+            【性 &nbsp; 状】为淡红色的片; 气芳香，味甜而辛凉。
+          </p>
+          <p class="detail-list-item">
+            【成 &nbsp; 分】西瓜霜、冰片、薄荷素油、薄荷脑。辅料为糊精、蔗糖、枸橼酸、硬脂酸镁、滑石粉、食用色素。
+          </p>
+          <p class="detail-list-item">
+            【用法与用量】含服，每小时含2-4片。
+          </p>
+          <p class="detail-list-item">
+            【规 &nbsp; 格】12片*2板。
+          </p>
+          <p class="detail-list-item">
+            【有效期】两年。
+          </p>
+          <p class="detail-list-item">
+            【批 &nbsp; 文】国药准字Z45021646。
+          </p>
+          <p class="detail-list-item">
+            【存 &nbsp; 储】遮光，密封保存。
+          </p>
+          <p class="detail-list-item">
+            【生产厂家】桂林三金药业股份有限公司。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--兑换提交按钮-->
+  <div class="change-submit">
+    <!--当积分不足时-->
+    <div class="integral-not-enough ">
+      <div class="integral-not-enough-text horizontal_center">
+        您的积分不足
+      </div>
+      <div class="integral-not-enough-btn">
+        <img src="images/integral-shop/get-integral3@2x.png" alt="">
+        <div class="change-submit-btn-text center_elm">
+          去赚取更多积分
+        </div>
+      </div>
+    </div>
+
+    <!--当积分充足时-->
+    <div class="change-submit-btn hide">
+      <img src="images/integral-shop/change-submit@2x.png" alt="">
+      <div class="change-submit-btn-text center_elm">
+        马上兑换
+      </div>
+    </div>
+  </div>
+  <!--兑换确定弹屏-->
+  <div class="change-bomb-screen hide">
+    <div class="change-bomb-screen-content center_elm">
+      <img class="change" src="images/integral-shop/change-bomb-screen@2x.png" alt="" usemap="#change">
+      <map name="change">
+        <area shape="rect" coords="" href="javascript: void(0);" alt="">
+        <area shape="rect" coords="" href="javascript: void(0);" alt="">
+      </map>
+    </div>
+  </div>
+  <script src="http://m.360hwj.com/js/jquery/jquery-1.11.3.js"></script>
+  <script>
+    //兑换确定弹屏函数
+    function changeArea() {
+      var w = parseFloat(getComputedStyle($(".change")[0]).width);
+      var h = parseFloat(getComputedStyle($(".change")[0]).height);
+      var x1 = 0,x2 = 0.5*w,x3 = w;
+      var y1 = 195/286*h, y2 = h;
+
+      $($("[name = 'change'] area")[0]).attr("coords",x1+","+y1+","+x2+","+y2).on("click",function () {
+        console.log("取消兑换！");
+        $(".change-bomb-screen").addClass("hide");
+      });
+      $($("[name = 'change'] area")[1]).attr("coords",x2+","+y1+","+x3+","+y2).on("click",function () {
+        console.log("确定兑换！");
+        $(".change-bomb-screen").addClass("hide");
+      });
+    }
+    function changeBtn() {
+      $(".change-submit-btn").on("click",function () {
+        $(".change-bomb-screen").removeClass("hide");
+        changeArea();
+      });
+    }
+    window.onload = function () {
+      changeBtn();
+      $("title").html("隆力奇 乳木果VE护手霜 50g");
+    };
+
+  </script>
+</body>
+</html>

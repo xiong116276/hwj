@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+				content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<title>抽奖弹框</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/draw-result.css">
+	<style>
+		body{
+			background-color: #fff;
+		}
+		.btn{
+			width: 80%;
+			margin: 1rem auto;
+			text-align: center;
+			color: #000;
+			border: 1px solid #ddd;
+			height: 3rem;
+			line-height: 3rem;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="btn draw-dbf">抽到阿胶蛋白粉</div>
+	<div class="btn draw-ip7">抽到苹果7</div>
+	<div class="btn draw-yhq">抽到优惠券</div>
+	<div class="btn draw-itr25">抽到25积分</div>
+	<div class="btn draw-itr100">抽到100积分</div>
+	<div class="btn draw-itr1000">抽到1000积分</div>
+	<div class="btn draw-notimes">达到抽奖次数</div>
+	<div class="btn draw-empty">积分不足</div>
+	<div class="btn draw-thanks">谢谢参与</div>
+	<div class="btn draw-rules">抽奖规则</div>
+
+	<div class="modal-draw">
+		<div class="modal-mask"></div>
+		<div class="modal-content center_elm">
+			<img class="draw-bg" src="img/draw-something.png" alt="">
+			<div class="draw-content">
+				<!--抽中奖品-->
+				<div class="draw-prize">太棒啦，您中了阿胶蛋白粉一瓶，价值198元哦！</div>
+
+				<!--查看按钮-->
+				<div class="draw-check">
+					<a href="#">马上去查看奖品记录吧>></a>
+					<a href="#">记得分享给您的朋友哦>></a>
+				</div>
+
+				<!--前往积分商城-->
+				<div class="draw-integral">
+					<a class="text-1" href="#">前往“积分商城”兑换奖品吧>></a>
+					<img class="smile-img" src="img/smile-img.png" alt="">
+					<!--达到抽奖次数-->
+					<div class="draw-enough">
+						<p>邀请一个朋友一起玩增加</p>
+						<p>10次抽奖次数 <a class="btn-invitation" href="#">赶紧去邀请吧>></a></p>
+					</div>
+				</div>
+
+				<!--积分不足-->
+				<div class="integral-less">
+					<p>购物送积分 <a class="btn-buy" href="#">立即前往>></a></p>
+					<p>推荐会员送积分 <a class="btn-recommend" href="#">立即前往>></a></p>
+					<p>签到送积分 <a class="btn-signIn" href="#">立即前往>></a></p>
+					<p class="less-bottom">PS : 100积分=1元，积分可以当钱花呢！</p>
+				</div>
+				<!--抽奖规则-->
+				<div class="draw-rules">
+					<p class="rules-item">每次抽奖消耗<span class="lottery-integral">50</span>积分，每人每天<span class="lottery-count">10</span>次，邀请好友可增加<span class="lottery-count-add">5</span>次抽奖机会；</p>
+					<p class="rules-item">抽中积分，可前往个人中心“我的积分”查看；</p>
+					<p class="rules-item">抽中优惠券，可前往个人中心“我的优惠券”查看；</p>
+					<p class="rules-item">每天送出奖品的数量超过1000，送完即止；</p>
+					<p class="rules-item">积分可用于积分兑换商品，抽奖等；</p>
+					<p class="rules-item">对于任何非法途径获得积分，好万家有权对其进行处理，并保留最终解释权。</p>
+				</div>
+				<!--底部按钮-->
+				<div class="btn-bottom">再抽一次</div>
+				<!--关闭按钮-->
+				<span class="icon-close"></span>
+			</div>
+		</div>
+	</div>
+
+	<script src="http://m.360hwj.com/js/jquery/jquery-1.11.3.js"></script>
+	<script>
+		function modalData(options,funs) {
+		  var obj = {
+		    check:options.check,
+		    integral:options.integral,
+		    bg:options.bg,
+        prize:options.prize,
+        enough:options.enough,
+		    less:options.less,
+		    btnBottom:options.btnBottom,
+				rules:options.rules
+			};
+		  obj.check?$(".modal-draw .draw-check").show():$(".modal-draw .draw-check").hide();
+      obj.enough? $(".modal-draw .draw-enough").show():$(".modal-draw .draw-enough").hide();
+      obj.bg?$(".modal-draw .draw-bg").show().attr('src',obj.bg):$(".modal-draw .draw-bg").hide();
+      obj.less?$(".modal-draw .integral-less").show():$(".modal-draw .integral-less").hide();
+			obj.prize?$(".modal-draw .draw-prize").show().html(obj.prize):$(".modal-draw .draw-prize").hide();
+			if(obj.integral){
+        $(".modal-draw .draw-integral a.text-1").html(obj.integral.text);
+        obj.integral.img?$(".modal-draw .draw-integral img").show().attr('src',obj.integral.img):$(".modal-draw .draw-integral img").hide();
+        $(".modal-draw .draw-integral").show();
+      }else{
+        $(".modal-draw .draw-integral").hide();
+      }
+      if(obj.rules){
+        $(".modal-draw .draw-rules").show();
+        $(".draw-rules .lottery-integral").html(obj.rules.lotteryIntegral);
+        $(".draw-rules .lottery-count").html(obj.rules.lotteryCount);
+        $(".draw-rules .lottery-count-add").html(obj.rules.lotteryCountAdd);
+			}else{
+        $(".modal-draw .draw-rules").hide();
+			}
+      // 底部按钮
+			if(obj.btnBottom){
+        $(".btn-bottom").show().html(obj.btnBottom.text||obj.btnBottom);
+        $(".btn-bottom").off("click").on("click",function () {
+          obj.btnBottom.fun&&obj.btnBottom.fun.apply(this);
+        });
+			}else{
+        $(".btn-bottom").hide();
+			}
+
+			// 添加点击事件
+			if(funs!==''&&funs!== undefined){
+				for(let k in funs){
+					$('.modal-draw .'+k).off("click").on("click",function () {
+						funs[k].apply(this);
+					})
+				}
+			}
+
+      $(".modal-draw").show();
+    }
+    //抽到商品
+		function drawSomething(something,fun) {
+      modalData({
+        check:true,//查看记录和分享给朋友
+        bg:'img/draw-something.png',//modal背景图片
+        prize:'太棒啦，您中了'+something,//抽到奖品内容
+        btnBottom:{text:'再抽一次',fun:fun},//底部按钮文字
+      });
+    }
+    //抽到积分
+    function drawItr(num,fun) {
+      modalData({
+        integral:{//抽到积分，前往积分商城,笑脸图片
+          text:"前往“积分商城”兑换奖品吧>>",
+          img:'img/smile-img.png'
+        },
+        bg:'img/draw-something.png',//modal背景图片
+        prize:'太棒啦，您中了'+num+'积分',//抽到奖品内容
+        btnBottom:{text:'再抽一次',fun:fun},//底部按钮文字
+      });
+    }
+    //达到抽奖次数
+    function drawEnough(fun) {
+      modalData({
+        integral:{//抽到积分，前往积分商城,笑脸图片
+          text:"每人每天抽奖10次",
+        },
+        enough:true,//达到抽奖次数
+        bg:'img/draw-nothing.png',//modal背景图片
+        prize:'您今天抽奖次数上限',//抽到奖品内容
+        btnBottom:{text:'去首页逛逛', fun:fun},//底部按钮文字
+      });
+    }
+    //积分不足
+    function drawLess(arrObj) {
+      modalData({
+        less:true,//积分不足
+        bg:'img/draw-nothing.png',//modal背景图片
+        prize:'您积分不足,无法抽奖',//抽到奖品内容
+      },arrObj);
+    }
+    //再接再厉
+    function drawNothing(fun) {
+      modalData(
+        {
+					integral:{//抽到积分，前往积分商城,笑脸图片
+						text:'只要努力，胜利就在眼前！',
+						img:'img/cry-img.png'
+					},
+					bg:'img/draw-nothing.png',//modal背景图片
+					prize:'没中奖,请再接再厉',//抽到奖品内容
+					btnBottom:{text:'再抽一次',fun:fun}//底部按钮文字
+				}
+			);
+    }
+		function drawRules(options) {
+		  let rulesObj = {};
+		  if(options){
+        rulesObj.lotteryIntegral = options.lotteryIntegral;
+        rulesObj.lotteryCount = options.lotteryCount;
+        rulesObj.lotteryCountAdd = options.lotteryCountAdd;
+			}
+      modalData(
+        {
+					rules:rulesObj,
+          bg:'img/draw-rule-content.png',//modal背景图片
+          btnBottom:{
+					  text:'我知道了',
+						fun:function () {
+							$(this).parents(".modal-draw").hide();
+            }
+					}//底部按钮文字
+        }
+      );
+
+    }
+		$(".btn").on("click",function () {
+			if($(this).hasClass('draw-dbf')){
+			  drawSomething('阿胶蛋白粉一瓶，价值198元哦！',function (e) {
+					console.log(this);
+					console.log(e);
+        });
+			}else if($(this).hasClass('draw-ip7')){
+        drawSomething('苹果7一部');
+      }else if($(this).hasClass('draw-yhq')){
+        drawSomething('20元现金券');
+      }else if($(this).hasClass('draw-itr25')){
+				drawItr(25,function () {console.log(25);});
+      }else if($(this).hasClass('draw-itr100')){
+        drawItr(100);
+      }else if($(this).hasClass('draw-itr1000')){
+        drawItr(1000);
+      }else if($(this).hasClass('draw-notimes')){
+        drawEnough(function () {
+          window.location.href = "http://m.360hwj.com";
+        });
+      }else if($(this).hasClass('draw-empty')){
+			  drawLess(
+					{
+					  "btn-buy":function () {alert("前往购物页面");console.log(this)},
+					  "btn-recommend":function () {alert("前往推荐会员页面");console.log(this)},
+					  "btn-signIn":function () {alert("前往签到页面");console.log(this)},
+					}
+				);
+      }else if($(this).hasClass('draw-thanks')){
+			  drawNothing(function () {
+          console.log(this);
+          $(this).parents(".modal-draw").hide();
+        });
+      }else if($(this).hasClass('draw-rules')){
+				drawRules({
+					lotteryIntegral:100,
+					lotteryCount: 100,
+					lotteryCountAdd: 10
+				});
+			}
+    });
+
+		$('.modal-mask').on("click",function () {
+			$(this).parents(".modal-draw").hide();
+    });
+		$(".icon-close").on("click",function () {
+      $(this).parents(".modal-draw").hide();
+    })
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

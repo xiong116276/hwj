@@ -1,0 +1,233 @@
+@charset "utf-8";
+@import "../base/_minxins.scss";
+body{
+  max-width: 750px;
+}
+.sign-top{
+  width: 100%;
+  position: relative;
+}
+.btn-active-rule{
+  @include position-template(absolute,0.24rem,0.42rem,auto,auto);
+  color: #fff;
+  padding-right: 0.28rem;
+  font-size: 0.25rem;
+  @include bg-img("../images/sign-in/icon-question-mark@2x.png",no-repeat,right 0.07rem,0.22rem);
+}
+.top-bar{
+  width: 100%;
+  height: 1.6rem;
+  background-color: #fff;
+  font-family: "苹方 中等";
+  font-size: 0.3rem;
+  padding-top: 0.52rem;
+  position: relative;
+  .num{
+    color: #ff2a1d;
+  }
+  .text{
+    color : #222;
+  }
+  div{
+    text-align: center;
+  }
+}
+.my-integral{
+  width: 35%;
+}
+.purse-img{
+  width: 43%;
+  @include position-template(absolute,auto,auto,0.1rem,27%);
+  bottom: 0.1rem;
+  .purse-img-text{
+    @include position-template(absolute,auto,37%,0.55rem,auto);
+    font-family: "苹方 粗体";
+    font-size: 0.34rem;
+    color:#fff;
+    width: 30%;
+  }
+  .purse-img-text-signed{
+    color: #b71306;
+  }
+}
+.my-sign{
+  width: 45%;
+}
+
+//积分商城
+.integral-shop{
+  margin-top: 0.32rem;
+  width: 100%;
+  height: 4.1rem;
+  .fl{
+    width: 3.19rem;
+    border-right: 0.02rem solid rgb(236,236,236);
+  }
+  .fr{
+    width: 4.31rem;
+  }
+}
+.fr-top{
+  border-bottom: 0.02rem solid rgb(236,236,236);
+}
+//更多活动
+.more-activity {
+  width: 100%;
+  height: 4.5rem;
+  margin-bottom: 0.34rem;
+  .top-text {
+    font-family: "苹方 粗体";
+    width: 100%;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+    font-size: 0.36rem;
+    color: #222;
+  }
+}
+.activity-content{
+  width: 100%;
+  height: 3.3rem;
+
+  .fl{
+    width: 3.8rem;
+    border-right: 0.02rem solid rgb(236,236,236);
+  }
+  .fr{
+    width: 3.7rem;
+  }
+}
+//弹屏
+%bomb-screen{
+  @include position-template(fixed,0,auto,0,auto);
+  background-color: rgba(0,0,0,0.8);
+  width: 100%;
+}
+//活动规则弹屏
+.sign-activity-rule{
+  @extend %bomb-screen;
+}
+.bomb-screen-img{
+  width: 80%;
+}
+.bomb-screen-text{
+  @include position-template(absolute,3.25rem,auto,auto,auto);
+  width: 100%;
+  padding-left: 0.28rem;
+  .text-item{
+    font-family: "苹方 中等";
+    font-size: 0.24rem;
+    color: #040404;
+    margin-bottom: 0.05rem;
+    padding:0 0.1rem 0 0.3rem;
+    position: relative;
+    span{
+      @include position-template(absolute,0.035rem,auto,auto,0);
+      @include round(0.24rem,#fff,#000);
+      @include border-radius(50%);
+    }
+  }
+}
+.btn-bomb-screen{
+  width: 80%;
+  bottom: 0.05rem;
+}
+.btn-text{
+  font-family: "苹方 粗体";
+  font-size: 0.36rem;
+  color: #fe854e;
+  bottom: 0.4rem;
+  width: 100%;
+  text-align: center;
+}
+.icon-close{
+  @include position-template(absolute,-0.8rem,0,auto,auto);
+  @include round(0.5rem,#fff,transparent);
+  @include bg-img("../images/sign-in/close-button@2x.png",no-repeat,center,contain);
+}
+
+//签到弹屏
+.signed-screen{
+  @extend %bomb-screen;
+}
+.signed-screen-content{
+  width: 80%;
+}
+.signed-days{
+  top: 1.8rem;
+  width: 37%;
+}
+.signed-days-text{
+  @include position-template(absolute,auto,0,0.45rem,auto);
+  width: 100%;
+  text-align: center;
+  font-size: 0.24rem;
+  color: #fff;
+  span{
+    color: #facb47;
+  }
+}
+.signed-prompt{
+  font-family: "苹方 中等";
+  font-size: 0.25rem;
+  color: #999;
+  top: 3.8rem;
+  width: 100%;
+  text-align: center;
+}
+.signed-list{
+  top: 4.3rem;
+  width: 90%;
+
+  .signed-list-item{
+    float: left;
+    width: 0.68rem;
+    height: 0.8rem;
+    font-family: "苹方 粗体";
+    font-size: 0.25rem;
+    color: #333;
+    text-align: center;
+    &:not(:last-child){
+      margin-right: 0.1rem;
+    }
+  }
+  .default{
+    @include bg-img("../images/sign-in/Gold@2x.png",no-repeat,center 0.4rem,0.4rem);
+    &:last-child{
+      @include bg-img("../images/sign-in/gift@2x.png",no-repeat,center 0.43rem,0.3rem);
+    }
+  }
+  .active{
+    background-color: rgb(246,198,47);
+    @include border-radius(0.1rem);
+    @include bg-img("../images/sign-in/icon-signed@2x.png",no-repeat,center 0.45rem,0.3rem);
+  }
+}
+
+.signed-screen-bottom{
+  width: 100%;
+  bottom: 0.15rem;
+}
+.signed-screen-symbol{
+  width: 30%;
+  margin: 0 auto -0.4rem;
+}
+.signed-screen-btn{
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

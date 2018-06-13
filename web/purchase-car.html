@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>购物车</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/purchase-car.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-text">
+    <p class="header-text-container">
+      <a href="user-cart" class="header-text-normal header-text-active">购物车</a>
+      <a href="user-demand" class="header-text-normal">需求单</a>
+    </p>
+  </div>
+</header>
+<div class="content">
+  <div class="user-cart">
+    <!--购物车内容-->
+    <div class="header-text-edit hide user-cart-edit">编辑</div>
+    <!--当购物车内有商品时-->
+    <div class="cart-container cart-goods-container">
+      <div class="free-postage">已享受免邮费</div>
+      <ul class="cart-elms">
+        <!--&lt;!&ndash;一家店铺的所有商品&ndash;&gt;-->
+        <!--<li class="cart-elm cart-goods">-->
+          <!--&lt;!&ndash;店铺名字&ndash;&gt;-->
+          <!--<div class="cart-elm-top">-->
+            <!--<input type="checkbox" title="selection" class="checkbox-select-false vertical_center">-->
+            <!--<i class="icon-select-false vertical_center"></i>-->
+            <!--<div class="shop-name fl">好万家自营</div>-->
+            <!--<i class="icon-right vertical_center"></i>-->
+          <!--</div>-->
+          <!--<div class="cart-elm-content">-->
+            <!--<ul class="cart-products">-->
+              <!--&lt;!&ndash;&lt;!&ndash;一家店铺的一个商品&ndash;&gt;&ndash;&gt;-->
+              <!--&lt;!&ndash;<li class="cart-product">&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="cart-product-content">&ndash;&gt;-->
+                  <!--&lt;!&ndash;<input type="checkbox" title="selection" class="checkbox-select-false vertical_center">&ndash;&gt;-->
+                  <!--&lt;!&ndash;<i class="icon-select-false vertical_center"></i>&ndash;&gt;-->
+                  <!--&lt;!&ndash;<div class="cart-product-detail">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="cart-product-images vertical_center">&ndash;&gt;-->
+                      <!--&lt;!&ndash;<images src="images/product.png" alt="">&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="cart-product-text">&ndash;&gt;-->
+                      <!--&lt;!&ndash;<div><p class="cart-product-name">玛咖片&nbsp;(1.3g*30片)</p> <span class="fr">×5</span></div>&ndash;&gt;-->
+                      <!--&lt;!&ndash;<p class="cart-product-guige cart-guige">规格: 盒</p>&ndash;&gt;-->
+                      <!--&lt;!&ndash;<p class="cart-product-price">￥59.5</p>&ndash;&gt;-->
+                      <!--&lt;!&ndash;<div class="cart-product-edit hide cart-edit">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span class="cart_number_icon">-</span>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<input type="number" value="5" class="cart_buy_number">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span class="cart_number_icon">+</span>&ndash;&gt;-->
+                      <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+              <!--&lt;!&ndash;</li>&ndash;&gt;-->
+            <!--</ul>-->
+          <!--</div>-->
+        <!--</li>-->
+        <!--&lt;!&ndash;一家店铺的所有商品&ndash;&gt;-->
+        <!--<li class="cart-elm cart-goods">-->
+          <!--&lt;!&ndash;店铺名字&ndash;&gt;-->
+          <!--<div class="cart-elm-top">-->
+            <!--<input type="checkbox" title="selection" class="checkbox-select-false vertical_center">-->
+            <!--<i class="icon-select-false vertical_center"></i>-->
+            <!--<div class="shop-name fl">康美大药房</div>-->
+            <!--<i class="icon-right vertical_center"></i>-->
+          <!--</div>-->
+          <!--<div class="cart-elm-content">-->
+            <!--<ul class="cart-products">-->
+              <!--&lt;!&ndash;&lt;!&ndash;一家店铺的一个商品&ndash;&gt;&ndash;&gt;-->
+              <!--&lt;!&ndash;<li class="cart-product">&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="cart-product-content">&ndash;&gt;-->
+                  <!--&lt;!&ndash;<input type="checkbox" title="selection" class="checkbox-select-false vertical_center">&ndash;&gt;-->
+                  <!--&lt;!&ndash;<i class="icon-select-false vertical_center"></i>&ndash;&gt;-->
+                  <!--&lt;!&ndash;<div class="cart-product-detail">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="cart-product-images vertical_center">&ndash;&gt;-->
+                      <!--&lt;!&ndash;<images src="images/product.png" alt="">&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="cart-product-text">&ndash;&gt;-->
+                      <!--&lt;!&ndash;<div><p class="cart-product-name">中智草晶华淫羊藿破壁草本</p> <span class="fr">×5</span></div>&ndash;&gt;-->
+                      <!--&lt;!&ndash;<p class="cart-product-guige cart-guige">规格: 盒</p>&ndash;&gt;-->
+                      <!--&lt;!&ndash;<p class="cart-product-price">￥59.5</p>&ndash;&gt;-->
+                      <!--&lt;!&ndash;<div class="cart-product-edit hide cart-edit">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span class="cart_number_icon">-</span>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<input type="number" value="5" class="cart_buy_number">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span class="cart_number_icon">+</span>&ndash;&gt;-->
+                      <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+              <!--&lt;!&ndash;</li>&ndash;&gt;-->
+
+              <!--&lt;!&ndash;&lt;!&ndash;一家店铺的一个商品&ndash;&gt;&ndash;&gt;-->
+              <!--&lt;!&ndash;<li class="cart-product">&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="cart-product-content">&ndash;&gt;-->
+                  <!--&lt;!&ndash;<input type="checkbox" title="selection" class="checkbox-select-false vertical_center">&ndash;&gt;-->
+                  <!--&lt;!&ndash;<i class="icon-select-false vertical_center"></i>&ndash;&gt;-->
+                  <!--&lt;!&ndash;<div class="cart-product-detail">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="cart-product-images vertical_center">&ndash;&gt;-->
+                      <!--&lt;!&ndash;<images src="images/product.png" alt="">&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="cart-product-text">&ndash;&gt;-->
+                      <!--&lt;!&ndash;<div><p class="cart-product-name">肾宝片(汇仁)</p> <span class="fr">×5</span></div>&ndash;&gt;-->
+                      <!--&lt;!&ndash;<p class="cart-product-guige cart-guige">规格: 盒</p>&ndash;&gt;-->
+                      <!--&lt;!&ndash;<p class="cart-product-price">￥59.5</p>&ndash;&gt;-->
+                      <!--&lt;!&ndash;<div class="cart-product-edit hide cart-edit">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span class="cart_number_icon">-</span>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<input type="number" value="5" class="cart_buy_number">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span class="cart_number_icon">+</span>&ndash;&gt;-->
+                      <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+              <!--&lt;!&ndash;</li>&ndash;&gt;-->
+            <!--</ul>-->
+          <!--</div>-->
+        <!--</li>-->
+      </ul>
+      <!--已选/结算-->
+      <div class="fixed-ele">
+        <div class="select-menu">
+          <div class="select-menu-all fl">
+            <input type="checkbox" title="selection" class="checkbox-select-false vertical_center">
+            <i class="icon-select-false vertical_center"></i>
+            <p class="cart-selected">已选<span class="select-num">(0)</span></p>
+          </div>
+          <div class="submit-btn fr submit-btn-cart">结算</div>
+          <div class="select-menu-price fr">￥0.00</div>
+        </div>
+      </div>
+    </div>
+    <!--当购物车内为空时-->
+    <div class="cart-empty cart-goods-empty">
+      <div class="purchase-box">
+        <div class="purchase-img"></div>
+        <div class="purchase-btn-look" onclick="window.location.href = 'index-old.html'">去商场看看</div>
+      </div>
+      <!--热品推荐-->
+      <div class="product_doctorTuijian">
+        <div class="product_doctorTuijian_top">
+          <i class="icon-tuijian vertical_center"></i>
+          <p class="product_doctorTuijian_top_text">热品推荐</p>
+        </div>
+        <div class="product_doctorTuijian_content">
+          <ul class="product_doctorTuijian_elms after">
+            <li class="product_doctorTuijian_elm">
+              <div class="horizontal_center product_doctorTuijian_img">
+                <img src="images/detail/detail_tuijian_01.png" alt="">
+              </div>
+              <div class="horizontal_center product_doctorTuijian_text">
+                <p class="product-description">中智草晶华淫羊藿破壁草本中智草晶华淫羊藿破壁草本中智草晶华淫羊藿破壁草本</p>
+                <p class="product_doctorTuijian_price">￥68</p>
+              </div>
+            </li>
+            <li class="product_doctorTuijian_elm">
+              <div class="horizontal_center product_doctorTuijian_img">
+                <img src="images/detail/detail_tuijian_02.png" alt="">
+              </div>
+              <div class="horizontal_center product_doctorTuijian_text">
+                <p class="product-description">中智草晶华淫羊藿破壁草本中智草晶华淫羊藿破壁草本中智草晶华淫羊藿破壁草本</p>
+                <p class="product_doctorTuijian_price">￥68</p>
+              </div>
+            </li>
+            <li class="product_doctorTuijian_elm">
+              <div class="horizontal_center product_doctorTuijian_img">
+                <img src="images/detail/detail_tuijian_03.png" alt="">
+              </div>
+              <div class="horizontal_center product_doctorTuijian_text">
+                <p class="product-description">中智草晶华淫羊藿破壁草本中智草晶华淫羊藿破壁草本中智草晶华淫羊藿破壁草本</p>
+                <p class="product_doctorTuijian_price">￥68</p>
+              </div>
+            </li>
+            <li class="product_doctorTuijian_elm">
+              <div class="horizontal_center product_doctorTuijian_img">
+                <img src="images/detail/detail_tuijian_04.png" alt="">
+              </div>
+              <div class="horizontal_center product_doctorTuijian_text">
+                <p class="product-description">中智草晶华淫羊藿破壁草本中智草晶华淫羊藿破壁草本中智草晶华淫羊藿破壁草本</p>
+                <p class="product_doctorTuijian_price">￥68</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="user-demand hide">
+    <!--需求单内容-->
+    <div class="header-text-edit hide user-demand-edit">编辑</div>
+    <!--当需求单内有商品时-->
+    <div class="cart-container demand-cart-container">
+      <div class="free-postage">已享受免邮费</div>
+      <ul class="cart-elms">
+        <!--&lt;!&ndash;一家店铺的所有商品&ndash;&gt;-->
+        <!--<li class="cart-elm demand-goods">-->
+        <!--&lt;!&ndash;店铺名字&ndash;&gt;-->
+        <!--<div class="cart-elm-top">-->
+        <!--<input type="checkbox" title="selection" class="checkbox-select-false vertical_center">-->
+        <!--<i class="icon-select-false vertical_center"></i>-->
+        <!--<div class="shop-name fl">好万家自营</div>-->
+        <!--<i class="icon-right vertical_center"></i>-->
+        <!--</div>-->
+        <!--<div class="cart-elm-content">-->
+        <!--<ul class="cart-products">-->
+        <!--&lt;!&ndash;一家店铺的一个商品&ndash;&gt;-->
+        <!--<li class="cart-product">-->
+        <!--<div class="cart-product-content">-->
+        <!--<input type="checkbox" title="selection" class="checkbox-select-false vertical_center">-->
+        <!--<i class="icon-select-false vertical_center"></i>-->
+        <!--<div class="cart-product-detail">-->
+        <!--<div class="cart-product-images vertical_center">-->
+        <!--<images src="images/product.png" alt="">-->
+        <!--</div>-->
+        <!--<div class="cart-product-text">-->
+        <!--<div><p class="cart-product-name">玛咖片&nbsp;(1.3g*30片)</p> <span class="fr">×5</span> </div>-->
+        <!--<p class="cart-product-guige demand-guige">规格: 盒</p>-->
+        <!--<p class="cart-product-price">￥59.5</p>-->
+        <!--<div class="cart-product-edit hide demand-edit">-->
+        <!--<span class="cart_number_icon">-</span>-->
+        <!--<input type="number" value="5" class="cart_buy_number">-->
+        <!--<span class="cart_number_icon">+</span>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--</li>-->
+      </ul>
+      <!--已选/结算-->
+      <div class="fixed-ele">
+        <div class="select-menu">
+          <div class="select-menu-all fl">
+            <input type="checkbox" title="selection" class="checkbox-select-false vertical_center">
+            <i class="icon-select-false vertical_center"></i>
+            <p class="cart-selected">已选<span class="select-num">(0)</span></p>
+          </div>
+          <div class="submit-btn fr submit-btn-demand">提交需求</div>
+          <div class="select-menu-price fr">￥0.00</div>
+        </div>
+      </div>
+    </div>
+    <!--当需求单内为空时-->
+    <div class="cart-empty demand-cart-empty">
+      <div class="purchase-box">
+        <div class="purchase-img"></div>
+        <div class="purchase-btn-look" onclick="window.location.href = 'index-old.html'">去商场看看</div>
+      </div>
+      <!--热品推荐-->
+      <div class="product_doctorTuijian">
+        <div class="product_doctorTuijian_top">
+          <i class="icon-tuijian vertical_center"></i>
+          <p class="product_doctorTuijian_top_text">热品推荐</p>
+        </div>
+        <div class="product_doctorTuijian_content">
+          <ul class="product_doctorTuijian_elms after">
+            <li class="product_doctorTuijian_elm">
+              <div class="horizontal_center product_doctorTuijian_img">
+                <img src="images/detail/detail_tuijian_01.png" alt="">
+              </div>
+              <div class="horizontal_center product_doctorTuijian_text">
+                <p class="product-description">中智草晶华淫羊藿破壁草本中智草晶华淫羊藿破壁草本中智草晶华淫羊藿破壁草本</p>
+                <p class="product_doctorTuijian_price">￥68</p>
+              </div>
+            </li>
+            <li class="product_doctorTuijian_elm">
+              <div class="horizontal_center product_doctorTuijian_img">
+                <img src="images/detail/detail_tuijian_02.png" alt="">
+              </div>
+              <div class="horizontal_center product_doctorTuijian_text">
+                <p class="product-description">中智草晶华淫羊藿破壁草本中智草晶华淫羊藿破壁草本中智草晶华淫羊藿破壁草本</p>
+                <p class="product_doctorTuijian_price">￥68</p>
+              </div>
+            </li>
+            <li class="product_doctorTuijian_elm">
+              <div class="horizontal_center product_doctorTuijian_img">
+                <img src="images/detail/detail_tuijian_03.png" alt="">
+              </div>
+              <div class="horizontal_center product_doctorTuijian_text">
+                <p class="product-description">中智草晶华淫羊藿破壁草本中智草晶华淫羊藿破壁草本中智草晶华淫羊藿破壁草本</p>
+                <p class="product_doctorTuijian_price">￥68</p>
+              </div>
+            </li>
+            <li class="product_doctorTuijian_elm">
+              <div class="horizontal_center product_doctorTuijian_img">
+                <img src="images/detail/detail_tuijian_04.png" alt="">
+              </div>
+              <div class="horizontal_center product_doctorTuijian_text">
+                <p class="product-description">中智草晶华淫羊藿破壁草本中智草晶华淫羊藿破壁草本中智草晶华淫羊藿破壁草本</p>
+                <p class="product_doctorTuijian_price">￥68</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="footer">
+  <a href="index-old.html" class="footer-menu-label ">
+    <i class="horizontal_center iconfont">
+      <img src="images/tab01.png" alt="01">
+    </i>
+    <p class="horizontal_center icon_text">首页</p>
+  </a>
+
+  <a href="fenleiPage.html" class="footer-menu-label">
+    <i class="horizontal_center iconfont">
+      <img src="images/tab02.png" alt="02">
+    </i>
+    <p class="horizontal_center icon_text">分类</p>
+  </a>
+
+  <a href="purchase-car.html" class="footer-menu-label footer-menu-label-active">
+    <i class="horizontal_center iconfont">
+      <img src="images/tab03-hl.png" alt="03">
+    </i>
+    <p class="horizontal_center icon_text">购物车</p>
+  </a>
+
+  <a href="personalPage.html" class="footer-menu-label">
+    <i class="horizontal_center iconfont">
+      <img src="images/tab04.png" alt="04">
+    </i>
+    <p class="horizontal_center icon_text">个人</p>
+  </a>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+  //    判断购物车内是否有商品
+  $(function () {
+//    当购物车和需求单内都没有商品时
+    if ($(".cart-product").length == 0) {
+      $(".cart-empty").removeClass("hide");
+      $(".cart-container").addClass("hide");
+      $(".header-text-edit").addClass("hide");
+    } else {
+      $(".cart-empty").addClass("hide");
+      $(".cart-container").removeClass("hide");
+      $(".header-text-edit").removeClass("hide");
+    }
+//    当购物车内有商品，需求单内没有商品时
+    if ($(".demand-goods").length == 0) {
+      $(".demand-cart-empty").removeClass("hide");
+      $(".demand-cart-container").addClass("hide");
+      $(".user-demand-edit").addClass("hide");
+    } else {
+      $(".demand-cart-empty").addClass("hide");
+      $(".demand-cart-container").removeClass("hide");
+      $(".user-demand-edit").removeClass("hide");
+    }
+//    当购物车内没有商品，需求单内有商品时
+    if ($(".cart-goods").length == 0) {
+      $(".cart-goods-empty").removeClass("hide");
+      $(".cart-goods-container").addClass("hide");
+      $(".user-cart-edit").addClass("hide");
+    } else {
+      $(".cart-goods-empty").addClass("hide");
+      $(".cart-goods-container").removeClass("hide");
+      $(".user-cart-edit").removeClass("hide");
+    }
+  });
+  //点击购物车编辑出现商品数量操作按钮
+  $(".user-cart-edit").on("click", function (e) {
+    e.preventDefault();
+    if ($(this).html() == '编辑') {
+      $(".cart-edit").removeClass("hide");
+      $(".cart-guige").addClass("hide");
+      $(this).html("完成");
+      $(".submit-btn-cart").html("删除");
+    } else if ($(this).html() == '完成') {
+      $(".cart-edit").addClass("hide");
+      $(".cart-guige").removeClass("hide");
+      $(this).html("编辑");
+      $(".submit-btn-cart").html("结算");
+    }
+  });
+  //点击需求单编辑出现商品数量操作按钮
+  $(".user-demand-edit").on("click", function (e) {
+    e.preventDefault();
+    if ($(this).html() == '编辑') {
+      $(".demand-edit").removeClass("hide");
+      $(".demand-guige").addClass("hide");
+      $(this).html("完成");
+      $(".submit-btn-demand").html("删除");
+    } else if ($(this).html() == '完成') {
+      $(".demand-edit").addClass("hide");
+      $(".demand-guige").removeClass("hide");
+      $(this).html("编辑");
+      $(".submit-btn-demand").html("提交需求");
+    }
+  });
+  //    点击切换购物车和需求单tab页
+  $(".header-text-normal").on("click", function (e) {
+    e.preventDefault();
+//    改变选中字体颜色大小
+    $(this).addClass("header-text-active").siblings("[class~='header-text-active']").removeClass("header-text-active");
+//    改变页面
+    var className = $(this).attr("href");
+    $("." + className).removeClass("hide").siblings().addClass("hide");
+  });
+  //点击切换checkbox状态
+  $(function () {
+    $(".checkbox-select-false").on('click', function () {
+      $(this).siblings("i[class~='icon-select-false']").toggleClass('icon-select-true')
+    });
+  });
+  //删除
+  $(function () {
+    var startX = 0;
+    var moved = 0;
+
+    $(".cart-product").on("touchstart", function () {
+      startX = event.changedTouches[0].clientX;
+    });
+
+    $(".cart-product").on("touchmove", function () {
+      var moveX = event.changedTouches[0].clientX;
+      moved = moveX - startX;
+
+      if (moved < -100) {
+        $(this).addClass("moveleft");
+        $(this).css("left", "-5rem");
+        if ($(this).children(".product-delete").length == 0) {
+          var btn = document.createElement("div");
+          $(btn).html("删除");
+          $(btn).addClass("product-delete");
+          $(btn).on("click", function (e) {
+            $(this).parent().remove();
+            if ($(".cart-product").length == 0) {
+              $(".cart-empty").removeClass("hide");
+              $(".cart-container").addClass("hide");
+              $(".header-text-edit").addClass("hide");
+            } else {
+              $(".cart-empty").addClass("hide");
+              $(".cart-container").removeClass("hide");
+              $(".header-text-edit").removeClass("hide");
+            }
+          })
+          $(this).append(btn);
+        }
+      }
+      if (moved > 100) {
+        $(this).css("left", "0");
+      }
+    });
+  })
+
+
+</script>
+</body>
+</html>

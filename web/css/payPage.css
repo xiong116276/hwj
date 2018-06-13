@@ -1,0 +1,242 @@
+.header {
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    background-color: #fff;
+}
+
+.header-top {
+    text-align: center;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.header-back {
+    position: absolute;
+    top: 0;
+    left: 6%;
+    width: 0.8rem;
+    height: 3.2rem;
+}
+
+.content {
+    padding: 1rem 0;
+    width: 100%;
+    max-width: 640px;
+}
+
+
+.pay-way{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #fff;
+}
+
+.icon{
+    position: relative;
+    width: 20%;
+    height: 4rem;
+}
+
+.icon-WeChat{
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: url("../images/pay/icon-WeChat-pay.png") center no-repeat;
+    -webkit-background-size:contain;
+    background-size:contain;
+}
+
+.icon-alipay{
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: url("../images/pay/icon-alipay.png") center no-repeat;
+    -webkit-background-size:contain;
+    background-size:contain;
+}
+
+.icon-UnionPay{
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: url("../images/pay/icon-UnionPay.png") center no-repeat;
+    -webkit-background-size:contain;
+    background-size:contain;
+}
+
+.icon-nomal-pay{
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: url("../images/pay/icon-nomal-pay.png") center no-repeat;
+    -webkit-background-size:contain;
+    background-size:contain;
+}
+
+.pay-way-name{
+    width: 55%;
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 1.2rem;
+}
+
+.pay-num{
+    width: 25%;
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 1.2rem;
+}
+
+
+
+
+/*支付模态框*/
+/*显示*/
+@keyframes mymove
+{
+    from {bottom:-100%;}
+    to {bottom:0;}
+}
+
+@-webkit-keyframes mymove /*Safari and Chrome*/
+{
+    from {bottom:-100%;}
+    to {bottom:0;}
+}
+/*退出*/
+@keyframes mymoveOut
+{
+    from {top:0;}
+    to {top:-100%}
+}
+
+@-webkit-keyframes mymoveOut /*Safari and Chrome*/
+{
+    from {top:0;}
+    to {top:-100%}
+}
+
+.modal_page{
+    position: fixed;
+    height:100%;
+    width:100%;
+    max-width: 640px;
+    background-color: rgba(101,97,96,0.9);
+}
+.animation{
+    animation: mymove 1s forwards;
+    -webkit-animation:mymove 1s forwards; /*Safari and Chrome*/
+}
+.animation2{
+    animation: mymoveOut 1s forwards;
+    -webkit-animation:mymoveOut 1s forwards; /*Safari and Chrome*/
+}
+.pay_mould{
+    position: absolute;
+    width:100%;
+    bottom:0;
+    height:15rem;
+    background-color: #fff;
+}
+.pay_mould_top{
+    width:100%;
+    height:5rem;
+    line-height: 5rem;
+    position: relative;
+}
+.pay_top_text{
+    color:#9B9B9B;
+    font-size: 1rem;
+    margin: 0 1rem;
+}
+p.center_elm{
+    width:60%;
+    height:5rem;
+    line-height: 5rem;
+    text-align: center;
+}
+.pay_lock{
+    display:inline-block;
+    width:1.2rem;
+    height:1.2rem;
+}
+.pay_input_group{
+    width:100%;
+    height:10rem;
+    position: relative;
+}
+.pay_input_box{
+    float: left;
+    width:16.66%;
+    text-align: center;
+    height:8rem;
+    line-height: 8rem;
+}
+.pay_input{
+    width:3rem;
+    height:3rem;
+    border:1px solid #F27965;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.pay-btn{
+    color:#ed4529;
+}
+
+/*test*/
+.pay_set_form{
+    position: relative;
+    height: 5rem;
+}
+.input{
+    height:100%;
+    opacity: 0;
+    z-index: 100;
+    margin-left: -100%;
+    width: 200%;
+}
+.input-box{
+    width: 100%;
+    position: absolute;
+}
+.input-box i{
+    float: left;
+    width:13%;
+    height:3rem;
+    border:1px solid #F27965;
+    margin: 0 1.5%;
+    position: relative;
+}
+.input-active{
+    background: url("https://t.alipayobjects.com/images/rmsweb/T1nYJhXalXXXXXXXXX.gif") no-repeat center;
+    -webkit-background-size: contain;
+    background-size: contain;
+}
+
+.input-box i b{
+    display: none;
+    width:10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

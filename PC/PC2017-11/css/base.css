@@ -1,0 +1,388 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0;}
+fieldest,img {border:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+ol,ul {list-style:none;}
+capation,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:''}
+abbr,acronym{border:0;}
+a {
+	color: #83868a;
+}
+a:hover {
+	cursor: pointer;
+}
+.clearfix { *zoom: 1; } 
+.clearfix:before, 
+.clearfix:after { display: table;  line-height: 0; content: ""; } 
+.clearfix:after { clear: both; } 
+
+body {
+	font-family: "Microsoft yahei";
+	color: #83868a;
+	background-color: #f5f5f5;
+	font-size: 12px;
+}
+a {
+	text-decoration: none;
+	color: #83868a;
+}
+i, em {
+	font-style: normal;
+}
+
+/*页面中所有的背景图标 第一张雪碧图  sprite-02-new */ 
+.speed-i-1 { 
+	background-image: url(../images/sprite-02-new.png);
+	background-position:0 -420px;
+}
+.speed-i-2 { 
+	background-image: url(../images/sprite-02-new.png);
+	background-position:-60px -420px;
+}
+.speed-i-3 { 
+	background-image: url(../images/sprite-02-new.png);
+	background-position:-120px -420px;
+}
+.speed-i-4 { 
+	background-image: url(../images/sprite-02-new.png);
+	background-position:-180px -420px;
+}
+
+.signal {
+	background-image: url(../images/sprite-02-new.png);
+	background-position:-241px -420px;
+}
+
+.recommend-news.active {
+	background-image: url(../images/sprite-02-new.png);
+	background-position:0 0;
+
+}
+.recommend-hot.active {
+	background-image: url(../images/sprite-02-new.png);
+	background-position:-160px 0;
+}
+.recommend-pre.active {
+	background-image: url(../images/sprite-02-new.png);
+	background-position:0 -40px;
+}
+.recommend-like.active {
+	background-image: url(../images/sprite-02-new.png);
+	background-position:-160px -40px;
+}
+
+/*页面中所有的背景图标 第一张雪碧图  sprite-01-new */ 
+.cart-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position:-30px 0;
+}
+.cart-icon_white {
+	background-image: url(../images/sprite-01-new.png);
+	background-position:-60px 0;
+}
+.news-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position:0 -189px;
+}
+.hot-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position:-28px -189px;
+}
+.pre-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position:-59px -189px;
+}
+.like-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position:-89px -189px;
+}
+
+.recommend-list.active .news-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position:0 -219px;
+}
+.recommend-list.active .hot-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position:-28px -219px;
+}
+.recommend-list.active .pre-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position:-59px -219px;
+}
+.recommend-list.active .like-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position:-89px -219px;
+}
+
+.zxyp-icon {
+	background-image: url(../images/sprite-02-new.png);
+	background-position:0 -100px;
+}
+.ylqx-icon {
+	background-image: url(../images/sprite-02-new.png);
+	background-position: -240px -100px;
+}
+.zyyp-icon {
+	background-image: url(../images/sprite-02-new.png);
+	background-position: 0px -180px;
+}
+.bjsp-icon {
+	background-image: url(../images/sprite-02-new.png);
+	background-position: -240px -180px;
+}
+.jjyp-icon {
+	background-image: url(../images/sprite-02-new.png);
+	background-position: 0 -261px;
+} 
+
+.zbsp-icon {
+	background-image: url(../images/sprite-02-new.png);
+	background-position: -240px -261px;
+} 
+
+.cryp-icon {
+	background-image: url(../images/sprite-02-new.png);
+	background-position: 0 -342px;
+} 
+.ykyy-icon {
+	background-image: url(../images/sprite-02-new.png);
+	background-position: -240px -342px;
+} 
+.star-icon-gray {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -121px -220px;
+}
+.star-icon-gray.active {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -120px -190px;	
+}
+
+.star-sm-gray.active {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -180px -220px;
+}
+.star-sm-gray {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -240px -220px;	
+}
+/* footer 图标*/
+.qwry-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: 0 -290px;
+}
+.ppsq-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -50px -290px;
+}
+.zgbz-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -100px -290px;
+}
+.yqrz-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -150px -290px;
+}
+.thwy-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -200px -290px;
+}
+.sybz-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -251px -290px;
+}
+
+.phone-service:before {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: 0 0;
+}
+
+.home-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -40px -160px;
+}
+.bread-menu a:after {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -70px -160px;
+}
+.rx-icon {
+	background-image: url(../images/sprite-02-new.png);
+	background-position: -540px -300px;
+}
+.otc-icon {
+	background-image: url(../images/sprite-02-new.png);
+	background-position: -489px -329px;
+}
+.show-hide-icon {
+	background-image: url(../images/sprite-02-new.png);
+	background-position: -350px -446px;	
+}
+.submit-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: 0-250px;	
+}
+.vip-login i {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -200px -190px;
+}
+.phone-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -32px -386px;
+}
+.clock-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: 0 -386px;
+}
+.user-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -62px -386px;
+}
+.confirm-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -96px -386px;	
+}
+.yzm-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -131px -384px;	
+}
+.rt-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -177px -390px;	
+}
+.bm-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -249px 0;	
+}
+.all-resart-list.active .bm-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -249px -12px;	
+}
+.close-resart-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -329px 0;	
+}
+.top-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -249px 0;	
+}
+.up-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -207px -390px;	
+}
+.down-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -234px -390px;	
+}
+.total-prev-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -299px -29px;	
+}
+.total-next-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -299px -59px;	
+}
+.cang-star {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -109px -249px;
+}
+.cang.active .cang-star {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -258px -340px;
+}
+.more-down-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -177px -390px;
+}
+
+.order-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -40px -130px;
+}
+.mr-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -160px -250px;
+}
+.huo-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: 0 -90px;
+}
+.online-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -30px -91px;
+}
+.yue-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -150px -220px;
+}
+.wechat-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -70px -90px;
+}
+.airpay-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -300px -250px;
+}
+.bank-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -110px -90px;
+}
+.check-no {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -200px -250px;
+}
+.song-style p.active .check-no {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -250px -250px;
+}
+.pay-icon {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: 0 -130px;
+}
+
+.shenhe-icon {
+	background-image: url(../images/sprite-02-new.png);
+	background-position: -500px -220px;
+}
+.menu-down {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -286px -390px;
+}
+.help-menu-title.active .menu-down {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -258px -390px;
+}
+
+.doc-qs {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -220px -190px;
+}
+.doc-ask-list span.active .doc-qs {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -220px -157px;
+}
+.doc-phone {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -250px -190px;
+}
+.doc-ask-list span.active .doc-phone {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -250px -157px;
+}
+.doc-online {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -325px -189px;
+}
+.doc-ask-list span.active .doc-online {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -310px -160px;
+}
+.doc-hide {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -280px -159px;
+}
+.doc-ask-list span.active .doc-hide {
+	background-image: url(../images/sprite-01-new.png);
+	background-position: -280px -175px;
+}
+

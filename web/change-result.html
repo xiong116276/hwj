@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>兑换结果</title>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/integral-shop.css">
+</head>
+<body>
+  <div class="integral-change-result">
+    <div class="change-result-img">
+      <img src="images/integral-shop/change-result-icon@2x.png" alt="">
+    </div>
+    <div class="change-result-text">
+      <p>恭喜您兑换成功</p>
+      <p>前往“兑换记录”查看记录~</p>
+    </div>
+    <div class="change-result-btn">
+      <img src="images/integral-shop/finish_icon@2x.png" alt="">
+      <div class="btn-text center_elm">
+        完成
+      </div>
+    </div>
+  </div>
+  <script src="http://m.360hwj.com/js/jquery/jquery-1.11.3.js"></script>
+  <script>
+    window.onload = function () {
+      getRem(750,100);
+    };
+    window.onresize = function () {
+      getRem(750,100);
+    };
+    //计算 rem 值
+    function getRem(pwidth,prem){
+      var html = document.getElementsByTagName("html")[0];
+      var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+      html.style.fontSize = oWidth/pwidth*prem + "px";
+    }
+  </script>
+</body>
+</html>

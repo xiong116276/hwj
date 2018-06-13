@@ -1,0 +1,223 @@
+@charset "utf-8";
+@import "../base/_minxins.scss";
+
+.container{
+  position: relative;
+  z-index: 100;
+  overflow-y: scroll;
+}
+//抽奖转盘
+
+.pan-content{
+  width:88%;
+  bottom:13%;
+}
+.pan{
+  width: 98%;
+}
+.pin{
+  width: 30%;
+  bottom: 40%;
+}
+
+//抽奖规则
+%draw-modal{
+  @include position-template(fixed,0,auto,0,auto);
+  background-color: rgba(0,0,0,.85);
+  width: 100%;
+  z-index: 200;
+}
+%draw-content-width{
+  width: 80%;
+}
+
+.draw-rule{
+  @extend %draw-modal;
+}
+.draw-rule-content{
+  @extend %draw-content-width;
+}
+.icon-close{
+  width: 2rem;
+  height: 2rem;
+  @include position-template(absolute,-4rem,0,auto,auto);
+  @include bg-img("../images/draw/icon-close.png",no-repeat,center,contain);
+}
+
+//没有抽到奖
+.draw-nothing{
+  @extend %draw-modal;
+}
+.draw-nothing-content{
+  @extend %draw-content-width;
+}
+//抽到奖
+.draw-something{
+  @extend %draw-modal;
+}
+.draw-something-content{
+  @extend %draw-content-width;
+}
+.draw-something-text{
+  position: absolute;
+  bottom: 19.5%;
+  height: 23%;
+  width: 100%;
+  text-align: center;
+  p:nth-child(1){
+    font-family: "苹方 粗体";
+    font-size: 1.1rem;
+  }
+  p:nth-child(2){
+    font-size: .8rem;
+  }
+}
+//底部抽奖消息
+.draw-news{
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.icon-speaker{
+  display: inline-block;
+  @include bg-img("../images/draw/icon-speaker.png",no-repeat,center,contain);
+  width: 5%;
+  height: 100%;
+  margin-left: 5%;
+}
+.draw-news-box{
+  width: 90%;
+  height: 100%;
+  padding-left: 5%;
+  position: relative;
+}
+.draw-news-items{
+  position: absolute;
+}
+.draw-news-item{
+  color : #fff;
+  width: 100%;
+  height: 100%;
+  line-height: 3;
+}
+//抽奖记录
+.draw-data{
+  @extend %draw-modal;
+  background-color: #fff;
+  overflow-y: scroll;
+}
+.draw-data-content{
+  width:100%;
+  padding: .5rem 5%;
+  background-color: rgb(232,232,232);
+
+}
+.draw-data-item{
+  margin-bottom: .5rem;
+  width: 100%;
+  height: 6rem;
+  position: relative;
+  .item-content{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    @include border-radius(8px);
+    position: absolute;
+    z-index: 100;
+  }
+}
+.icon-integra{
+  width:1rem;
+  height: 1rem;
+  left:-.5rem;
+  z-index: 10;
+  .draw-data-item:nth-child(odd) &{
+    @include bg-img("../images/draw/icon-integra-point-blue.png",no-repeat,center,contain);
+  };
+  .draw-data-item:nth-child(even) &{
+    @include bg-img("../images/draw/icon-integra-point-gold.png",no-repeat,center,contain);
+  }
+}
+.draw-data-item-img{
+  width: 30%;
+  height: 100%;
+  position: relative;
+  img{
+    display: block;
+    width: 60%;
+    max-width: 78px;
+    max-height: 100%;
+  }
+}
+.draw-data-item-text{
+  padding: 1rem 0;
+  width: 70%;
+  height: 100%;
+  p{
+    width: 100%;
+    height: 40%;
+    line-height: 2.5;
+  }
+  p:nth-child(1){
+    font-family: "苹方 粗体";
+    font-size: 1.1rem;
+    small{
+      font-size: .8rem;
+    }
+  }
+}
+//抽奖记录为空
+
+
+.draw-data-empty{
+  @include position-template(fixed,0,auto,0,auto);
+  width: 100%;
+  background-color: #fff;
+  .draw-empty-img{
+    width: 35%;
+    top: 18%;
+  }
+  .draw-empty-btn{
+    top: 55%;
+    width: 40%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,152 @@
+/*****************************************header*******************************/
+.header {
+    position: fixed;
+    width: 100%;
+    max-width: 640px;
+    height: 4rem;
+    background-color: transparent;
+    z-index: 1000;
+}
+.header .icon-msg {
+    float: left;
+    display: inline-block;
+    width: 0.7rem;
+    height: 2rem;
+    background: url("../images/personal/icon-left-white.png") no-repeat center;
+    background-size: contain;
+    left:1rem;
+}
+.header .header-text{
+    width:100%;
+    height:4rem;
+    line-height: 4rem;
+    text-align: center;
+    color:#fff;
+    font-size: 1.2rem;
+}
+/*******************内容区域***********************************/
+.content{
+    width:100%;
+    margin-top: 18rem;
+}
+/*顶部内容*/
+.wallet-top{
+    top:0;
+    width:100%;
+    max-width: 640px;
+    position: fixed;
+    padding-bottom: 3rem;
+    z-index: 900;
+    background-color: #F3F3F3;
+}
+.wallet-top-img{
+    width:100%;
+}
+.wallet-show{
+    position: absolute;
+    height:5rem;
+    width:15rem;
+    bottom:7rem;
+    text-align: center;
+    color: #fff;
+}
+.wallet-head-img{
+    float: left;
+    width:5rem;
+    height:5rem;
+    border-radius: 50%;
+    border:2px solid #EFB07B;
+    overflow: hidden;
+    display: inline-block;
+}
+.wallet-show .wallet-num{
+    display: inline-block;
+    width:100%;
+    font-size: 3rem;
+}
+.wallet-show .wallet-num .wallet-RMBsign{
+    font-size: 1.3rem;
+    vertical-align: top;
+    display: inline-block;
+    padding-top: 0.7rem;
+}
+.wallet-show .wallet-show-text{
+    width:5.5rem;
+    margin-top: -0.5rem;
+}
+/*充值，提现，银行卡*/
+.wallet-top-list{
+    width:94%;
+    height: 5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    bottom:0.8rem;
+}
+.wallet-top-list .wallet-top-elm{
+    width:33.33%;
+    float: left;
+    height:5rem;
+    text-align: center;
+    position: relative;
+}
+.wallet-top-list .wallet-top-elm:not(:last-child){
+    border-right:1px solid #E9E9E9 ;
+}
+.wallet-top-list .wallet-elm-img{
+    top:1rem;
+   width:1.5rem;
+}
+.wallet-top-list .wallet-elm-name{
+    bottom: 0.8rem;
+    font-size: 1rem;
+}
+/*****钱包明细内容*********/
+.wallet-detail{
+    background-color: #fff;
+    width:100%;
+}
+.wallet-detail .wallet-detail-item{
+    margin-left: 1rem;
+    border-left: 1px solid #E2E2E2;
+    height:6rem;
+    padding-top: 1rem;
+}
+.wallet-detail .wallet-detail-item .wallet-item-time{
+    position: relative;
+    margin-left: -0.4rem;
+    background-color: #fff;
+}
+.wallet-detail .wallet-detail-item .wallet-item-time .wallet-item-icon{
+    display: inline-block;
+    width:0.8rem;
+    height:0.8rem;
+    margin-right:0.3rem;
+}
+.wallet-detail .wallet-detail-item:nth-child(odd) i{
+    background: url("../images/personal/integra_point@3x.png") no-repeat center;
+    background-size: contain;
+}
+.wallet-detail .wallet-detail-item:nth-child(even) i{
+    background: url("../images/personal/integra_point_gold@3x.png") no-repeat center;
+    background-size: contain;
+}
+.wallet-detail .wallet-detail-item .wallet-item-data{
+    margin: 0.3rem 0 0 1rem;
+    color:#2b2b2b;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

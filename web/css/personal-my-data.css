@@ -1,0 +1,128 @@
+/*中间内容*******************************/
+.myData-content{
+    width:100%;
+    max-width: 640px;
+}
+.myData-headImg{
+    position: relative;
+    width: 100%;
+    height:6rem;
+    background-color: #fff;
+    margin-bottom: 0.6rem;
+}
+
+.myData-file-upload{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity:0;
+    z-index: 5;
+}
+
+.myData-item{
+    width: 100%;
+    height:4rem;
+    background-color: #fff;
+    position: relative;
+}
+.myData-item:not(:last-child){
+    border-bottom: 1px solid #E8E8E8;
+}
+.myData-item-text{
+    left:1.5rem;
+    font-size: 1.2rem;
+}
+.myData-item-img{
+    height: 6rem;
+}
+
+.icon-user-img{
+    right:13%;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    float: right;
+
+}
+
+.myData-icon-right{
+    position: absolute;
+    width:0.6rem;
+    height:2rem;
+    right:1.5rem;
+    background: url("../images/arrow-right@3x.png") no-repeat center;
+    background-size: contain;
+}
+/*!*退出登录按钮*!*/
+/*.myData-btn-quit{*/
+    /*width:100%;*/
+    /*margin-top: 0.6rem;*/
+    /*background-color: #fff;*/
+    /*color:#ed4529;*/
+    /*height:4rem;*/
+    /*line-height: 4rem;*/
+    /*text-align: center;*/
+/*}*/
+
+/*底部保存按钮*/
+.fixed-btn{
+    position: fixed;
+    max-width: 640px;
+    width: 100%;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    border: none;
+    outline: none;
+    bottom:0;
+    background-color: #ed4529;
+    color: #fff;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+
+
+input[type=search]::-webkit-search-cancel-button{
+    /*消除叉叉按钮*/
+    -webkit-appearance: none;
+
+    /*background: url("../images/search/icon-clean.png") center no-repeat;*/
+    /*-webkit-background-size:contain;*/
+    /*background-size:contain;*/
+    /*position: relative;*/
+    /*height: 1.3rem;*/
+    /*width: 1.3rem;*/
+    /*border-radius: 50%;*/
+}
+
+
+
+
+.myData-item-elm{
+    position: absolute;
+    right: 15%;
+    width: 50%;
+    height:100%;
+    font-size: 1.3rem;
+    outline: none;
+    border:none;
+    color: #9a9a9a;
+    text-align: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

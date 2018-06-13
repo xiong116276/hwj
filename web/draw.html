@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <title>幸运抽奖</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/draw.css">
+</head>
+<body>
+  <div class="container">
+    <img class="draw-bg" src="images/draw/draw-bg-02.png" alt="" usemap="#btn">
+    <map name="btn">
+      <area shape="rect" coords="0,0,0,0" href="javascript:void (0);" alt="">
+      <area shape="rect" coords="0,0,0,0" href="javascript:void (0);" alt="">
+    </map>
+    <div class="pan-content horizontal_center">
+      <img class="pan-lamp" src="images/draw/red-pan-01.png" alt="">
+      <div class="pan center_elm">
+        <img class="draw-pan" src="images/draw/pan@2x.png" alt="">
+        <div class="pin horizontal_center">
+          <img src="images/draw/pin-01.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="draw-news horizontal_center after">
+      <i class="icon-speaker fl"></i>
+      <div class="draw-news-box fl">
+        <div class="draw-news-items"></div>
+      </div>
+    </div>
+  </div>
+  <!--规则说明-->
+  <div class="draw-rule hide">
+    <div class="draw-rule-content center_elm">
+      <img class="rule-bg" src="images/draw/draw-rule-content.png" alt="" usemap="#btnRule">
+      <map name="btnRule">
+        <area shape="rect" coords="0,0,0,0" href="javascript:void (0);" alt="">
+      </map>
+      <i class="icon-close"></i>
+    </div>
+  </div>
+  <!--没抽到奖-->
+  <div class="draw-nothing hide">
+    <div class="draw-nothing-content center_elm">
+      <img class="draw-nothing-bg" src="images/draw/no-winning.png" alt="" usemap="#btnDraw">
+      <map name="btnDraw">
+        <area shape="rect" coords="0,0,0,0" href="javascript:void (0);" alt="">
+      </map>
+      <i class="icon-close"></i>
+    </div>
+  </div>
+  <!--抽到奖-->
+  <div class="draw-something hide">
+    <div class="draw-something-content center_elm">
+      <img class="draw-something-bg" src="images/draw/winning.png" alt="" usemap="#btnCheck">
+      <map name="btnCheck">
+        <area shape="rect" coords="0,0,0,0" href="javascript:void (0);" alt="">
+      </map>
+      <i class="icon-close"></i>
+      <div class="draw-something-text">
+        <p>恭喜！您抽中了<span>25积分</span>！</p>
+        <p>可前往“中奖记录”查看哦~</p>
+      </div>
+    </div>
+  </div>
+  <script src="http://m.360hwj.com/js/jquery/jquery-1.11.3.js"></script>
+  <script src="js/draw.js"></script>
+</body>
+</html>

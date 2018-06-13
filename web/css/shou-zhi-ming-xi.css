@@ -1,0 +1,104 @@
+/*******************************中间内容*********************/
+.shouzhi-content{
+    width:100%;
+    padding-top: 4.6rem;
+}
+.shouzhi-content .shouzhi-top{
+    position: fixed;
+    top:0;
+    width:100%;
+    max-width: 640px;
+    height:4rem;
+    background-color: #fff;
+}
+.shouzhi-content .shouzhi-top .shouzhi-type-item{
+    width:50%;
+    float: left;
+    text-align: center;
+    height:4rem;
+    line-height: 4rem;
+    position: relative;
+    font-size: 1rem;
+}
+.shouzhi-content .shouzhi-top .shouzhi-type-item .shouzhi-icon-down{
+    display: inline-block;
+    border: 5px solid transparent;
+    border-top:5px solid #A5A5A5;
+    right: -1.2rem;
+    -webkit-transform: translate(0,-25%);
+    -moz-transform: translate(0,-25%);
+    -ms-transform: translate(0,-25%);
+    -o-transform: translate(0,-25%);
+    transform: translate(0,-25%);
+}
+.shouzhi-content .shouzhi-top .shouzhi-type-item .shouzhi-type-choose{
+    position: absolute;
+    bottom:-1.2rem;
+    font-size: 0.8rem;
+    width:100%;
+    text-align: center;
+}
+.shouzhi-content .shouzhi-top .shouzhi-type-item .shouzhi-icon-selection{
+    display: inline-block;
+    width:1rem;
+    height:4rem;
+    background: url("../images/selection.png") no-repeat center;
+    background-size: contain;
+    right: -1.5rem;
+}
+/*收支明细*/
+.shouzhi-container{
+    width: 100%;
+    background-color: #fff;
+}
+.shouzhi-item{
+    width:100%;
+    height:6rem;
+    padding: 1rem;
+    border-bottom: 1px solid #e7e7e7;
+}
+.shouzhi-item .shouzhi-item-left{
+    height:3rem;
+    padding-top: 0.5rem;
+    width:80%;
+}
+.shouzhi-item .shouzhi-item-left p{
+    height:1.5rem;
+    line-height: 1.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1rem;
+}
+.shouzhi-item .shouzhi-item-left p:nth-child(2){
+    color:#a6a6a6;
+    font-size: 0.8rem;
+}
+.shouzhi-item .shouzhi-item-right{
+    width:20%;
+    height:4rem;
+    line-height: 4rem;
+    color: #ed4529;
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

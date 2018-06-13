@@ -1,0 +1,161 @@
+/*内容*/
+p {
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    padding-bottom: 1rem;
+}
+/*banner*/
+.product-banner{
+    width:100%;
+    position: relative;
+}
+.product-banner-btn{
+    position: absolute;
+    width: 7rem;
+    height: 2rem;
+    left: 2rem;
+    bottom: 1.8rem;
+}
+/*简介*/
+.content-item{
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+    margin-bottom: 0.6rem;
+}
+.content-item-top{
+    width: 100%;
+    height:3rem;
+    line-height: 3rem;
+    text-align: left;
+    padding-left: 1rem;
+    border-bottom: 1px solid #E8E8E8;
+    position: relative;
+}
+.content-item-top-icon{
+    display: inline-block;
+    width:0.4rem;
+    height: 0.4rem;
+    border: 2px solid #ed4529;
+    border-radius: 50%;
+}
+.content-summary-tittle{
+    width:100%;
+    height:3rem;
+    line-height: 3rem;
+    padding-left: 1.5rem;
+}
+.content-summary-tittle a{
+    padding:0.1rem 0.2rem;
+    color: #fff;
+    background-color: #CFAA73;
+}
+.content-item-text{
+    padding: 0.5rem 1.5rem 1rem;
+}
+
+.symptom-list li{
+    float: left;
+    margin: 0 1rem;
+}
+.inspect-list{
+    padding-left: 1rem;
+}
+.judge-table{
+    border-top: 1px solid #EDEDED;
+    border-left: 1px solid #EDEDED;
+    width:100%;
+    padding: 0;
+    border-spacing: 0;
+}
+.judge-table td{
+    border-right: 1px solid #EDEDED;
+    border-bottom: 1px solid #EDEDED;
+    padding: 0.2rem 1rem;
+    color: #473E33;
+    font-size: 0.8rem;
+}
+.content-summary-btn{
+    width:100%;
+    height:3rem;
+    line-height: 3rem;
+    border-top: 1px solid #E8E8E8;
+    text-align: center;
+    color: #BEBEBE;
+}
+.summary-btn-icon{
+    display: inline-block;
+    width: 1rem;
+    height: 0.5rem;
+    background: url("../images/arrow_down_gray@2x.png") no-repeat center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    margin-left: .5rem;
+}
+.summary-btn-active{
+    transform: rotate(180deg);
+    margin-bottom: 0.2rem;
+}
+/*推荐用药*/
+.content-item-detail{
+    position: relative;
+}
+.swiper-container{
+    width:100%;
+    height:100%;
+}
+.pagination{
+    right: 1rem;
+    top:0;
+}
+.pagination span{
+    margin: 0 .2rem !important;
+}
+.swiper-pagination-bullet-active {
+    background: #ed4529!important;
+}
+.tuijan-item{
+    width:33%;
+    text-align: center;
+    float: left;
+}
+.tuijian-img{
+    width:50%;
+    margin: 1rem auto;
+}
+.tuijian-name{
+    margin-bottom:1rem;
+}
+/*相关疾病*/
+.sickness-container{
+    padding: 1rem;
+}
+.sickness-item{
+    display: inline-block;
+    padding: 0.2rem 1rem;
+    border: 1px solid #E8E8E8;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    border-radius:15px ;
+}
+/************返回顶部按钮****************/
+.icon_totop{
+    position: fixed;
+    right:2.2rem;
+    bottom:4rem;
+    width:3rem;
+    height:3rem;
+    border-radius: 50%;
+    background-color:#7F7F7F ;
+}
+.icon_totop_img{
+    display: inline-block;
+    width:1.5rem;
+}
+
+

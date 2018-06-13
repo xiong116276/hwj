@@ -1,0 +1,113 @@
+
+
+/*滑动导航*/
+.fixed-swiper{
+    width: 100%;
+    max-width: 640px;
+    overflow: hidden;
+    position: fixed;
+    z-index: 5;
+    background-color: #ed4529;
+}
+
+.swiper-container1{
+    text-align: center;
+    background-color: rgba(0,0,0,.2);
+    padding:1rem 0;
+    color: #ffcccc;
+}
+.swiper-container1 .swiper-slide{
+    font-size: 1rem;
+}
+.swiper-container1 .active{
+    color: #f4f4f4;
+    font-weight: 600;
+    font-size: 1.07rem;
+}
+
+
+/*抢购商品列表*/
+.activity-content{
+    position: fixed;
+    top: 3.5rem;
+    bottom: 0;
+    left: 0;
+    right:0;
+    overflow: auto;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    background-color: #ed4529;
+}
+
+.activity-goods{
+    height: 11rem;
+    margin: 1rem;
+    background-color: #fff;
+    border:1px solid #fff;
+    border-radius: .5rem;
+}
+
+.goods-box-left{
+    width: 50%;
+    float: left;
+}
+
+.goods-img{
+    width: 11rem;
+    padding: .5rem;
+}
+
+.goods-info{
+    width: 50%;
+    height: 11rem;
+    float: left;
+    padding: .5rem;
+}
+
+.goods-name{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: 600;
+    margin-top: .5rem;
+    font-size: 1.1rem;
+}
+
+.goods-description{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #a5a5a5;
+}
+
+.price-act{
+    width: 50%;
+    height: 2rem;
+    float: left;
+    color: #ed4529;
+    font-weight: 700;
+}
+
+.price-act span{
+    font-size: 1.6rem;
+}
+
+.price-normal{
+    float: left;
+    width: 50%;
+    height: 2rem;
+    line-height: 2.5rem;
+    color: #a5a5a5;
+    padding-left: .5rem;
+}
+
+.purchase-btn{
+    width: 100%;
+    background-color: #ed4529;
+    margin: .5rem 0;
+    padding: .5rem;
+    border-radius: .3rem;
+    text-align: center;
+    color: #fff;
+}

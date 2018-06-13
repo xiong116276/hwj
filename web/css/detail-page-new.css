@@ -1,0 +1,295 @@
+@charset "UTF-8";
+/*利益买点*/
+.product-buying-point {
+  margin: 0.8rem 1rem 0;
+  font-size: 1.2rem;
+  color: #ed4529; }
+
+.product_price_reduce {
+  color: #ed4529;
+  margin-left: 1rem; }
+
+/*生产厂家*/
+.product_vender {
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: #2f2f2f; }
+
+/*药品功效*/
+.product_function {
+  margin: 0.5rem 0.5rem 0.5rem 1rem;
+  font-size: 1.1rem;
+  padding-left: 5.5rem;
+  position: relative;
+  color: #2f2f2f; }
+
+.product_function span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2rem; }
+
+/*商品优惠活动*/
+.activity-title {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem; }
+
+.product-discount {
+  position: absolute;
+  top: 0.1rem;
+  right: auto;
+  bottom: auto;
+  left: 0; }
+
+.activity-detail {
+  padding-left: 3rem;
+  margin: 0 0 0.5rem 0;
+  width: 100%; }
+
+.activity-top {
+  width: 100%;
+  padding: 1rem 0;
+  border-bottom: 1px solid #c5c5c5;
+  border-top: 1px solid #c5c5c5; }
+  .activity-top p {
+    padding-left: 0.5rem;
+    border-left: 5px solid #ed4529;
+    font-size: 1.2rem; }
+
+/******疗程优惠装**********/
+.discount-suit {
+  margin-top: 0.6rem;
+  background-color: #fff; }
+  .discount-suit .suit-container {
+    padding: 1rem 0.5rem; }
+  .discount-suit .suit-content {
+    width: 100%; }
+  .discount-suit .suit-item {
+    float: left;
+    width: 50%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    padding: 0 0.5rem;
+    margin-bottom: 1rem; }
+    .discount-suit .suit-item p {
+      border: 1px solid #c3c3c3;
+      color: #222; }
+      .discount-suit .suit-item p span {
+        font-size: 1.2rem;
+        margin: 0 0.5rem; }
+    .discount-suit .suit-item .active {
+      background-color: #ed4529;
+      color: #fff; }
+
+.suit-price {
+  margin: 0 0.5rem;
+  border-top: 1px solid #cecece;
+  padding: 1.5rem 0 0; }
+
+.suit-price-left {
+  float: left;
+  font-size: 1.2rem;
+  color: #3b3b3b; }
+  .suit-price-left p:nth-child(1) {
+    margin-bottom: 0.5rem; }
+    .suit-price-left p:nth-child(1) span {
+      color: #ed4529; }
+
+.suit-price-right {
+  float: right;
+  font-size: 1.2rem;
+  margin-top: 1rem; }
+  .suit-price-right .btn-box {
+    float: right;
+    width: 7rem; }
+    .suit-price-right .btn-box span, .suit-price-right .btn-box input {
+      float: left;
+      width: 2rem;
+      height: 2rem;
+      line-height: 1.9rem;
+      text-align: center; }
+    .suit-price-right .btn-box span {
+      border: 1px solid #b9b9b9; }
+    .suit-price-right .btn-box input {
+      font-size: 1.2rem;
+      width: 3rem;
+      line-height: 2rem;
+      border: 0;
+      border-top: 1px solid #b9b9b9;
+      border-bottom: 1px solid #b9b9b9; }
+
+/*******药师推荐套餐**********/
+.doctor-recommend-suit .suit-price-right, .doctor-recommend-bomb-screen .suit-price-right {
+  background-color: #ed4529;
+  color: #fff;
+  padding: 0.5rem;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  margin-top: 1rem;
+  font-size: 1rem; }
+
+.doctor-recommend-suit {
+  background-color: #fff;
+  margin-top: 0.6rem; }
+  .doctor-recommend-suit .top {
+    padding: 1rem 0;
+    color: #ed4529;
+    font-size: 1.2rem;
+    text-align: center;
+    border-top: 1px solid #b9b9b9; }
+  .doctor-recommend-suit .suit-price {
+    margin: 0;
+    padding: 1rem; }
+
+.recommend-suit-box {
+  border-bottom: 1px solid #b9b9b9; }
+
+.recommend-suit-nav {
+  border-top: 1px solid #b9b9b9;
+  width: 100%;
+  height: 3.5rem; }
+  .recommend-suit-nav > div {
+    float: left;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    text-align: center;
+    border-bottom: 1px solid #b9b9b9; }
+  .recommend-suit-nav .nav-box {
+    width: 88%;
+    border-right: 1px solid #b9b9b9; }
+    .recommend-suit-nav .nav-box .nav-item {
+      float: left;
+      width: 50%; }
+    .recommend-suit-nav .nav-box .active {
+      background-color: #ed4529;
+      color: #fff;
+      position: relative; }
+      .recommend-suit-nav .nav-box .active:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: auto;
+        -webkit-transform: translate(-50%, 0);
+        -moz-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        -o-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+        border: 8px solid transparent;
+        border-top-color: #ed4529;
+        bottom: -16px; }
+  .recommend-suit-nav .nav-more-btn {
+    width: 12%;
+    position: relative; }
+    .recommend-suit-nav .nav-more-btn .btn-container i {
+      display: block;
+      width: 5px;
+      height: 5px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      background-color: #2e2e2e;
+      margin: 0.2rem; }
+
+.recommend-suit-items {
+  padding: 1rem; }
+
+.recommend-suit-item .item-top {
+  background-image: url("../images/detail/icon_doctor.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  -webkit-background-size: 1.2rem;
+  background-size: 1.2rem;
+  font-size: 1rem;
+  color: #ed4529;
+  padding-left: 1.5rem;
+  margin-bottom: 0.6rem; }
+.recommend-suit-item .item-describe {
+  font-size: 0.8rem;
+  color: #2e2e2e; }
+.recommend-suit-item .item-detail {
+  margin: 1rem 0;
+  width: 100%;
+  overflow-x: scroll; }
+  .recommend-suit-item .item-detail .item-box {
+    float: left;
+    position: relative;
+    padding-right: 4.5rem; }
+    .recommend-suit-item .item-detail .item-box p {
+      color: #3b3b3b; }
+  .recommend-suit-item .item-detail .item-box:not(:last-child):after {
+    content: "";
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 3rem;
+    right: 1rem;
+    bottom: auto;
+    left: auto;
+    background-image: url("../images/detail/icon-add-mark.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: contain;
+    background-size: contain; }
+  .recommend-suit-item .item-detail .goods-img {
+    width: 100%;
+    height: 8rem;
+    position: relative;
+    margin-bottom: 1rem; }
+  .recommend-suit-item .item-detail .goods-name {
+    font-size: 0.8rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 0.5rem; }
+  .recommend-suit-item .item-detail .goods-price {
+    font-size: 0.8rem; }
+
+/******药师推荐搭配套餐弹屏*******/
+.doctor-recommend-bomb-screen {
+  position: fixed;
+  max-width: 750px;
+  top: 0;
+  right: auto;
+  bottom: 0;
+  left: auto;
+  width: 100%;
+  max-width: 640px;
+  z-index: 100000; }
+  .doctor-recommend-bomb-screen .bomb-screen-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 3.5rem; }
+  .doctor-recommend-bomb-screen .bomb-screen-scroll-box {
+    padding: 1rem 0; }
+  .doctor-recommend-bomb-screen .bomb-screen-top {
+    font-family: "苹方 粗体";
+    font-size: 1.2rem;
+    color: #2e2e2e;
+    text-align: center; }
+  .doctor-recommend-bomb-screen .bomb-screen-close-btn {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: "苹方 中等";
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    height: 3rem;
+    line-height: 3rem;
+    background-color: #ed4529;
+    max-width: 640px; }
+  .doctor-recommend-bomb-screen .item-title {
+    padding: 1rem 0 0 1rem; }
+  .doctor-recommend-bomb-screen .bomb-screen-item {
+    border-bottom: 1px solid #b9b9b9; }
+
+/*# sourceMappingURL=detail-page-new.css.map */

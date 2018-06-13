@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <title>搜索</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/gooey.min.css">
+    <style>
+        .search-relation{
+            position: fixed;
+            top: 3.5rem;
+            bottom:0;
+            left:0;
+            right:0;
+            width:100%;
+            background-color: #fff;
+            z-index: 1000;
+        }
+
+        .relation-items{
+            padding: 0 1rem;
+            border-bottom: 1px solid #e5e5e5;
+            color: #2f2f2f;
+        }
+    </style>
+</head>
+<body>
+<!--头部-->
+<header class="header">
+    <!--<div class="header-left">药品<i class="icon-bottom vertical_center"></i></div>-->
+    <div class="header-form">
+        <form action="" class="after">
+            <input class="search-input fl" type="search" placeholder="请输入搜索药品">
+            <button class="search-btn fl">搜药</button>
+
+            <div class="search-relation hide">
+                <div class="relation-items">三九感冒药</div>
+                <div class="relation-items">三九胃康灵</div>
+                <div class="relation-items">三九</div>
+                <div class="relation-items">999</div>
+                <div class="relation-items">1</div>
+                <div class="relation-items">2</div>
+                <div class="relation-items">3</div>
+                <div class="relation-items">4</div>
+                <div class="relation-items">5</div>
+                <div class="relation-items">6</div>
+            </div>
+        </form>
+    </div>
+</header>
+
+
+<div class="fixed-ele">
+    <div class="erweima">
+        <i class="icon-erweima vertical_center"></i>
+        <span class="erweima-text">条形码二维码扫描</span>
+    </div>
+</div>
+
+<div class="content">
+    <div class="search-container">
+        <div class="search-title">热门搜索</div>
+        <div class="search-outcome">
+            <span class="outcome-box">肾宝片</span>
+            <span class="outcome-box">力合健</span>
+            <span class="outcome-box">感冒</span>
+            <span class="outcome-box">肠胃用药</span>
+            <span class="outcome-box">骨骼关节养护</span>
+            <span class="outcome-box">肾宝片</span>
+            <span class="outcome-box">肠胃用药</span>
+            <span class="outcome-box">力合健</span>
+        </div>
+    </div>
+
+    <div class="search-container">
+        <div class="search-title">
+            历史搜索
+            <i class="icon-history-del vertical_center"></i>
+        </div>
+        <div class="search-outcome">
+            <span class="outcome-box">肾宝片</span>
+            <span class="outcome-box">力合健</span>
+            <span class="outcome-box">肠胃用药</span>
+            <span class="outcome-box">骨骼关节养护</span>
+        </div>
+    </div>
+</div>
+
+
+<!--底部悬浮按钮-->
+<nav id="gooey-API">
+    <input type="checkbox" class="menu-open" name="menu-open5" id="menu-open5"/>
+    <label class="open-button" for="menu-open5">
+        <span class="burger burger-1"></span>
+        <span class="burger burger-2"></span>
+        <span class="burger burger-3"></span>
+    </label>
+
+    <a href="#" class="gooey-menu-item gooey-menu-item-first"><img src="images/home-white.png"
+                                                                   class="gooey-menu-item-icon" alt=""></a>
+    <a href="#" class="gooey-menu-item gooey-menu-item-second"><img src="images/search-white.png"
+                                                                    class="gooey-menu-item-icon" alt=""></a>
+    <a href="#" class="gooey-menu-item gooey-menu-item-third"><img src="images/kefu_white.png"
+                                                                   class="gooey-menu-item-icon" alt=""></a>
+</nav>
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+    $(".search-choose-elms").on("click", function (e) {
+        e.preventDefault();
+        $(".icon-bottom").toggleClass("icon-bottom-rotate");
+    });
+
+    $(".search-input").on("keyup",function () {
+
+        $(".search-relation").addClass("show");
+        if(this.value==""){
+            $(".search-relation").removeClass("show");
+        }
+
+    });
+
+    $(".search-input").on("click",function () {
+        $(".search-relation").removeClass("show");
+    })
+
+</script>
+<script src="js/gooey.min.js"></script>
+<script>
+    $(function ($) {
+        $("#gooey-API").gooeymenu({
+            bgColor: "#ed4529",
+            contentColor: "white",
+            style: "circle",
+            circle: {
+                radius: 85
+            },
+            margin: "small",
+            size: 70,
+            bounce: true,
+            bounceLength: "small",
+            transitionStep: 100,
+            hover: "#ed4529",
+            open: function () {
+                $(this).find(".gooey-menu-item").css("background-color", "#ed4529");
+                $(this).find(".open-button").css("background-color", "#ed4529");
+                $(".gooey-menu-item-first").addClass("gooey-menu-item-middle-one");
+                $(".gooey-menu-item-second").addClass("gooey-menu-item-middle-two");
+                $(".gooey-menu-item-third").addClass("gooey-menu-item-middle-three");
+            },
+            close: function () {
+                $(this).find(".gooey-menu-item").css("background-color", "#ed4529");
+                $(this).find(".open-button").css("background-color", "#ed4529");
+                $(".gooey-menu-item-first").removeClass("gooey-menu-item-middle-one");
+                $(".gooey-menu-item-second").removeClass("gooey-menu-item-middle-two");
+                $(".gooey-menu-item-third").removeClass("gooey-menu-item-middle-three");
+            }
+        });
+    });
+</script>
+</body>
+</html>

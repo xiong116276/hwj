@@ -1,0 +1,331 @@
+@charset "utf-8";
+//蓝色版
+$color-common: rgb(24,147,240);
+//绿色版
+$color-common: rgb(4,170,88);
+body{
+  background-color: #fff;
+}
+%bg-image{
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+/*
+* 顶部固定栏
+*/
+.top-search-hide{
+  background-color: #fff;
+  height: 56px;
+  border-bottom: 2px solid $color-common;
+  #logo_2{
+    display: inline-block;
+    height: 56px;
+    width: 170px;
+    overflow: hidden;
+    background-image: url("../images/home-new/logo.png");
+    @extend %bg-image;
+  }
+  .search-form_2{
+    top: 10px;
+    input{
+      border: 2px solid $color-common;
+    }
+    .search-btn{
+      background-color: $color-common;
+    }
+  }
+  .cart{
+    .cart-icon{
+      position: absolute;
+      display: block;
+      width: 18px;
+      height: 18px;
+      float: left;
+      top: 9px;
+      left: 12px;
+    }
+    top: 10px;
+    background-color: #fff;
+    color: #83868a;
+    border: 1px solid $color-common;
+  }
+}
+
+/*
+* 导航栏颜色
+*/
+.home-menu{
+  background-color: $color-common;
+  .showall{
+    background-color: darken($color-common, 15%);
+  }
+}
+
+/*
+* 搜索框颜色
+*/
+.section-2{
+  #logo{
+    width: 299px;
+    height: 100px;
+    background-image: url("../images/home-new/logo.png");
+    @extend %bg-image;
+  }
+  .search-sec{
+    input{
+      border: 2px solid $color-common;
+    }
+    .search-btn{
+      background-color: $color-common;
+    }
+  }
+}
+/*
+* 首页banner轮播图右侧图标
+*/
+.palm-speed {
+  height: 450px;
+  top: 40px;
+  .speed-menu {
+    padding-top: 18px;
+    span{
+      height: 86px;
+    }
+  }
+  .speed-ewm{
+    bottom: 0;
+    left: 0;
+    img{
+      float: left;
+      width: 100%;
+    }
+    .rational-use{
+      float: left;
+      width: 100%;
+      height: 181px;
+      background-image: url("../images/home-new/rational-use.png");
+      @extend %bg-image;
+    }
+  }
+}
+/*
+* banner导航点
+*/
+.swiper-container{
+  .swiper-pagination-bullet{
+    width: 18px;
+    height: 18px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: $color-common;
+  }
+}
+
+/*
+* 首页产品分类区域
+*/
+.section-6-floors{
+  margin: 5px auto 0;
+  width: 1200px;
+}
+.floors-top{
+  position: relative;
+  height: 69px;
+  i{
+    display: block;
+    width: 236px;
+    height: 69px;
+    position: absolute;
+    left: -5px;
+    line-height: 80px;
+    text-align: center;
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.42);
+  }
+  .floors-top-nav{
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    text-align: right;
+    max-width: 960px;
+    max-height: 35px;
+    font-size: 14px;
+    overflow: hidden;
+    a{
+      float: left;
+      border-right: 1px solid #a1a3a6;
+      padding: 0 10px;
+      &:last-child{
+        border-right: 0;
+        padding-right: 0;
+      }
+    }
+  }
+}
+/***不同楼层的边框颜色***/
+.floors-zxyp{
+  border-bottom: 2px solid #1994f1;
+}
+.floors-ylqx{
+  border-bottom: 2px solid #71b234;
+}
+.floors-zyyp{
+  border-bottom: 2px solid #f58905;
+}
+.floors-bjsp{
+  border-bottom: 2px solid #02c6ba;
+}
+.floors-jjyp{
+  border-bottom: 2px solid #9238c0;
+}
+.floors-zbsp{
+  border-bottom: 2px solid #fc6912;
+}
+.floors-cryp{
+  border-bottom: 2px solid #f9423d;
+}
+.floors-ykyy{
+  border-bottom: 2px solid #f52c86;
+}
+
+.floors-content{
+  border: 1px solid #ececec;
+  background-color: #fff;
+
+  img{
+    width: 100%;
+  }
+
+  .floors-row-1{
+    height: 309px;
+    overflow: hidden;
+    border-bottom: 1px solid #ececec;
+  }
+
+  .floors-banner{
+    float: left;
+    width: 478px;
+    height: 309px;
+  }
+
+  .floors-goods{
+    position: relative;
+    float: left;
+    width: 239px;
+    height: 309px;
+    border-left: 1px solid #ececec;
+  }
+
+  .floors-classify{
+    position: relative;
+    float: left;
+    width: 239px;
+    height: 187px;
+    overflow: hidden;
+    border-left: 1px solid #ececec;
+    &:first-child{
+      border-left: 0;
+      width: 238px;
+    }
+  }
+}
+
+/*热销图标*/
+.icon-hot-sell{
+  position: absolute;
+  width: 39px;
+  height: 42px;
+  top: 0;
+  right: 5px;
+  background: url("../images/home-new/icon-hot-sell.png") no-repeat center;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+/*footer颜色*/
+.footer{
+  background-color: $color-common;
+  .brand-list{
+    border-bottom: 1px solid lighten($color-common,5%);
+  }
+  .ft-menus{
+    border-right: 1px solid lighten($color-common,5%);
+  }
+  .copyright{
+    background-color: darken($color-common,15%);
+    color: #fff;
+  }
+  .brand-list .brand-item span{
+    color: #fff;
+  }
+  .cr-menu a{
+    color: #fff;
+    padding: 0 15px;
+    border-right: 1px solid #fff;
+  }
+}
+
+/***左右悬浮背景图片***/
+.swt-wrapper{
+  .new-guider-title{
+    i{
+      background-image: url("../images/swt_03.png");
+      @extend %bg-image;
+    }
+  }
+  .swt-right-top{
+    width: 170px;
+    height: 198px;
+    background-image: url("../images/swt_05.png");
+    @extend %bg-image;
+  }
+}
+
+//判断背景颜色
+@if($color-common == rgb(4,170,88)) {
+  //logo 背景图片
+  .section-2 #logo, .top-search-hide #logo_2 {
+    background-image: url("../images/home-new/home-green/logo.png");
+  }
+  //banner轮播合理用药图片
+  .palm-speed {
+    .speed-ewm{
+      .rational-use{
+        background-image: url("../images/home-new/home-green/rational-use.png");
+      }
+    }
+  }
+
+  //左右悬浮背景
+  .swt-wrapper{
+    .new-guider-title{
+      i{
+        background-image: url("../images/home-new/home-green/swt_03.png");
+      }
+    }
+    .swt-right-top{
+      background-image: url("../images/home-new/home-green/swt_05.png");
+    }
+    .doc-ask {
+      background: url(../images/home-new/home-green/swt_09.png) no-repeat;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+

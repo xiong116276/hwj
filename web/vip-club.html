@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>会员俱乐部</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/vip-club.css">
+</head>
+<body>
+<div class="header">
+    <div class="user">
+        <div class="user-img">
+            <img src="images/personal/icon-user-photo.png" alt="">
+        </div>
+        <div class="user-name">林林</div>
+        <div class="user-asset">
+            <i class="icon-asset vertical_center"></i>
+            <div class="asset-text vertical_center">我的资产</div>
+        </div>
+    </div>
+
+    <div class="vip-info">
+        <div class="vip-items">
+            <div class="items-title">会员数量</div>
+            <div class="vip-num">1285</div>
+        </div>
+        <div class="vip-items">
+            <div class="items-title">收入增长</div>
+            <div class="vip-num">￥88</div>
+        </div>
+    </div>
+</div>
+
+<div class="margin-well"></div>
+
+<div class="vip-content after">
+
+    <div class="vip-content-title after">
+        <div class="content-box content-box-active">
+            <div class="vip-content-items vip-content-items-active">
+                <i class="icon-club-share center_elm"></i>
+                <p>分享推广</p>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <div class="vip-content-items">
+                <i class="icon-vip-mine center_elm"></i>
+                <p>我的会员</p>
+            </div>
+        </div>
+        <div class="content-box">
+            <div class="vip-content-items">
+                <i class="icon-input-detail center_elm"></i>
+                <p>收入明细</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="share-line after">
+        <div class="share-item" id="copy-code">
+            <img src="images/personal/club_link@2x.png" alt="">
+            <p>复制链接</p>
+        </div>
+        <div class="share-item" id="share-code">
+            <img src="images/personal/club_code@2x.png" alt="">
+            <p>复制链接</p>
+        </div>
+
+    </div>
+</div>
+
+
+
+<!--二维码链接-->
+<div class="share-code-box hide">
+    <div class="share-code">
+        <div class="code-box center_elm" id="code-box"></div>
+        <i class="icon-close horizontal_center"></i>
+    </div>
+</div>
+
+
+<!--复制链接-->
+<div class="share-code-container hide">
+    <div class="copy-code">
+        <div class="code-container center_elm" id="code-code">
+            <textarea placeholder=""></textarea>
+            <div class="copy-code-tips">请复制方框内的链接</div>
+        </div>
+        <i class="icon-close horizontal_center"></i>
+    </div>
+</div>
+
+<input id="text" class="hide" type="text" value="http://m.360hwj.com/index" />
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+    $(function () {
+
+//        分享推广、我的会员、收支明细tab页下标active切换
+        $(".content-box").on("click",function () {
+            $(this).siblings().removeClass("content-box-active").end().addClass("content-box-active");
+        });
+
+//      复制链接
+        $("#copy-code").on("click",function () {
+            $(".share-code-container").addClass("show");
+        });
+
+        $(".icon-close").on("click",function (e) {
+            e.preventDefault();
+            $(".share-code-container").removeClass("show");
+        });
+
+
+
+		
+		//        分享页面（二维码）
+        $("#share-code").on("click",function () {
+            $(".share-code-box").addClass("show");
+        });
+
+        $(".icon-close").on("click",function (e) {
+            e.preventDefault();
+            $(".share-code-box").removeClass("show");
+        });
+
+    });
+
+</script>
+<script src="js/qrcode.js"></script>
+<script>
+    var qrcode = new QRCode(document.getElementById("code-box"), {
+        width : 100,
+        height : 100
+    });
+    function makeCode () {
+        var elText = document.getElementById("text");
+        qrcode.makeCode(elText.value);
+    }
+
+    makeCode();
+</script>
+</body>
+</html>

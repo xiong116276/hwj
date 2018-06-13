@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <title>评价</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/dingdan-pingjia.css">
+</head>
+<body>
+    <div class="order-evaluate-content">
+        <div class="order-evaluate-item">
+            <div class="order-evaluate-product">
+                <div class="products-item-img fl">
+                    <img src="images/zhongxi_01.jpg" alt="">
+                </div>
+                <div class="products-item-text">
+                    <div class="products-text-top">
+                        <p class="products-item-name">玛咖片 (1.3g*30片)</p>
+                        <p class="products-item-data">×2</p>
+                    </div>
+                    <p class="products-item-guige">规格: 盒</p>
+                    <p class="products-item-price">￥59.5</p>
+                </div>
+            </div>
+            <div class="order-evaluate-text">
+                <textarea class="evaluate-text-content" placeholder="来说两句吧～"></textarea>
+            </div>
+            <div class="order-evaluate-stars">
+                <div class="fl">星级评价:</div>
+                <div class="evaluate-stars-container fr">
+                    <i class="evaluate-star"></i>
+                    <i class="evaluate-star"></i>
+                    <i class="evaluate-star"></i>
+                    <i class="evaluate-star"></i>
+                    <i class="evaluate-star"></i>
+                </div>
+            </div>
+        </div>
+        <div class="order-evaluate-item">
+            <div class="order-evaluate-product">
+                <div class="products-item-img fl">
+                    <img src="images/zhongxi_02.png" alt="">
+                </div>
+                <div class="products-item-text">
+                    <div class="products-text-top">
+                        <p class="products-item-name">玛咖片 (1.3g*30片)</p>
+                        <p class="products-item-data">×2</p>
+                    </div>
+                    <p class="products-item-guige">规格: 盒</p>
+                    <p class="products-item-price">￥59.5</p>
+                </div>
+            </div>
+            <div class="order-evaluate-text">
+                <textarea class="evaluate-text-content" placeholder="来说两句吧～"></textarea>
+            </div>
+            <div class="order-evaluate-stars">
+                <div class="fl">星级评价:</div>
+                <div class="evaluate-stars-container fr">
+                    <i class="evaluate-star"></i>
+                    <i class="evaluate-star"></i>
+                    <i class="evaluate-star"></i>
+                    <i class="evaluate-star"></i>
+                    <i class="evaluate-star"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="order-evaluate-footer">
+        提交评价
+    </footer>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+        //        评价星星点亮
+        $(".evaluate-star").on("click",function (e) {
+            e.preventDefault();
+            var n = $(this).index();
+            var arr = $(this).parents().children(".evaluate-star");
+            for(i=0;i<=n;i++){
+                $(arr[i]).addClass("evaluate-star-active");
+            }
+            for(j=n;j<arr.length;j++){
+                $(arr[j+1]).removeClass("evaluate-star-active");
+            }
+        });
+    </script>
+</body>
+</html>

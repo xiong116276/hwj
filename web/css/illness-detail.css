@@ -1,0 +1,374 @@
+.content {
+    width: 100%;
+    max-width: 640px;
+}
+
+.user-header {
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+}
+.icon-user-photo {
+    position: absolute;
+    top: 20%;
+    left: 6.3%;
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    background: url("../images/personal/icon-user-photo.png") center no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    border-radius: 50%;
+    box-shadow: 0 0 .3rem #fff;
+}
+
+@media screen and (min-width: 640px) {
+    .icon-user-photo {
+        position: absolute;
+        top: 25%;
+        left: 7%;
+        display: block;
+        width: 5rem;
+        height: 5rem;
+        background: url("../images/personal/icon-user-photo.png") center no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+        border-radius: 50%;
+        box-shadow: 0 0 .3rem #fff;
+    }
+}
+
+.user-name {
+    left: 27%;
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.user-sex {
+    position: absolute;
+    bottom: 39%;
+    left: 42%;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.user-date {
+    position: absolute;
+    bottom: 39%;
+    left: 50%;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.user-illness-detail {
+    width: 100%;
+    max-width: 640px;
+    padding: 1rem 0;
+    background-color: #fff;
+}
+
+.user-illness-detail-text {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.info-elm {
+    width: 100%;
+    max-width: 640px;
+    background-color: #fff;
+    margin-top: .8rem;
+}
+
+.info-title {
+    position: relative;
+    width: 100%;
+    height: 3rem;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 1.2rem;
+    line-height: 3rem;
+    padding-left: 5%;
+}
+
+.icon-sign-red {
+    left: 1%;
+    width: .7rem;
+    height: .7rem;
+    background: url("../images/personal/case_sign_red@2x.png");
+    -webkit-background-size: contain;
+    background-size: contain;
+}
+
+.info-content {
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    height: 7rem;
+}
+
+.icon-doctor {
+    left: 5%;
+    width: 5em;
+    height: 5rem;
+    background: url("../images/personal/icon-doctor.png") center no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.info-doctor {
+    position: absolute;
+    left: 25%;
+    width: 75%;
+    float: right;
+
+}
+
+.doctor-name {
+    width: 100%;
+    line-height: 2.5rem;
+    font-size: 1.2rem;
+}
+
+.doctor-detail {
+    color: #9a9a9a;
+}
+
+.doctor-position {
+    margin-right: 1rem;
+}
+
+.info-content-text {
+    padding: 1rem 1.4rem;
+    color: #9a9a9a;
+}
+
+.user-order-product {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #E9E9E9;
+}
+.user-order-product-img {
+    width: 30%;
+    background: url("../images/product.png") center no-repeat;
+    background-size: contain;
+    margin: 0 2.5%;
+}
+
+.user-order-product-info {
+    width: 50%;
+    height: 9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.user-order-product-name {
+    width: 100%;
+    height: 50%;
+    line-height: 7rem;
+}
+
+.user-order-product-specification {
+    width: 100%;
+    height: 50%;
+    color: #a5a5a5;
+}
+
+.user-order-product-specification-price {
+    color: #ed4529;
+}
+
+.user-order-product-num {
+    width: 15%;
+    height: 8rem;
+    line-height: 6rem;
+    text-indent: .8rem;
+}
+
+.info-elm-buy {
+    position: relative;
+    padding-bottom: 5rem;
+}
+
+.info-elm-buy .info-title {
+    border-bottom: none;
+}
+
+.footer-btn {
+    bottom: -5rem;
+    width: 90%;
+    height: 3rem;
+    color: #ed4529;
+    border: 1px solid #ed4529;
+    background-color: #fff;
+    text-align: center;
+    -webkit-border-radius: .2rem;
+    -moz-border-radius: .2rem;
+    border-radius: .2rem;
+    margin: 1rem 0;
+    outline: none;
+}
+
+.footer-btn:active {
+    box-shadow: 0 0 .3rem #a9a9a9;
+}
+/***************规格模态框页面******************/
+@keyframes mymove
+{
+    from {bottom:-100%;top:100%}
+    to {bottom:0;top:0}
+}
+
+@-webkit-keyframes mymove /*Safari and Chrome*/
+{
+    from {bottom:-100%;top:100%;}
+    to {bottom:0;top:0}
+}
+.illness-modal-page{
+    position: fixed;
+    height:100%;
+    width:100%;
+    max-width: 640px;
+    background-color: rgba(101,97,96,0.9);
+    z-index: 1000;
+}
+.animation{
+    animation: mymove 1s forwards;
+    -webkit-animation:mymove 1s forwards; /*Safari and Chrome*/
+}
+.illness-modal-page-mask{
+    width:100%;
+    height:100%;
+    background-color: transparent;
+    position: relative;
+    z-index: 1000;
+}
+.illness-modal-page-content{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    max-width: 640px;
+    left:50%;
+    transform: translate(-50%,0);
+    background-color: #fff;
+    z-index: 1001;
+}
+.illness-modal-top{
+    width:100%;
+    height:3rem;
+    background-color: #F8F8F8;
+}
+.illness-modal-top p{
+    height:3rem;
+    line-height: 3rem;
+    margin:0 1rem;
+}
+.illness-modal-item{
+    width: 100%;
+    height:5rem;
+    border-top:1px solid #E2E2E2;
+    position: relative;
+}
+.illness-modal-item-img{
+    width: 4rem;
+    height:4rem;
+    left: 1rem;
+}
+.illness-modal-item-text{
+    width: 13rem;
+    height:4rem;
+    left: 6rem;
+}
+.illness-modal-item-text p{
+    height:2rem;
+    line-height: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.illness-modal-item-text p span{
+    color:#ed4529;
+}
+.illness-modal-item-edit{
+    width:6rem;
+    height:2rem;
+    right:1rem;
+}
+.illness-modal-item-edit span{
+    display: inline-block;
+    width:1.5rem;
+    height:1.5rem;
+}
+.illness-modal-input{
+    width:3rem;
+    height:1.5rem;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+/*modal页底部按钮*/
+.illness-modal-bottom{
+    width:100%;
+    height:3rem;
+    background-color: #2B2B2B;
+    position: relative;
+}
+.illness-modal-icon-cart{
+    width:3rem;
+    height:3rem;
+    position: absolute;
+    top:-0.8rem;
+    left:1rem;
+    background: url("../images/personal/shop_car@3x.png") no-repeat center;
+    background-size: contain;
+}
+.illness-modal-cart-jiaobiao{
+    position: absolute;
+    width:1.3rem;
+    height:1.3rem;
+    line-height: 1.3rem;
+    text-align: center;
+    background-color: #ed4529;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    top:-0.3rem;
+    right:-0.3rem;
+}
+.illness-modal-total{
+    color: #fff;
+    height:3rem;
+    line-height: 3rem;
+    display: inline-block;
+    margin-left:4.5rem;
+    font-size: 1.2rem;
+}
+.illness-modal-total span{
+    font-size: 0.8rem;
+    color:#666;
+}
+.illness-modal-btn-submit{
+    width:8rem;
+    height:3rem;
+    line-height: 3rem;
+    text-align: center;
+    background-color: #ed4529;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>首页</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/electronic-tag.css">
+</head>
+<body>
+  <div class="electronic-tag-container">
+    <div class="goods-img">
+      <img src="images/electronic-tag/product_slider_01.png" alt="">
+    </div>
+    <div class="goods-detail">
+      <div class="goods-content">
+        <div class="goods-content-title">
+          肾宝片(汇仁)
+        </div>
+        <div class="goods-content-box">
+          <div class="goods-content-item">
+            <span class="item-title">价 &nbsp; &nbsp; &nbsp;格:</span>
+            <span class="item-content item-price">57.0</span>
+          </div>
+          <div class="goods-content-item">
+            <span class="item-title">单 &nbsp; &nbsp; &nbsp;位:</span>
+            <span class="item-content">1盒</span>
+          </div>
+          <div class="goods-content-item">
+            <span class="item-title">规 &nbsp; &nbsp; &nbsp;格:</span>
+            <span class="item-content">100ml</span>
+          </div>
+          <div class="goods-content-item">
+            <span class="item-title">产 &nbsp; &nbsp; &nbsp;地:</span>
+            <span class="item-content">江西</span>
+          </div>
+          <div class="goods-content-item">
+            <span class="item-title">商品编码:</span>
+            <span class="item-content">12345678</span>
+            <i class="item-icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="http://m.360hwj.com/js/jquery/jquery-1.11.3.js"></script>
+  <script>
+    window.onload = function () {
+      var h = parseFloat(getComputedStyle($(".electronic-tag-container")[0]).height);
+      var h1 = parseFloat(getComputedStyle($(".goods-img")[0]).height);
+      $(".goods-detail").css("height",(1-(h1/h))*100+"%");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>银行卡</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/yin-hang-ka-pay.css">
+</head>
+<body>
+    <div class="card-pay-content">
+        <div class="card-pay-content-top">请输入支付密码</div>
+        <div class="pay_input_group horizontal_center">
+            <form class="after  pay_pwd_form" action="#">
+                <div class="pay_input_box"><input type="password" maxlength="1" class="pay_input"></div>
+                <div class="pay_input_box"><input type="password" maxlength="1" class="pay_input"></div>
+                <div class="pay_input_box"><input type="password" maxlength="1" class="pay_input"></div>
+                <div class="pay_input_box"><input type="password" maxlength="1" class="pay_input"></div>
+                <div class="pay_input_box"><input type="password" maxlength="1" class="pay_input"></div>
+                <div class="pay_input_box"><input type="password" maxlength="1" class="pay_input"></div>
+            </form>
+        </div>
+        <div class="card-pay-btn horizontal_center">
+            完成
+        </div>
+    </div>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+
+        $(function () {
+            var arr = $(".pay_pwd_form").children().children("input");
+            var m = 0;
+            var pay_key = [];
+            arr[0].focus();
+            //       点击完成按钮 输出密码
+            $(".card-pay-btn").on("click",function (e) {
+                e.preventDefault();
+                if (arr[5].value !== '' ){
+                    arr[0].focus();
+                    m = 0;
+                    for(var i=0;i<6;i++){
+                        pay_key.push($(".pay_pwd_form").children().children("input")[i].value);
+                    }
+                    //   输出密码
+                    console.log(pay_key);
+                    //       清空内容
+                    arr.val("");
+                    pay_key = [];
+                }else{
+                    arr[0].focus();
+                }
+            });
+            $(document).keyup(function(event){
+                if(((event.keyCode <= 57)&&(event.keyCode >= 48))||((event.keyCode <= 105)&&(event.keyCode >= 96))){
+                    if(m < 5){
+                        m++;
+                        arr[m].focus();
+                        if(m > 0){
+                            arr[m-1].blur();
+                        }
+                    }
+                }else if(event.keyCode !== 8){
+                    arr[0].focus();
+                    m = 0;
+                    //       清空内容
+                    arr.val("");
+                    pay_key = [];
+                }
+                if(event.keyCode === 8) {
+                    if(m > 0){
+                        arr[m-1].focus();
+                        arr[m-1].value = '';
+                        m--;
+                    }
+                }
+            });
+        })
+
+    </script>
+</body>
+</html>

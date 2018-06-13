@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <title>验证手机</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/validate_phone.css">
+</head>
+<body>
+<img src="images/login_bg.png" alt="" class="bg">
+<!--头部-->
+<header class="login_header">
+    <p class="login_top">
+        <span class="vertical_center login_back" onclick="history.go(-1)">
+            <img src="images/icon_left.png" alt="">
+        </span>
+        <span class="login_close">
+            <img src="images/icon_close.png" alt="">
+        </span>
+        验证手机
+    </p>
+</header>
+<!--中间内容-->
+<div class="login_content">
+    <form action="#">
+        <p class="validate">
+            <input class="login_input" type="password" placeholder="请设置新密码" autofocus>
+            <a href="#" class="vertical_center validate_clean hide">×</a>
+        </p>
+        <button class="login_btn" disabled>完成</button>
+    </form>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+
+
+    //检测表单是否有内容输入
+    $(".login_input").on("keyup",function (e) {
+        e.preventDefault();
+        $(".login_btn").removeAttr("disabled");
+        $(".validate_clean").removeClass("hide");
+        $(".login_btn").css("background-color","#ED452A");
+    });
+    $(".validate_clean").on("click",function (e) {
+        e.preventDefault();
+        $(".login_input").val("");
+        $(this).addClass("hide");
+        $(".login_btn").css("background-color","#9C9C9C");
+        $(".login_btn").attr("disabled","disabled");
+    })
+    $(".login_btn").on("click",function (e) {
+        e.preventDefault();
+        window.location.href='login.html';
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+.myCoupon-content{
+    width:100%;
+}
+
+/*顶部tab页*/
+.myCoupon-top{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    max-width: 640px;
+    height:4rem;
+    background-color: #fff;
+}
+.myCoupon-top-item{
+    display: inline-block;
+    float: left;
+    width:33.33%;
+    height:4rem;
+    line-height: 4rem;
+    text-align: center;
+    color: #2F2F2F;
+    font-size: 1.2rem;
+}
+.myCoupon-top-active{
+    color: #ed4529;
+}
+/*优惠券内容*/
+.myCoupon-container{
+    width:100%;
+    padding-top: 4.6rem;
+}
+.myCoupon-container-item{
+    width:100%;
+    background-color: #fff;
+}
+.myCoupon-container-item .myCoupon-item{
+    width:100%;
+    position: relative;
+    padding: 1.5rem 1.2rem 0;
+}
+.myCoupon-container-item .myCoupon-item:last-child{
+    padding-bottom: 1.5rem;
+}
+.myCoupon-container-item .myCoupon-item .coupon-state{
+    position: absolute;
+    top:0;
+    right:0;
+    width: 4.5rem;
+    height:2rem;
+    line-height: 2rem;
+    text-align: center;
+    color:#fff;
+}
+.myCoupon-container-item .myCoupon-item .myCoupon-item-content{
+    width:100%;
+    position: relative;
+}
+.myCoupon-container-item .myCoupon-item .myCoupon-item-content .coupon-content{
+    position: absolute;
+    top:2rem;
+    left: 1rem;
+    color:#fff;
+}
+.myCoupon-container-item .myCoupon-item .myCoupon-item-content .coupon-content .coupon-content-num{
+    font-size: 1.5rem;
+}
+.myCoupon-container-item .myCoupon-item .myCoupon-item-content .coupon-content .coupon-content-time{
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+}
+/*优惠券底部内容*/
+.myCoupon-container-item .myCoupon-item .myCoupon-item-content .coupon-detail{
+    height:3rem;
+    color:#fff;
+    position: absolute;
+    width:100%;
+    bottom:0;
+}
+.myCoupon-container-item .myCoupon-item .myCoupon-item-content .coupon-detail .coupon-detail-text{
+    font-size: 1rem;
+    left:1rem;
+    right:3rem;
+}
+.myCoupon-container-item .myCoupon-item .myCoupon-item-content .coupon-detail .text-overflow{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.div-text{
+    height:3rem;
+}
+.myCoupon-container-item .myCoupon-item .myCoupon-item-content .coupon-detail .icon-down{
+    position: absolute;
+    right:1rem;
+    width:1rem;
+    top:0;
+    height:100%;
+    background: url("../images/personal/arrow_down_white@3x.png") no-repeat center;
+    background-size: contain;
+}
+.myCoupon-container-item .myCoupon-item .myCoupon-item-content .coupon-detail .icon-down-active{
+    transform: rotate(180deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

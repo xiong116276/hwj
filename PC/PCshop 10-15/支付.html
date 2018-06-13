@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/base.css" />
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/common.css" />
+	<link rel="stylesheet" type="text/css" href="css/pay.css" />
+	<title>订单支付--支付</title>
+	<style>
+		.center{
+			margin: auto;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+		.pay-check{
+			position: fixed;
+			top:0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			z-index: 1000;
+			display: none;
+		}
+		.pay-mould-mask{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: #000;
+			opacity: 0.5;
+		}
+		.pay-mould{
+			width: 400px;
+			height: 270px;
+			padding: 20px;
+			background-color: #fff;
+		}
+		.pay-mould-top{
+			text-align: center;
+			font-size: 16px;
+		}
+		.pay-input-group{
+			margin-top: 50px;
+			height: 200px;
+		}
+		.pay-set-form{
+			position: relative;
+			width: 100%;
+			height: 100%;
+		}
+		.pay-check .input{
+			position: absolute;
+			top: 0;
+			height:50px;
+			opacity: 0;
+			z-index: 100;
+			margin-left: -100%;
+			width: 200%;
+		}
+		.pay-check .input-box{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 50px;
+			z-index: 1;
+		}
+		.pay-check .input-box i{
+			float: left;
+			width:13%;
+			height:50px;
+			border:1px solid #F27965;
+			margin: 0 1.5%;
+			position: relative;
+		}
+		.pay-check .input-active{
+			background: url("images/cursor.gif") no-repeat center;
+		}
+		.pay-check .input-box i b{
+			display: none;
+			width:10px;
+			height: 10px;
+			border-radius: 50%;
+			background-color: #000;
+		}
+		.pay-check .btn{
+			position: absolute;
+			bottom: 10px;
+			width: 100px;
+			text-align: center;
+			cursor: pointer;
+		}
+		.pay-check .btn-submit{
+			right: 120px;
+			color: #fff;
+			height: 38px;
+			line-height: 38px;
+			background-color: #2e61dd;
+		}
+		.pay-check .btn-cancel{
+			right: 0;
+			color: #2e61dd;
+			height: 36px;
+			line-height: 36px;
+			border: 1px solid #2e61dd;
+		}
+	</style>
+</head>
+<body style="background-color: #fff;">
+	<section class="section-1">
+		<div class="center-box">
+			<h3>互联网药品交易服务资格证：<span>沪C20160003</span></h3>
+			<div class="top-layout">
+				<span class="login">您好，请<a href="javascript:;">登录</a></span>
+				<span class="register"><a href="javascript:;">免费注册</a></span>
+				<span class="my-order"><a href="javascript:;">我的订单</a></span>
+				<span class="palm"><a href="javascript:;">手机客户端</a></span>
+				<span class="web-map"><a href="javascript:;">网站导航</a></span>
+				<span class="phone-service">客服电话：0662-123456789</span>
+			</div>
+		</div>
+	</section>
+	<section class="section-2">
+		<div class="center-box">
+			<i id="logo">
+				<img src="images/logo.png"/>
+			</i>
+			<div class="search-sec">
+
+				<form action="" method="get" class="search-form">
+					<i class="search-icon"></i>
+					<input type="text" placeholder="六味地黄丸" class="search-input" name="search-input"/>
+					<button id="search-btn" class="search-btn" type="button">搜索</button>
+				</form>
+
+				<div class="search-menu">
+					<a href="javascript:void(0);">肾宝片</a>
+					<a href="javascript:void(0);">六味地黄丸</a>
+					<a href="javascript:void(0);">血压计</a>
+					<a href="javascript:void(0);">益安宁丸</a>
+					<a href="javascript:void(0);">肾安片</a>
+				</div>
+				<div class="cart">
+					<i class="cart-icon"></i>
+					<span>购物车<em>3</em></span>
+					<i class="go-icon"></i>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="section-3-menu">
+		<div class="home-menu">
+			<div class="home-center-ctrl">
+				<div class="home-menu-inner">
+					<em class="hover-move"></em>
+					<a data-index="1" class="active" href="javascript:void(0);" target="_blank">首页</a>
+					<a data-index="2" href="javascript:void(0);" target="_blank">自助找药</a>
+					<a data-index="3" href="javascript:void(0);" target="_blank">男性专区</a>
+					<a data-index="4" href="javascript:void(0);" target="_blank">女性专区</a>
+					<a data-index="5" href="javascript:void(0);" target="_blank">中药饮片</a>
+					<a data-index="6" href="javascript:void(0);" target="_blank">成人用品</a>
+					<a data-index="7" href="javascript:void(0);" target="_blank">活动专区</a>
+				</div>
+				<!-- 折叠菜单 -->
+				<div class="menu-zhedie">
+					<div class="showall"><i class="menu-all-icon"></i>全部商品分类</div>
+					<div class="show-content active">
+						<div class="show-list" data-index="1">
+							<h3 class="menu-li"><i class="menu-zxyp-icon"></i> 中西药品 <em class="more-icon"></em></h3>
+							<div class="show-list-item">
+								<div class="list-item">
+									<h3>心脑血管11</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;" class="hot">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管22</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+							</div>
+						</div>
+
+						<div class="show-list" data-index="2">
+							<h3 class="menu-li"><i class="menu-ylqx-icon"></i> 医疗器械 <em class="more-icon"></em></h3>
+							<div class="show-list-item">
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+							</div>
+						</div>
+
+						<div class="show-list" data-index="3">
+							<h3 class="menu-li"><i class="menu-zyyp-icon"></i> 中药饮片 <em class="more-icon"></em></h3>
+							<div class="show-list-item">
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+							</div>
+						</div>
+
+						<div class="show-list" data-index="4">
+							<h3 class="menu-li"><i class="menu-bjsp-icon"></i> 保健食品 <em class="more-icon"></em></h3>
+							<div class="show-list-item">
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+							</div>
+						</div>
+						<div class="show-list" data-index="5">
+							<h3 class="menu-li active"><i class="menu-jjry-icon"></i> 家居日用 <em class="more-icon"></em></h3>
+							<div class="show-list-item">
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+							</div>
+						</div>
+						<div class="show-list" data-index="6">
+							<h3 class="menu-li"><i class="menu-zbp-icon"></i> 滋补品 <em class="more-icon"></em></h3>
+							<div class="show-list-item">
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+							</div>
+						</div>
+						<div class="show-list" data-index="7">
+							<h3 class="menu-li"><i class="menu-cryp-icon"></i> 成人用品 <em class="more-icon"></em></h3>
+							<div class="show-list-item">
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+							</div>
+						</div>
+						<div class="show-list" data-index="8">
+							<h3 class="menu-li"><i class="menu-ykyy-icon"></i> 眼科用药 <em class="more-icon"></em></h3>
+							<div class="show-list-item">
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+								<div class="list-item">
+									<h3>心脑血管</h3>
+									<a href="javascript:;">高血压</a>
+									<a href="javascript:;">脑血管病</a>
+									<a href="javascript:;">冠心病</a>
+									<a href="javascript:;">高血脂</a>
+									<a href="javascript:;">心绞痛</a>
+									<a href="javascript:;">静脉曲张</a>
+									<a href="javascript:;">血液疾病</a>
+									<a href="javascript:;">低血压 </a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- 以上是公共部分 -->
+	<section class="bread-menu">
+		<i class="home-icon"></i>
+		<a href="javascript:;"><span>首页</span></a>
+		<a href="javascript:;"><span>购物车</span></a>
+		<a href="javascript:;" class="active"><span>订单支付</span></a>
+	</section>
+	<section class="pay-wrapper">
+		<h2><div class="text"><i class="pay-icon"></i>您的订单已提交成功，正在等待付款！</div></h2>
+		<div class="pay-tab">订单信息</div>
+		<div class="pay-order-table">
+			<table border="0" cellpadding="0" cellspacing="0">
+			  <tr>
+			    <td width="118px" align="center">编号</td>
+			    <td width="459px" style="padding-left:20px">123456789 <a href="">[查看订单]</a></td>
+			    <td width="119px" align="center">应付金额</td>
+			    <td width="459px" style="padding-left:20px">￥28.00</td>
+			  </tr>
+			  <tr>
+			    <td width="118px" align="center">配送方式</td>
+			    <td width="459px" style="padding-left:20px">顺丰速运</td>
+			    <td width="119px" align="center">支付方式</td>
+			    <td width="459px" style="padding-left:20px">货到付款</td>
+			  </tr>
+			  <tr><td class="he-th" style="padding-left:35px" width="1165px"><em>注：</em> 请您在<span>2017-09-15 00:00 </span>之前支付订单款项，否则该订单将失效！</td></tr>
+			</table>
+		</div>
+		<div class="pay-tab">支付方式</div>
+
+		<div class="pay-style-list">
+			<div class="pay-style-item3 active"><i class="huo-icon"></i>货到付款</div>
+			<div class="pay-style-item3"><i class="yue-icon"></i>余额支付</div>
+			<div class="pay-style-item3"><i class="wechat-icon"></i>微信支付</div>
+			<div class="pay-style-item3"><i class="airpay-icon"></i>支付宝支付</div>
+			<div class="pay-style-item3"><i class="bank-icon"></i>银联支付</div>
+		</div>
+		<div class="paynow-btn"><button type="button" class="p-btn">立即支付</button></div>
+	</section>
+	<!--输入密码-->
+	<section class="pay-check">
+		<div class="pay-mould-mask"></div>
+		<div class="pay-mould center">
+			<div class="pay-mould-top">
+				验证密码
+			</div>
+			<div class="pay-input-group">
+				<form class="pay-set-form" action="#">
+					<input type="number" maxlength="6" minlength="6" class="input">
+					<div class="input-box">
+						<i><b class="center"></b></i>
+						<i><b class="center"></b></i>
+						<i><b class="center"></b></i>
+						<i><b class="center"></b></i>
+						<i><b class="center"></b></i>
+						<i><b class="center"></b></i>
+					</div>
+					<div class="btn btn-submit">
+						确定
+					</div>
+					<div class="btn btn-cancel">
+						取消
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+	<!-- 以下是公共部分 -->
+	<footer class="footer">
+		<div class="main-center">
+			<div class="brand-list">
+				<div class="brand-item">
+					<i class="qwry-icon"></i>
+					<h3>权威荣誉</h3>
+					<span>国家认可 正规合法</span>
+				</div>
+				<div class="brand-item">
+					<i class="ppsq-icon"></i>
+					<h3>品牌授权</h3>
+					<span>国家认可 正规合法</span>
+				</div>
+				<div class="brand-item">
+					<i class="zgbz-icon"></i>
+					<h3>正规保证</h3>
+					<span>国家认可 正规合法</span>
+				</div>
+				<div class="brand-item">
+					<i class="yqrz-icon"></i>
+					<h3>药品认证</h3>
+					<span>国家认可 正规合法</span>
+				</div>
+				<div class="brand-item">
+					<i class="thwy-icon"></i>
+					<h3>退换无忧</h3>
+					<span>国家认可 正规合法</span>
+				</div>
+				<div class="brand-item">
+					<i class="sybz-icon"></i>
+					<h3>私隐包装</h3>
+					<span>国家认可 正规合法</span>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="ft-menus">
+					<div class="ft-menu">
+						<h3>新手入门</h3>
+						<a href="javascript:;">会员注册</a>
+						<a href="javascript:;">找回密码</a>
+						<a href="javascript:;">购物流程</a>
+						<a href="javascript:;">会员积分说明</a>
+					</div>
+					<div class="ft-menu">
+						<h3>新手入门</h3>
+						<a href="javascript:;">会员注册</a>
+						<a href="javascript:;">找回密码</a>
+						<a href="javascript:;">购物流程</a>
+						<a href="javascript:;">会员积分说明</a>
+					</div>
+					<div class="ft-menu">
+						<h3>新手入门</h3>
+						<a href="javascript:;">会员注册</a>
+						<a href="javascript:;">找回密码</a>
+						<a href="javascript:;">购物流程</a>
+						<a href="javascript:;">会员积分说明</a>
+					</div>
+					<div class="ft-menu">
+						<h3>新手入门</h3>
+						<a href="javascript:;">会员注册</a>
+						<a href="javascript:;">找回密码</a>
+						<a href="javascript:;">购物流程</a>
+						<a href="javascript:;">会员积分说明</a>
+					</div>
+					<div class="ft-menu">
+						<h3>新手入门</h3>
+						<a href="javascript:;">会员注册</a>
+						<a href="javascript:;">找回密码</a>
+						<a href="javascript:;">购物流程</a>
+						<a href="javascript:;">会员积分说明</a>
+					</div>
+				</div>
+
+				<div class="ft-ewm">
+					<div class="ft-ewm-item">
+						<span>手机购药</span>
+						<img src="images/ewm-1.jpg" alt=""/>
+					</div>
+					<div class="ft-ewm-item">
+						<span>微信购药</span>
+						<img src="images/ewm-2.jpg" alt=""/>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="copyright">
+			<div class="cr-menu">
+				<a href="javascript:;">关于好万家网</a>
+				<a href="javascript:;">质量信息</a>
+				<a href="javascript:;">网站地图</a>
+				<a href="javascript:;">商品地图</a>
+				<a href="javascript:;">友情链接</a>
+				<a href="javascript:;">诚征英才</a>
+				<a href="javascript:;">关于我们</a>
+			</div>
+			<p>公司司名称：XXXXXXXXXXXX有限公司  |  公司地址：上海市长宁区中山西路1001号－7楼  </p>
+			<p>Copyright © 2010-2015  XXX版权所有 客服电话：4001-151-161</p>
+		</div>
+	</footer>
+	<script type="text/javascript" src="script/jquery.9.1.min.js"></script>
+	<script type="text/javascript" src="script/swiper.min.js"></script>
+	<script type="text/javascript" src="script/magnifier.js"></script>
+	<script type="text/javascript" src="script/main.js"></script>
+	<script>
+    $(function () {
+      var pay_key = "";
+      var m = 0;
+      $(".input").on("click",function () {
+        $(this).focus();
+        if(pay_key === ""){
+          $($(".input-box i")[0]).addClass("input-active");
+        }
+      });
+      $(document).keyup(function(event){
+        if(((event.keyCode <= 57)&&(event.keyCode >= 48))||((event.keyCode <= 105)&&(event.keyCode >= 96))){
+          if(m<6){
+            m++;
+            $($(".input-box i")[m]).addClass("input-active").siblings("[class~='input-active']").removeClass("input-active");
+            $($(".input-box i")[m-1]).children("b").css("display","block");
+            pay_key = $(".input").val();
+            console.log(pay_key);
+          }else{
+            m=6;
+          }
+        }else if(event.keyCode !== 8){
+//        alert("请输入数字！");
+        }
+        if(event.keyCode === 8) {
+          if(m>0){
+            m--;
+            $($(".input-box i")[m]).children("b").css("display","none");
+            $($(".input-box i")[m]).addClass("input-active").siblings("[class~='input-active']").removeClass("input-active");
+            pay_key = $(".input").val();
+            console.log(pay_key);
+            $(".input").focus();
+          }else {
+            m=0;
+          }
+        }
+      });
+    });
+	</script>
+</body>
+</html>

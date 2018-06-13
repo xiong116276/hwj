@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<img src="images/login_bg.png" alt="" class="bg">
+<!--头部-->
+<header class="login_header">
+    <p class="login_top">
+        <span class="login_close" onclick="window.location.href='index-old.html'">
+            <img src="images/icon_close.png" alt="">
+        </span>
+        登&nbsp;录
+    </p>
+</header>
+<!--中间内容-->
+<div class="login_content">
+    <form action="#">
+        <input class="login_input" type="tel" placeholder="请输入账号或手机号" autofocus>
+        <input class="login_input" type="password" placeholder="请输入密码">
+        <button class="login_btn" disabled >登录</button>
+    </form>
+    <p class="login_phone">
+        <a href="login_phone.html">手机登录</a><a href="forget.html">忘记密码?</a>
+    </p>
+    <div class="login_third">
+        <p class="login_third_top">
+            <em class="login_line"></em>
+            <span class="login_third_top_text center_elm">第三方账号登录</span>
+        </p>
+        <ul class="login_third_content after">
+            <li class="login_third_elm" onclick="window.location.href='bind_phone.html'">
+                <div class="horizontal_center login_third_img">
+                    <img src="images/icon_qq.png" alt="">
+                </div>
+                <p class="login_third_text" style="color:#6392EC;">QQ</p>
+            </li>
+            <li class="login_third_elm" onclick="window.location.href='bind_phone.html'">
+                <div class="horizontal_center login_third_img">
+                    <img src="images/icon_weichat.png" alt="">
+                </div>
+                <p class="login_third_text" style="color:#8DC302;">微信</p>
+            </li>
+            <li class="login_third_elm" onclick="window.location.href='bind_phone.html'">
+                <div class="horizontal_center login_third_img">
+                    <img src="images/icon_weibo.png" alt="">
+                </div>
+                <p class="login_third_text" style="color:#D64E39;">微博</p>
+            </li>
+        </ul>
+    </div>
+    <p class="login_register_btn">没有账号?<a href="register.html">立即注册</a></p>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+        $(".login_input").on("keyup",function (e) {
+            e.preventDefault();
+            $(".login_btn").css("background-color","#ED452A");
+            $(".login_btn").removeAttr("disabled");
+            if($('.login_input').val() == ''){
+                $(".login_btn").css("background-color","#9C9C9C");
+                $(".login_btn").attr("disabled","disabled");
+            }
+        });
+        $(".login_btn").on("click",function (e) {
+            e.preventDefault();
+            if(($(".login_input")[0].value !== '')&&($(".login_input")[1].value)){
+                window.location.href='index-old.html';
+            }
+        })
+</script>
+</body>
+</html>

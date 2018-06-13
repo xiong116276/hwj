@@ -1,0 +1,108 @@
+/*中间内容区域*/
+.order-evaluate-content{
+    width:100%;
+    padding-bottom: 4.6rem;
+}
+/****评价商品*/
+.order-evaluate-item:not(:first-child){
+    margin-top: 1rem;
+}
+.order-evaluate-product{
+    width:100%;
+    height:7rem;
+    padding: 1rem;
+    background-color: #fff;
+    position: relative;
+}
+.order-evaluate-product .products-item-img{
+    width:6rem;
+}
+.order-evaluate-product .products-item-text{
+    height:5rem;
+    padding:0.8rem 0 0 7rem;
+    font-size: 1rem;
+    position: relative;
+}
+.order-evaluate-product .products-item-text .products-text-top{
+    position: relative;
+}
+.order-evaluate-product .products-item-text .products-item-data{
+    position: absolute;
+    top:0;
+    right:0;
+}
+.order-evaluate-product .products-item-text .products-item-guige{
+    height:1.8rem;
+    line-height: 1.8rem;
+}
+.order-evaluate-product .products-item-text .products-item-price{
+    color:#ed4529;
+}
+/*评价内容*/
+.order-evaluate-text{
+    width:100%;
+    max-width: 640px;
+    padding: 1rem 0.5rem;
+}
+.evaluate-text-content{
+    width:100%;
+    max-width: 100%;
+    height:6rem;
+    max-height: 6rem;
+    background-color: #fff;
+    border:1px solid #E8E8E8;
+    border-radius: 5px;
+    padding:1rem;
+    text-align: left;
+}
+/*星级评价*/
+.order-evaluate-stars{
+    width:100%;
+    height:4rem;
+    line-height: 4rem;
+    background-color: #fff;
+    padding: 0 1rem;
+}
+.order-evaluate-stars .evaluate-stars-container{
+    width: 12rem;
+    height:4rem;
+    line-height: 4rem;
+}
+.order-evaluate-stars .evaluate-stars-container .evaluate-star{
+    display: inline-block;
+    width:1.5rem;
+    height:4rem;
+    background: url("../images/personal/star_gray_big@3x.png") no-repeat center;
+    background-size: contain;
+    margin-left: 0.5rem;
+}
+.order-evaluate-stars .evaluate-stars-container .evaluate-star-active{
+    background: url("../images/personal/star_red_big@3x.png") no-repeat center;
+    background-size: contain;
+}
+/*底部footer*/
+.order-evaluate-footer{
+    position: fixed;
+    bottom: 0;
+    width:100%;
+    max-width: 640px;
+    background-color: #ed4529;
+    color: #fff;
+    height:4rem;
+    line-height: 4rem;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

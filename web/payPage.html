@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <title>支付方式</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/payPage.css">
+</head>
+<body>
+<header class="header">
+    <p class="header-top">
+        <span class="header-back" onclick="history.go(-1)">
+            <img src="images/icon_left.png" alt="">
+        </span>
+        支付方式
+    </p>
+</header>
+
+<div class="content">
+    <!--支付方式-->
+    <div class="pay-way">
+        <div class="icon"><i class="icon-WeChat center_elm"></i></div>
+        <div class="pay-way-name">微信支付</div>
+    </div>
+
+    <div class="pay-way">
+        <div class="icon"><i class="icon-alipay center_elm"></i></div>
+        <div class="pay-way-name">支付宝支付</div>
+    </div>
+
+    <div class="pay-way">
+        <div class="icon"><i class="icon-UnionPay center_elm"></i></div>
+        <div class="pay-way-name">银联支付</div>
+    </div>
+
+    <div class="pay-way nomal-pay">
+        <div class="icon"><i class="icon-nomal-pay center_elm"></i></div>
+        <div class="pay-way-name">余额支付</div>
+        <div class="pay-num">￥1600.0</div>
+    </div>
+
+</div>
+
+
+<!--设置支付密码界面-->
+<div class="modal_page hide set-pwd">
+    <div class="pay_mould">
+        <div class="pay_mould_top">
+            <a class="pay_top_text fl pay_cancel" href="#">取消</a>
+            <p class="center_elm">
+                <em class="pay_lock">
+                    <img src="images/pay/Password_icon@3x.png" alt="">
+                </em>
+                设置支付密码
+            </p>
+            <a class="pay_top_text fr pay-top-next" href="#">下一步</a>
+        </div>
+        <div class="pay_input_group">
+            <form class="after  pay_set_form" action="#">
+                <div class="pay_input_box"><input type="password" maxlength="1" oninput="if(value.length>1)value=value.slice(0,1)" class="pay_input" autofocus></div>
+                <div class="pay_input_box"><input type="password" maxlength="1" oninput="if(value.length>1)value=value.slice(0,1)" class="pay_input"></div>
+                <div class="pay_input_box"><input type="password" maxlength="1" oninput="if(value.length>1)value=value.slice(0,1)" class="pay_input"></div>
+                <div class="pay_input_box"><input type="password" maxlength="1" oninput="if(value.length>1)value=value.slice(0,1)" class="pay_input"></div>
+                <div class="pay_input_box"><input type="password" maxlength="1" oninput="if(value.length>1)value=value.slice(0,1)" class="pay_input"></div>
+                <div class="pay_input_box"><input type="password" maxlength="1" oninput="if(value.length>1)value=value.slice(0,1)" class="pay_input"></div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--确认支付密码界面-->
+<div class="modal_page hide make-sure">
+    <div class="pay_mould">
+        <div class="pay_mould_top">
+            <a class="pay_top_text fl pay_prev" href="#">上一步</a>
+            <p class="center_elm">
+                <em class="pay_lock">
+                    <img src="images/pay/Password_icon@3x.png" alt="">
+                </em>
+                确认支付密码
+            </p>
+            <a class="pay_top_text fr pay-sure-btn" href="#">确认</a>
+        </div>
+        <div class="pay_input_group">
+            <form class="after pay_makesure_form" action="#">
+                <div class="pay_input_box"><input type="password" maxlength="1" oninput="if(value.length>1)value=value.slice(0,1)" class="pay_input" autofocus></div>
+                <div class="pay_input_box"><input type="password" maxlength="1" oninput="if(value.length>1)value=value.slice(0,1)" class="pay_input"></div>
+                <div class="pay_input_box"><input type="password" maxlength="1" oninput="if(value.length>1)value=value.slice(0,1)" class="pay_input"></div>
+                <div class="pay_input_box"><input type="password" maxlength="1" oninput="if(value.length>1)value=value.slice(0,1)" class="pay_input"></div>
+                <div class="pay_input_box"><input type="password" maxlength="1" oninput="if(value.length>1)value=value.slice(0,1)" class="pay_input"></div>
+                <div class="pay_input_box"><input type="password" maxlength="1" oninput="if(value.length>1)value=value.slice(0,1)" class="pay_input"></div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--支付界面-->
+<div class="modal_page hide pay-page">
+    <div class="pay_mould">
+        <div class="pay_mould_top">
+            <a class="pay_top_text fl pay_other" href="#">其它支付</a>
+            <p class="center_elm">
+                <em class="pay_lock">
+                    <img src="images/pay/Password_icon@3x.png" alt="">
+                </em>
+                支付密码
+            </p>
+            <a class="pay_top_text fr pay-btn" href="#">支付</a>
+        </div>
+        <div class="pay_input_group">
+            <form class="after  pay_pwd_form" action="#">
+                <div class="pay_input_box"><input type="number" maxlength="1" oninput="if(value.length>1)value=value.slice(0,1)" class="pay_input" autofocus></div>
+                <div class="pay_input_box"><input type="number" maxlength="1" oninput="if(value.length>1)value=value.slice(0,1)" class="pay_input"></div>
+                <div class="pay_input_box"><input type="number" maxlength="1" oninput="if(value.length>1)value=value.slice(0,1)" class="pay_input"></div>
+                <div class="pay_input_box"><input type="number" maxlength="1" oninput="if(value.length>1)value=value.slice(0,1)" class="pay_input"></div>
+                <div class="pay_input_box"><input type="number" maxlength="1" oninput="if(value.length>1)value=value.slice(0,1)" class="pay_input"></div>
+                <div class="pay_input_box"><input type="number" maxlength="1" oninput="if(value.length>1)value=value.slice(0,1)" class="pay_input"></div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+    $(function () {
+
+        var arr = $(".pay_set_form").children().children("input");
+        var m = 0;
+        var pay_key = [];
+
+        //        余额支付
+        $(".nomal-pay").on("click",function (e) {
+            e.preventDefault();
+            $(".set-pwd").removeClass("animation2").removeClass("hide").addClass("animation");
+            arr = $(".pay_set_form").children().children("input");
+            arr[0].focus();
+            m = 0;
+        });
+        //        取消按钮
+        $(".pay_cancel").on("click",function (e) {
+            e.preventDefault();
+            $(".set-pwd").removeClass("animation").addClass("animation2");
+            arr.val("");
+        });
+        //        下一步按钮
+        $(".pay-top-next").on("click",function (e) {
+            e.preventDefault();
+            if (arr[5].value !== '' ){
+                $(".set-pwd").removeClass("animation").addClass("hide");
+                $(".make-sure").removeClass("hide").addClass("animation");
+                arr = $(".pay_makesure_form").children().children("input");
+                arr[0].focus();
+                m = 0;
+                for(var i=0;i<6;i++){
+                    pay_key.push($(".pay_set_form").children().children("input")[i].value);
+                }
+                console.log(pay_key);
+
+            }
+        });
+        //        上一步按钮
+        $(".pay_prev").on("click",function (e) {
+            e.preventDefault();
+            $(".set-pwd").removeClass("hide").addClass("animation");
+            $(".make-sure").removeClass("animation").addClass("hide");
+            arr = $(".pay_set_form").children().children("input");
+            arr[5].focus();
+            pay_key = [];
+            m = 5;
+        });
+        //        确认按钮
+        $(".pay-sure-btn").on("click",function (e) {
+            e.preventDefault();
+            if (arr[5].value !== ''){
+                $(".pay-page").removeClass("hide").addClass("animation");
+                $(".make-sure").removeClass("animation").addClass("hide");
+                arr = $(".pay_pwd_form").children().children("input");
+                arr[0].focus();
+                pay_key = [];
+                m = 0;
+            }
+        });
+        //        其它支付
+        $(".pay_other").on("click",function (e) {
+            e.preventDefault();
+            $(".modal_page").removeClass("animation").addClass("hide");
+            $(".pay_set_form").children().children("input").val("");
+            $(".pay_makesure_form").children().children("input").val("");
+            arr.val("");
+        });
+
+        $(document).keyup(function(event){
+            if(((event.keyCode <= 57)&&(event.keyCode >= 48))||((event.keyCode <= 105)&&(event.keyCode >= 96))){
+                if(m < 5){
+                    m++;
+                    arr[m].focus();
+                    if(m > 0){
+                        arr[m-1].blur();
+                    }
+                }
+            }else if(event.keyCode !== 8){
+                arr[0].focus();
+                m = 0;
+                //清空内容
+                arr.val("");
+                pay_key = [];
+            }
+            if(event.keyCode === 8) {
+                if(m > 0){
+                    arr[m-1].focus();
+                    arr[m-1].value = '';
+                    m--;
+                }
+            }
+        });
+    })
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,315 @@
+@charset "utf-8";
+@import "../base/_minxins.scss";
+/*利益买点*/
+
+.product-buying-point{
+  margin:0.8rem 1rem 0;
+  font-size: 1.2rem;
+  color: #ed4529;
+}
+.product_price_reduce{
+  color: #ed4529;
+  margin-left: 1rem;
+}
+/*生产厂家*/
+.product_vender{
+  padding: 1rem;
+  font-size: 1.2rem;
+  color:#2f2f2f;
+}
+/*药品功效*/
+.product_function{
+  margin: 0.5rem 0.5rem 0.5rem 1rem;
+  font-size: 1.1rem;
+  padding-left: 5.5rem;
+  position: relative;
+  color:#2f2f2f;
+}
+.product_function span{
+  position: absolute;
+  left:0;
+  top:0;
+  font-size: 1.2rem;
+}
+/*商品优惠活动*/
+.activity-title {
+  position: absolute;
+  top:0.5rem;
+  left: 0.5rem;
+}
+
+.product-discount{
+  @include position-template(absolute,0.1rem,auto,auto,0);
+}
+.activity-detail{
+  padding-left: 3rem;
+  margin: 0 0 0.5rem 0;
+  width: 100%;
+}
+.activity-top{
+  width: 100%;
+  padding: 1rem 0;
+  border-bottom: 1px solid #c5c5c5;
+  border-top: 1px solid #c5c5c5;
+  p{
+    padding-left: 0.5rem;
+    border-left: 5px solid #ed4529;
+    font-size: 1.2rem;
+  }
+}
+/******疗程优惠装**********/
+.discount-suit{
+  margin-top: 0.6rem;
+  background-color: #fff;
+  .suit-container{
+    padding: 1rem 0.5rem;
+  }
+  .suit-content{
+    width: 100%;
+  }
+  .suit-item{
+    float: left;
+    width: 50%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    padding: 0 0.5rem;
+    margin-bottom: 1rem;
+    p{
+      border: 1px solid #c3c3c3;
+      color: #222;
+      span{
+        font-size: 1.2rem;
+        margin: 0 0.5rem;
+      }
+    }
+    .active{
+      background-color: #ed4529;
+      color: #fff;
+    }
+  }
+}
+.suit-price{
+  margin: 0 0.5rem;
+  border-top: 1px solid #cecece;
+  padding: 1.5rem 0 0;
+}
+.suit-price-left{
+  float: left;
+  font-size: 1.2rem;
+  color: #3b3b3b;
+  p:nth-child(1){
+    margin-bottom: 0.5rem;
+    span{
+      color: #ed4529;
+    }
+  }
+}
+.suit-price-right{
+  float: right;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  .btn-box{
+    float: right;
+    width: 7rem;
+    %text{
+      float: left;
+      width: 2rem;
+      height: 2rem;
+      line-height: 1.9rem;
+      text-align: center;
+    }
+    span{
+      @extend %text;
+      border: 1px solid #b9b9b9;
+    }
+    input{
+      @extend %text;
+      font-size: 1.2rem;
+      width: 3rem;
+      line-height: 2rem;
+      border: 0;
+      border-top: 1px solid #b9b9b9;
+      border-bottom: 1px solid #b9b9b9;
+    }
+  }
+}
+/*******药师推荐套餐**********/
+%addCartBtn{
+  background-color: #ed4529;
+  color: #fff;
+  padding: 0.5rem;
+  @include border-radius(10px);
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+.doctor-recommend-suit{
+  background-color: #fff;
+  margin-top: 0.6rem;
+  .top{
+    padding: 1rem 0;
+    color: #ed4529;
+    font-size: 1.2rem;
+    text-align: center;
+    border-top: 1px solid #b9b9b9;
+  }
+  .suit-price{
+    margin: 0 ;
+    padding: 1rem;
+  }
+  .suit-price-right{
+    @extend %addCartBtn;
+  }
+}
+.recommend-suit-box{
+  border-bottom: 1px solid #b9b9b9;
+}
+.recommend-suit-nav{
+  border-top: 1px solid #b9b9b9;
+  width: 100%;
+  height: 3.5rem;
+  >div{
+    float: left;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    text-align: center;
+    border-bottom: 1px solid #b9b9b9;
+  }
+  .nav-box{
+    width: 88%;
+    border-right: 1px solid #b9b9b9;
+    .nav-item{
+      float: left;
+      width: 50%;
+    }
+    .active{
+      background-color: #ed4529;
+      color: #fff;
+      position: relative;
+      &:after{
+        content: "";
+        @include transfrom-elm("horizontal");
+        border: 8px solid transparent;
+        border-top-color: #ed4529;
+        bottom: -16px;
+      }
+    }
+  }
+  .nav-more-btn{
+    width: 12%;
+    position: relative;
+    .btn-container{
+      i{
+        display: block;
+        width: 5px;
+        height: 5px;
+        @include border-radius(50%);
+        background-color: #2e2e2e;
+        margin: 0.2rem;
+      }
+    }
+  }
+}
+.recommend-suit-items{
+  padding: 1rem;
+}
+.recommend-suit-item{
+  .item-top{
+    @include bg-img("../images/detail/icon_doctor.png",no-repeat,left center,1.2rem);
+    font-size: 1rem;
+    color: #ed4529;
+    padding-left: 1.5rem;
+    margin-bottom: 0.6rem;
+  }
+  .item-describe{
+    font-size: 0.8rem;
+    color: #2e2e2e;
+  }
+  .item-detail{
+    margin: 1rem 0;
+    width: 100%;
+    overflow-x: scroll;
+    .item-detail-content{
+
+    }
+    .item-box{
+      float: left;
+      position: relative;
+      padding-right: 4.5rem;
+      p{
+        color: #3b3b3b;
+      }
+    }
+    .item-box:not(:last-child){
+      &:after{
+        content:"";
+        display: inline-block;
+        width: 3rem;
+        height: 3rem;
+        @include position-template(absolute,3rem,1rem,auto,auto);
+        @include bg-img("../images/detail/icon-add-mark.png",no-repeat,center,contain);
+      }
+    }
+    .goods-img{
+      width: 100%;
+      height: 8rem;
+      position: relative;
+      margin-bottom: 1rem;
+    }
+    .goods-name{
+      font-size: 0.8rem;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      margin-bottom: 0.5rem;
+    }
+    .goods-price{
+      font-size: 0.8rem;
+    }
+  }
+}
+
+/******药师推荐搭配套餐弹屏*******/
+.doctor-recommend-bomb-screen{
+  @include position-template(fixed,0,auto,0,auto);
+  width: 100%;
+  max-width: 640px;
+  z-index: 100000;
+  .bomb-screen-container{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 3.5rem;
+  }
+  .bomb-screen-scroll-box{
+    padding: 1rem 0;
+  }
+  .bomb-screen-top{
+    @include fontSet("苹方 粗体",1.2rem,#2e2e2e);
+    text-align: center;
+  }
+  .bomb-screen-close-btn{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    @include fontSet("苹方 中等",1.5rem,#fff);
+    text-align: center;
+    height: 3rem;
+    line-height: 3rem;
+    background-color: #ed4529;
+    max-width: 640px;
+  }
+  .item-title{
+    padding: 1rem 0 0 1rem;
+  }
+  .suit-price-right{
+    @extend %addCartBtn;
+  }
+  .bomb-screen-item{
+    border-bottom: 1px solid #b9b9b9;
+  }
+}

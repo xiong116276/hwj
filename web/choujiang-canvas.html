@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>抽奖转盘</title>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+<!-- 幸运抽奖 -->
+<div id="luck-lottery-container">
+  <button id="bt-lottery" type="button">点击抽奖</button> <br><br>
+  <canvas id="canvas-lottery" width="500px" height="500px"></canvas>
+</div>
+<script src="http://m.360hwj.com/js/jquery/jquery-1.11.3.js"></script>
+<script>
+  //幸运抽奖Canvas 绘图
+  window.onload = function () {
+    var w = window.screen.width<640?window.screen.width+"px":640+"px";
+    $("#canvas-lottery").attr("width",w);
+    $("#canvas-lottery").attr("height",w);
+    drawLottery();
+  }
+  function drawLottery(){
+    var canvas=document.getElementById("canvas-lottery");
+    var ctx=canvas.getContext("2d");
+    var progress=0;//图片加载进度
+
+    var pan=new Image();
+    pan.src="images/choujiang/pan.png";//权重75
+    pan.onload=function(){
+      progress+=75;
+      if(progress===100) {
+        beginDraw();
+      }
+    };
+
+    var pin=new Image();
+    pin.src="images/choujiang/pin.png";//权重25
+    pin.onload=function(){
+      progress+=25;
+      if(progress===100) {
+        beginDraw();
+      }
+    };
+
+    function beginDraw(){
+
+      ctx.drawImage(pan,0,0,canvas.width,canvas.height);
+
+      ctx.drawImage(pin,canvas.width/2-22,canvas.height/2-100);
+
+      //one 事件每次只能单击一次。one 里面要写事件类型。
+      $("#bt-lottery").on('click',beginRoll);
+      //var dg=Math.PI/180*(parseInt(Math.random()*1000));
+      //ctx.drawImage(pin,-22,-100);
+    };
+
+    function beginRoll(){
+      //console.log("圆盘开始旋转");
+      $("#bt-lottery").prop("disabled",true);
+      ctx.translate(canvas.width/2,canvas.height/2);
+      var degree=0;//每次旋转的角度
+      var duration=parseInt(Math.random()*1000+1800);//允许旋转的总时长
+      console.log(duration);
+      var last=0;//当前旋转的时间
+
+      var timer=setInterval(function(){
+        degree+=4;
+        degree=degree%360;//370度相当于10度。
+        ctx.rotate(Math.PI/180*degree);
+        ctx.drawImage(pan,-canvas.width/2,-canvas.height/2,canvas.width,canvas.height);
+        ctx.rotate(Math.PI/180*-degree);
+        ctx.drawImage(pin,-pin.width/2,-pin.height/2);
+
+        //判断是否可以停止旋转
+        last+=20;
+        if(last>=duration){
+          clearInterval(timer);
+          $("#bt-lottery").prop("disabled",false);
+          ctx.translate(-canvas.width/2,-canvas.height/2);
+          console.log(degree);
+          if(degree>=270&&degree<300){
+            console.log("恭喜您获得一等奖");
+          }else if((degree>=0&&degree<30)||(degree>=210&&degree<240)){
+            console.log("恭喜您获得二等奖");
+          }else if((degree>=30&&degree<60)||(degree>=90&&degree<120)||(degree>=150&&degree<180)||(degree>=300&&degree<330)){
+            console.log("恭喜您获得三等奖");
+          }else{
+            console.log("恭喜您获得幸运奖");
+          }
+          //异步请求PHP页面提交抽奖结果
+        }
+      },20);
+
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,425 @@
+@charset "UTF-8";
+body {
+  max-width: 750px; }
+
+.goods-integral-content .goods-integral-name, .change-record-item .change-goods-text p:nth-child(1) {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden; }
+
+.integral-top {
+  background-color: #fff; }
+
+.top-bar {
+  position: fixed;
+  max-width: 750px;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  width: 100%;
+  height: 0.92rem;
+  border-bottom: 0.01rem solid #e9eaea;
+  background-color: #fff;
+  z-index: 200; }
+  .top-bar div {
+    float: left;
+    font-family: "苹方 常规";
+    font-size: 0.28rem;
+    color: #666;
+    width: 3.75rem;
+    text-align: center;
+    height: 0.92rem;
+    line-height: 0.92rem; }
+    .top-bar div i {
+      display: inline-block;
+      width: 0.3rem;
+      height: 0.3rem;
+      margin-bottom: -0.05rem;
+      margin-right: 0.18rem; }
+  .top-bar .top-bar-left {
+    border-right: 0.01rem solid #e9eaea; }
+    .top-bar .top-bar-left span {
+      font-family: "苹方 粗体";
+      color: #fc4048; }
+    .top-bar .top-bar-left i {
+      background-image: url("../images/integral-shop/integra_icon@2x.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      -webkit-background-size: contain;
+      background-size: contain; }
+  .top-bar .top-bar-right i {
+    background-image: url("../images/integral-shop/record_icon@2x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: contain;
+    background-size: contain; }
+
+.top-banner {
+  padding-top: 0.92rem; }
+
+.goods-integral-change {
+  position: relative;
+  background-color: #fff; }
+  .goods-integral-change .change-top {
+    width: 70%;
+    height: 0.86rem;
+    line-height: 0.86rem;
+    font-family: "苹方 常规";
+    font-size: 0.3rem;
+    color: #2f2f2f; }
+    .goods-integral-change .change-top i {
+      float: left;
+      width: 0.15rem;
+      height: 0.86rem;
+      margin: 0 0.14rem;
+      background-image: url("../images/integral-shop/goods-change_icon@2x.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      -webkit-background-size: contain;
+      background-size: contain; }
+  .goods-integral-change .integral-rule {
+    font-family: "苹方 常规";
+    font-size: 0.25rem;
+    color: #2f2f2f;
+    right: 0.4rem;
+    padding-right: 0.3rem;
+    background-image: url("../images/integral-shop/integral-icon@2x.png");
+    background-repeat: no-repeat;
+    background-position: center right;
+    -webkit-background-size: 0.23rem;
+    background-size: 0.23rem; }
+
+.integral-rule-bomb-screen {
+  position: fixed;
+  max-width: 750px;
+  top: 0;
+  right: auto;
+  bottom: 0;
+  left: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  z-index: 300; }
+  .integral-rule-bomb-screen .horizontal_center {
+    top: 15%;
+    width: 75%;
+    max-width: 390px; }
+
+.close-btn {
+  position: absolute;
+  top: -10%;
+  right: 0;
+  bottom: auto;
+  left: auto;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-image: url("../images/integral-shop/close-button@2x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: contain;
+  background-size: contain; }
+
+.goods-integral-content {
+  padding: 0.1rem 0.1rem 0 0; }
+  .goods-integral-content .goods-integral-item {
+    float: left;
+    position: relative;
+    width: 3.6rem;
+    height: 4.48rem;
+    margin: 0 0 0.1rem 0.1rem;
+    font-family: "苹方 常规";
+    font-size: 0.3rem;
+    background-color: #fff; }
+  .goods-integral-content .goods-integral-img {
+    width: 65%;
+    margin: 0.3rem auto; }
+  .goods-integral-content .goods-integral-name {
+    color: #343434;
+    font-size: 0.25rem;
+    padding: 0 0.1rem;
+    margin-bottom: 0.20rem; }
+  .goods-integral-content .goods-integral-price {
+    padding-left: 0.12rem; }
+    .goods-integral-content .goods-integral-price .integral-num {
+      color: #fc4048;
+      font-family: "苹方 粗体";
+      margin-right: 0.24rem; }
+    .goods-integral-content .goods-integral-price .money-num {
+      color: #a7a7a7; }
+  .goods-integral-content .goods-integral-btn {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    text-align: center;
+    color: #fff;
+    border-bottom-right-radius: 0.1rem;
+    border-bottom-left-radius: 0.1rem; }
+  .goods-integral-content .goods-change {
+    background-color: #3069db; }
+  .goods-integral-content .goods-change-empty {
+    background-color: #c6c6c6; }
+
+.record-empty {
+  position: fixed;
+  max-width: 750px;
+  top: 0.92rem;
+  right: auto;
+  bottom: 0;
+  left: auto;
+  width: 100%;
+  background-color: #fff; }
+  .record-empty .record-empty-img {
+    width: 35%;
+    top: 2rem; }
+  .record-empty .record-empty-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 4.5rem;
+    font-size: 0.4rem; }
+
+.change-record-item {
+  position: relative;
+  width: 6.72rem;
+  margin: 0 auto; }
+  .change-record-item img {
+    position: relative;
+    z-index: 10; }
+  .change-record-item .icon-point {
+    width: 0.2rem;
+    height: 0.2rem;
+    z-index: 1;
+    background-image: url("../images/integral-shop/-integra_point@2x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: contain;
+    background-size: contain; }
+  .change-record-item:nth-child(odd) .icon-point {
+    background-image: url("../images/integral-shop/-integra_point@2x.png"); }
+  .change-record-item:nth-child(even) .icon-point {
+    background-image: url("../images/integral-shop/-integra_point_gold@2x.png"); }
+  .change-record-item .change-goods-img {
+    position: absolute;
+    top: 0;
+    right: auto;
+    bottom: auto;
+    left: 1rem;
+    width: 16%;
+    z-index: 100;
+    margin-right: 0.32rem; }
+  .change-record-item .change-goods-text {
+    position: absolute;
+    top: 0.4rem;
+    right: 0.7rem;
+    bottom: auto;
+    left: auto;
+    z-index: 100; }
+    .change-record-item .change-goods-text p:nth-child(1) {
+      font-family: "苹方 中等";
+      font-size: 0.28rem;
+      color: #2f2f2f;
+      margin-bottom: 0.1rem; }
+    .change-record-item .change-goods-text p:nth-child(2) {
+      font-family: "苹方 常规";
+      font-size: 0.24rem;
+      color: #a5a5a5; }
+
+/**积分商品详情**/
+.integral-goods-top-text {
+  width: 100%;
+  height: 5.7rem;
+  border-top: 0.01rem solid #ececec;
+  background-color: #fff;
+  padding: 0 1rem; }
+  .integral-goods-top-text .goods-name {
+    font-family: "苹方 中等";
+    font-size: 1.2rem;
+    color: #000;
+    margin: 1rem 0 2rem; }
+  .integral-goods-top-text .goods-price {
+    position: relative;
+    height: 0.5rem; }
+    .integral-goods-top-text .goods-price span {
+      position: absolute;
+      bottom: 0; }
+    .integral-goods-top-text .goods-price .goods-integral {
+      font-family: "苹方 粗体";
+      font-size: 1.8rem;
+      color: #ff0000;
+      left: 0; }
+    .integral-goods-top-text .goods-price .goods-money {
+      font-family: "苹方 常规";
+      font-size: 0.8rem;
+      color: #6b6b6b;
+      left: 8rem; }
+    .integral-goods-top-text .goods-price .goods-freight {
+      font-family: "苹方 中等";
+      font-size: 0.8rem;
+      color: #6b6b6b;
+      right: 0; }
+
+.delivery-address {
+  margin: -0.5rem 0 0.3rem;
+  position: relative; }
+  .delivery-address img {
+    float: left; }
+  .delivery-address .address-text {
+    width: 83%;
+    left: 2.5rem;
+    font-family: "苹方 中等";
+    font-size: 1rem;
+    color: #6b6b6b; }
+    .delivery-address .address-text input {
+      width: 80%;
+      margin-left: 0.1rem;
+      border: 0;
+      font-family: "苹方 中等";
+      font-size: 1rem;
+      color: #6b6b6b; }
+    .delivery-address .address-text :-moz-placeholder {
+      /* Mozilla Firefox 4 to 18 */
+      color: #6b6b6b;
+      opacity: 1;
+      text-align: center; }
+    .delivery-address .address-text ::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color: #6b6b6b;
+      opacity: 1;
+      text-align: center; }
+    .delivery-address .address-text input:-ms-input-placeholder {
+      color: #6b6b6b;
+      opacity: 1;
+      text-align: center; }
+    .delivery-address .address-text input::-webkit-input-placeholder {
+      color: #6b6b6b;
+      opacity: 1;
+      text-align: center; }
+
+.icon-triangle {
+  width: 1rem;
+  height: 1rem;
+  background-image: url("../images/integral-shop/icon-triangle@2x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: contain;
+  background-size: contain;
+  left: 1rem; }
+
+.integral-goods-detail {
+  background-color: #fff;
+  margin-bottom: 8rem; }
+  .integral-goods-detail .detail-title {
+    position: relative;
+    height: 2rem;
+    font-family: "苹方 中等";
+    font-size: 1rem;
+    color: #6b6b6b; }
+    .integral-goods-detail .detail-title span {
+      left: 2.5rem; }
+  .integral-goods-detail .detail-text-content {
+    width: 90%;
+    margin: 0 5%;
+    padding: 1rem 0;
+    border-top: 0.01rem solid #ebebeb; }
+    .integral-goods-detail .detail-text-content .activity-rule-title {
+      font-family: "苹方 中等";
+      font-size: 1rem;
+      color: #000;
+      margin-bottom: 0.5rem; }
+    .integral-goods-detail .detail-text-content .activity-rule-text {
+      font-family: "苹方 中等";
+      font-size: 0.8rem;
+      color: #494949; }
+    .integral-goods-detail .detail-text-content .activity-goods-name {
+      margin-bottom: 0.5rem; }
+    .integral-goods-detail .detail-text-content .activity-goods-integral {
+      color: #ff0000; }
+    .integral-goods-detail .detail-text-content .activity-goods-effect {
+      margin-bottom: 0.5rem; }
+    .integral-goods-detail .detail-text-content .activity-goods-count {
+      color: #ff0000;
+      margin-bottom: 0.5rem; }
+    .integral-goods-detail .detail-text-content .goods-detail .detail-list-item {
+      font-family: "苹方 中等";
+      font-size: 0.8rem;
+      color: #494949;
+      margin-bottom: 0.2rem; }
+
+.change-submit {
+  background-color: #fff;
+  width: 100%;
+  height: 7rem;
+  padding-top: 2rem;
+  position: fixed;
+  max-width: 750px;
+  top: auto;
+  right: auto;
+  bottom: 0;
+  left: auto; }
+  .change-submit .integral-not-enough-btn, .change-submit .change-submit-btn {
+    width: 90%;
+    margin: 0 auto;
+    position: relative; }
+  .change-submit .integral-not-enough-text {
+    font-family: "苹方 中等";
+    font-size: 1rem;
+    color: #6d6d6d;
+    top: 5%;
+    padding-left: 1.2rem;
+    background-image: url("../images/integral-shop/icon-exclamatory-mark@2x.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    -webkit-background-size: 1rem;
+    background-size: 1rem; }
+  .change-submit .change-submit-btn-text {
+    font-family: "苹方 粗体";
+    font-size: 1.4rem;
+    color: #fff; }
+
+.change-bomb-screen {
+  position: fixed;
+  max-width: 750px;
+  top: 0;
+  right: auto;
+  bottom: 0;
+  left: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%; }
+
+.change-bomb-screen-content {
+  width: 70%; }
+
+/*****积分兑换结果*******/
+.integral-change-result {
+  position: fixed;
+  max-width: 750px;
+  top: 0;
+  right: auto;
+  bottom: 0;
+  left: auto;
+  width: 100%;
+  background-color: #fff;
+  font-family: "苹方 常规"; }
+  .integral-change-result .change-result-img {
+    width: 35%;
+    margin: 15% auto 0.5rem; }
+  .integral-change-result .change-result-text {
+    text-align: center;
+    margin-bottom: 0.94rem; }
+    .integral-change-result .change-result-text p:nth-child(1) {
+      font-size: 0.4rem;
+      color: #2f2f2f;
+      margin-bottom: 0.24rem; }
+    .integral-change-result .change-result-text p:nth-child(2) {
+      font-size: 0.28rem;
+      color: #6f6f6f; }
+  .integral-change-result .change-result-btn {
+    width: 4.84rem;
+    font-size: 0.32rem;
+    color: #fff;
+    margin: 0 auto;
+    position: relative; }
+
+/*# sourceMappingURL=integral-shop.css.map */

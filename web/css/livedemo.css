@@ -1,0 +1,83 @@
+/*Menus*/
+
+#gooey-upper .gooey-menu-item,
+#gooey-upper .open-button {
+    left: 50%;
+    top: 50%;
+}
+
+#gooey-round,
+#gooey-API {
+    position: fixed;
+    right: 3rem;
+    bottom: 5rem;
+    z-index: 99999;
+    margin-right: 2rem;
+    padding-top: 2rem;
+}
+
+.gooey-menu-item-icon {
+    width: 50%;
+}
+
+/* Responsive styles */
+
+@media (max-width: 780px) {
+    .code-example {
+        margin-top: 5em;
+    }
+
+    #gooey-upper .gooey-menu-item,
+    #gooey-upper .open-button {
+        left: 44%;
+        top: 70%;
+    }
+
+    #gooey-round .gooey-menu-item, #gooey-round .open-button {
+        top: 50%;
+    }
+
+    .round-example {
+        min-height: 20em;
+    }
+
+    .event-api-ex {
+        min-height: 23em;
+    }
+
+    .vertical-example {
+        min-height: 15em;
+    }
+
+    #gooey-round .open-button,
+    #gooey-API .open-button,
+    #gooey-round .gooey-menu-item,
+    #gooey-API .gooey-menu-item {
+        margin-top: 4em;
+        margin-left: 1rem;
+        margin-right: 2rem;
+    }
+
+    .gooeySVG {
+        width: 0;
+        height: 0;
+    }
+
+    #gooey-h .open-button,
+    #gooey-h .gooey-menu-item {
+        margin-top: .8em;
+    }
+
+}
+
+.gooey-menu-item-middle-one {
+    transform: translate3d(-4rem, -3.6rem, 0px) !important;
+}
+
+.gooey-menu-item-middle-two {
+    transform: translate3d(0, -6rem, 0px) !important;
+}
+
+.gooey-menu-item-middle-three {
+    transform: translate3d(-6rem, 0.5rem, 0px) !important;
+}

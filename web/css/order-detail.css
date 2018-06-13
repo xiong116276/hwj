@@ -1,0 +1,395 @@
+.order-detail-content{
+    width:100%;
+    padding-bottom: 4.6rem;
+}
+/***********内容顶部************/
+.order-detail-top{
+    width:100%;
+    position: relative;
+}
+.order-detail-top .top-content{
+    position: absolute;
+    top:0;
+    width:10rem;
+    height:100%;
+}
+
+/*顶部图标*/
+.order-detail-top .top-content .icon-top{
+    display: inline-block;
+    width:2rem;
+}
+/*顶部文字*/
+.order-detail-top .top-content .top-text{
+    color:#fff;
+    left:3rem;
+}
+/*收货人和地址*/
+.order-detail-receiver{
+    margin-top: 0.6rem;
+    width:100%;
+    height:5.5rem;
+    background-color: #Fff;
+}
+.order-detail-receiver .order-receiver-name{
+    padding:0.5rem 1rem;
+}
+.order-detail-receiver .order-receiver-address{
+    margin: 0 1rem;
+    font-size: 0.8rem;
+}
+/*订单编号下单时间*/
+.order-detail-number{
+    margin-top: 0.6rem;
+    width:100%;
+    height:6rem;
+    background-color: #Fff;
+    padding: 0.8rem 1rem;
+}
+.order-number-text{
+    font-size: 0.9rem;
+    position: relative;
+    padding-left: 0.8rem;
+}
+.order-number-text i{
+    display: inline-block;
+    width:2px;
+    height:2px;
+    border-radius: 50%;
+    background-color: #9C9C9C;
+    left:0;
+}
+.order-number-text:not(:last-child){
+    margin-bottom: 0.4rem;
+}
+.order-number-text span.order-state{
+    color:#ed4529;
+}
+/***************订单商品***********/
+.order-detail-products{
+    width:100%;
+    background-color: #fff;
+}
+.order-detail-products .products-shop{
+    width:100%;
+    margin-top: 0.6rem;
+    height:3rem;
+    line-height: 3rem;
+    position: relative;
+    border-bottom: 1px solid #E2E2E2;
+}
+.order-detail-products .products-shop .shops-logo-img{
+    width:1rem;
+    left:1rem;
+}
+.order-detail-products .products-shop .shops-name{
+    position: absolute;
+    height:3rem;
+    line-height: 3rem;
+    left:2.5rem;
+}
+.order-detail-products .products-shop .icon-top{
+    display: inline-block;
+    width:1rem;
+    height:3rem;
+    background: url("../images/personal/arrow_up_gray@3x.png") no-repeat center;
+    background-size: contain;
+    margin-right: 1rem;
+}
+.order-detail-products .products-shop .icon-top-active{
+    transform: rotate(180deg);
+
+}
+.order-detail-products .products-item{
+    width:100%;
+    height:7rem;
+    padding: 1rem;
+    background-color: #fff;
+    position: relative;
+}
+.order-detail-products .products-item .products-item-img{
+    width:6rem;
+}
+.order-detail-products .products-item .products-item-text{
+    height:5rem;
+    padding:0.8rem 0 0 0;
+    font-size: 0.8rem;
+    position: relative;
+}
+.order-detail-products .products-item .products-item-text .products-text-top{
+    position: relative;
+}
+.order-detail-products .products-item .products-item-text .products-item-data{
+    position: absolute;
+    top:0;
+    right:0;
+}
+.order-detail-products .products-item .products-item-text .products-item-guige{
+    height:1.8rem;
+    line-height: 1.8rem;
+}
+.order-detail-products .products-item .products-item-text .products-item-price{
+    color:#ed4529;
+}
+.order-detail-products .products-data{
+    width:100%;
+    height:7rem;
+    border-bottom: 1px solid #E2E2E2;
+    border-top: 1px solid #E2E2E2;
+    background-color: #fff;
+    padding: 1rem;
+    text-align: right;
+}
+.order-detail-products .products-data .products-data-yunfei{
+    height:2rem;
+    line-height: 2rem;
+}
+.order-detail-products .products-total{
+    width:100%;
+    padding-right: 1rem;
+    height:3rem;
+    line-height: 3rem;
+    background-color: #fff;
+    color:#ed4529;
+    text-align: right;
+}
+/*待发货页面申请退款按钮*/
+.order-detail-products .products-item .products-item-text .products-btn-tuikuan{
+    position: absolute;
+    text-align: center;
+    height:2rem;
+    line-height: 2rem;
+    padding: 0 0.5rem;
+    right:0;
+    bottom:0;
+    border:1px solid #E2E2E2;
+    border-radius: 5px;
+}
+/********发票***************/
+.order-detail-fapiao{
+    margin-top: 0.6rem;
+    width:100%;
+    height:3rem;
+    line-height: 3rem;
+    background-color: #fff;
+    padding: 0 1rem;
+}
+/***********物流跟踪********************************************/
+.order-detail-wuliu{
+    margin-top: 0.6rem;
+    width:100%;
+}
+.order-detail-wuliu .order-wuliu-top{
+    width:100%;
+    height:3rem;
+    line-height: 3rem;
+    background-color: #fff;
+    padding: 0 1rem;
+    text-align: left;
+}
+.order-detail-wuliu .wuliu-info{
+    width: 100%;
+    height:6rem;
+    padding: 2.5rem 0 0 0;
+    position: relative;
+}
+.wuliu-info-first{
+    position: absolute;
+    width:2rem;
+    height:4rem;
+    left:1rem;
+}
+.wuliu-info-container{
+    width:100%;
+    height:4rem;
+    padding-left:3rem;
+}
+.icon-sign{
+    display: inline-block;
+    width:0.5rem;
+    height:0.5rem;
+    border-radius: 50%;
+    top:-1rem;
+    border:2px solid #e2e2e2;
+}
+.icon-sign-red{
+    border:2px solid #ed4529;
+}
+.wuliu-info-item{
+    width:24%;
+    height:4rem;
+    float: left;
+    position: relative;
+}
+.wuliu-item-line{
+    position: absolute;
+    right:1.7rem;
+    top:-0.6rem;
+    width:76%;
+    border-top:1px dashed #e2e2e2;
+}
+.wuliu-item-line-red{
+    border-top:1px solid #ed4529;
+}
+/**********物流列表**************/
+.wuliu-item-text{
+    position: absolute;
+    width:2rem;
+    height:4rem;
+    right:0;
+}
+.wuliu-list-items{
+    width:100%;
+    background-color: #fff;
+    position: relative;
+}
+.wuliu-list-item{
+    width:86%;
+    margin: 0 7%;
+    position: relative;
+    padding: 1rem 0;
+}
+.wuliu-list-icon{
+    position: absolute;
+    width:0.6em;
+    height:0.6rem;
+    background-color: #ed4529;
+    border-radius: 50%;
+    left:-1.2rem;
+    top:1.3rem;
+}
+.wuliu-list-text{
+    font-size: 1.2rem;
+}
+.wuliu-list-time{
+    padding: 0.3rem 0;
+    font-size: 1rem;
+}
+.wuliu-text-num{
+    color:#ed4529;
+}
+/**************物流运输*********/
+.wuliu-info-yunshu{
+    width:100%;
+    font-size: 1.2rem;
+    color:#a5a5a5;
+}
+.wuliu-yunshu-item{
+    width:100%;
+    margin-top: 1rem;
+}
+/*收起物流列表按钮*/
+.wuliu-list-retract{
+    border-top:1px solid #E2E2E2;
+    height:4rem;
+    line-height: 4rem;
+    width:100%;
+    text-align: center;
+    background-color: #fff;
+    color: #B4B4B4;
+    position: relative;
+}
+.wuliu-btn-retract{
+    width:10rem;
+}
+.wuliu-list-retract .icon-top{
+    display: inline-block;
+    width:1rem;
+    height:1rem;
+    background: url("../images/personal/arrow_up_gray@3x.png") no-repeat center;
+    background-size: contain;
+    right:1.5rem;
+}
+.wuliu-list-retract .icon-top-active{
+    transform: rotate(180deg) translate(0,50%);
+}
+/*最后一条物流信息*/
+.wuliu-info-last{
+    width:100%;
+    padding: 1rem 7%;
+    background-color: #fff;
+}
+/************取消订单modal************************************************/
+.order-detail-modal{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    width:100%;
+    max-width: 640px;
+    background-color: rgba(101,97,96,0.6);
+    z-index: 1000;
+}
+.order-detail-modal .modal-content{
+    width:80%;
+    height:10rem;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.order-detail-modal .modal-content .modal-text{
+    width:100%;
+    height:7rem;
+    line-height: 7rem;
+    text-align: center;
+    border-bottom: 1px solid #E2E2E2;
+}
+.order-detail-modal .modal-content .modal-btn-container{
+    width:100%;
+    height:3rem;
+    line-height: 3rem;
+}
+.order-detail-modal .modal-content .modal-btn-container .modal-btn{
+    width:50%;
+    text-align: center;
+}
+.order-detail-modal .modal-content .modal-btn-container .modal-btn-cancel{
+    border-right: 1px solid #E2E2E2;
+}
+.order-detail-modal .modal-content .modal-btn-container .modal-btn-sure{
+    color:#ed4529;
+}
+/***********footer*********/
+.footer{
+    position: fixed;
+    bottom: 0;
+    width:100%;
+    max-width: 640px;
+    height:4rem;
+    background-color: #ed4529;
+}
+/*待付款footer*/
+.footer .footer-btn{
+    width:50%;
+    display: inline-block;
+    height:4rem;
+    line-height: 4rem;
+    text-align: center;
+    color:#fff;
+}
+.footer .footer-btn-cancel{
+    background-color: #E2E2E2;
+    color:#2B2B2B;
+}
+/*待付款和待评价footer*/
+ .footer-send{
+    height:4rem;
+    line-height: 4rem;
+    text-align: center;
+    color:#fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

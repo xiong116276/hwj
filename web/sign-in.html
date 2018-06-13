@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>每日签到</title>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <link rel="stylesheet" href="css/common.css">
+  <script src="js/rem.js"></script>
+  <link rel="stylesheet" href="css/sign-in.css">
+</head>
+<body>
+  <div class="sign-top">
+    <img src="images/sign-in/sign-top_baanner@2x.png" alt="">
+    <div class="btn-active-rule">活动规则</div>
+    <div class="top-bar after">
+      <div class="my-integral fl">
+        <div class="num">0</div>
+        <div class="text">我的积分</div>
+      </div>
+
+      <div class="purse-img">
+        <img src="images/sign-in/purse@2x.png" alt="">
+        <div class="purse-img-text">
+          戳我签到
+        </div>
+      </div>
+
+      <div class="my-sign fr">
+        <div class="num">0</div>
+        <div class="text">连续签到天数</div>
+      </div>
+    </div>
+  </div>
+  <!--签到弹屏-->
+  <div class="signed-screen hide">
+    <div class="signed-screen-content center_elm">
+      <i class="icon-close"></i>
+      <img src="images/sign-in/sign-screen@2x.png" alt="">
+      <div class="signed-days horizontal_center">
+        <img src="images/sign-in/filet-black@2x.png" alt="">
+        <div class="signed-days-text">
+          已连续签到<span>1</span>天
+        </div>
+      </div>
+      <div class="signed-prompt horizontal_center">
+        连续签到7天可获得20积分
+      </div>
+      <div class="signed-list horizontal_center">
+        <div class="signed-list-item active">1</div>
+        <div class="signed-list-item default">2</div>
+        <div class="signed-list-item default">3</div>
+        <div class="signed-list-item default">4</div>
+        <div class="signed-list-item default">5</div>
+        <div class="signed-list-item default">6</div>
+        <div class="signed-list-item default">7</div>
+      </div>
+      <div class="signed-screen-bottom horizontal_center">
+        <div class="signed-screen-symbol">
+          <img src="images/sign-in/Mega-Coin@2x.png" alt="">
+        </div>
+        <div class="signed-screen-btn">
+          <img src="images/sign-in/fillet-white@2x.png" alt="">
+          <div class="btn-text horizontal_center">恭喜您获得5个积分</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--活动规则弹屏-->
+  <div class="sign-activity-rule hide">
+    <div class="bomb-screen-img center_elm">
+      <img src="images/sign-in/activity-bomb%20screen@2x.png" alt="">
+      <div class="bomb-screen-text">
+        <div class="text-item">
+          <span>1</span>登录后才能签到
+        </div>
+        <div class="text-item">
+          <span>2</span>每次登录后点击签到按钮才能送积分
+        </div>
+        <div class="text-item">
+          <span>3</span>每天只送一次，积分为5积分，连续签到一周后保持继续签到可获得双倍积分，中断一次则需重新计算周期
+        </div>
+        <div class="text-item">
+          <span>4</span>积分自领取之日起1年内有效
+        </div>
+        <div class="text-item">
+          <span>5</span>积分抽奖需要消耗一定积分
+        </div>
+        <div class="text-item">
+          <span>6</span>活动解释权归好万家所有
+        </div>
+      </div>
+      <div class="btn-bomb-screen horizontal_center">
+        <img src="images/sign-in/fillet-white@2x.png" alt="">
+        <div class="btn-text horizontal_center">我知道了</div>
+      </div>
+      <i class="icon-close"></i>
+    </div>
+  </div>
+  <!--积分商城-->
+  <div class="integral-shop">
+    <div class="fl">
+      <img src="images/sign-in/integral-shop@2x.png" alt="">
+    </div>
+    <div class="fr">
+      <div class="fr-top">
+        <img src="images/sign-in/member-enjoy@2x.png" alt="">
+      </div>
+      <div class="fr-bottom">
+        <img src="images/sign-in/share-hwj@2x.png" alt="">
+      </div>
+    </div>
+  </div>
+  <!--更多活动-->
+  <div class="more-activity">
+    <div class="top-text">—更多活动—</div>
+    <div class="activity-content">
+      <div class="fl">
+        <img src="images/sign-in/new-user-enjoy@2x.png" alt="">
+      </div>
+      <div class="fr">
+        <div class="fr-top">
+          <img src="images/sign-in/new-user-reduce@2x.png" alt="">
+        </div>
+        <div class="fr-bottom">
+          <img src="images/sign-in/recommend@2x.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--footer-->
+  <footer class="sign-footer">
+    <img src="images/sign-in/hwj-sever-banner@2x.png" alt="">
+  </footer>
+  <script src="http://m.360hwj.com/js/jquery/jquery-1.11.3.js"></script>
+  <script>
+    //弹屏函数
+    var bombScreen = function (screenClass) {
+      $("."+screenClass).removeClass("hide");
+      $(".icon-close").on("click",function () {
+        $("."+screenClass).addClass("hide");
+      });
+      $(".btn-text").on("click",function () {
+        $("."+screenClass).addClass("hide");
+      });
+    };
+    //活动规则按钮
+    $(".btn-active-rule").on("click",function () {
+        bombScreen("sign-activity-rule");
+    });
+    //签到按钮
+    $(".purse-img-text").on("click",function (e) {
+      var target = e.target;
+      $(target).html("已<br>签到").addClass("purse-img-text-signed").off("click");
+      bombScreen("signed-screen");
+    });
+  </script>
+</body>
+</html>

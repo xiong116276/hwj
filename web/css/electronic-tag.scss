@@ -1,0 +1,59 @@
+@charset "utf-8";
+@import "../base/minxins.scss";
+.electronic-tag-container{
+  @include position-template(fixed,0,auto,0,auto);
+  width: 100%;
+}
+.goods-img{
+  width: 100%;
+  background-color: rgb(255,250,241);
+}
+.goods-detail{
+  height: 54%;
+  background-color: rgb(74,138,241);
+  padding: 1rem;
+}
+.goods-content{
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+.goods-content-title{
+  font-family: "苹方 粗体";
+  height:20%;
+  line-height: 3rem;
+  border-bottom: 1px solid #fff;
+  font-size: 1.4rem;
+}
+.goods-content-box{
+  height: 80%;
+  padding-top: .5rem;
+  .item-content{
+    margin-left:1rem;
+  }
+  .item-price{
+    font-family: "苹方 粗体";
+    font-size: 1.5rem;
+  }
+}
+.goods-content-box .goods-content-item:nth-child(1){
+  color: #f5fe00;
+}
+.goods-content-item{
+  padding: .5rem 0;
+  width:100%;
+  height: 20%;
+  font-size: 1.2rem;
+}
+.goods-content-box .goods-content-item:last-child{
+ position: relative;
+}
+.item-icon{
+  @include position-template(absolute,auto,0,0,auto);
+  @include bg-img("../images/electronic-tag/purchase_icon@2x.png",no-repeat,center,100%);
+  width: 7rem;
+  height: 3.2rem;
+}
+
+
+

@@ -1,0 +1,201 @@
+body {
+    background-color: #fff;
+}
+
+/*tab页 开关*/
+.medication-tab-page {
+    position: relative;
+    float: left;
+    width: 100%;
+    max-width: 640px;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    /*margin-top: 3rem;*/
+    background-color: #fff;
+}
+
+.tab-selection {
+    float: left;
+    width: 50%;
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #2f2f2f;
+}
+
+.tab-selection-active {
+    border-bottom: 2px solid #ed4529;
+}
+
+.tab-border {
+    width: 1px;
+    height: 1rem;
+    background-color: #e5e5e5;
+}
+
+/*按身体tab页*/
+.tab-selection-body {
+    position: absolute;
+    top: 4.1rem;
+    bottom:0;
+    width: 100%;
+    max-width:640px;
+}
+
+.tab-selection-body img{
+    height: 100%;
+}
+
+/*按科室tab页*/
+.tab-selection-apartment {
+    position: absolute;
+    top: 4.1rem;
+    bottom:0;
+    width: 100%;
+    max-width: 640px;
+    float: left;
+}
+
+.apartment-selection {
+    position: absolute;
+    top:0;
+    bottom:0;
+    width: 30%;
+    float: left;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #2f2f2f;
+    background-color: #f4f4f4;
+    overflow: auto;
+}
+
+.apartment-selection a {
+    float: left;
+    width: 100%;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.apartment-selection-a-act {
+    border-bottom: 0 !important;
+    border-left: 3px solid #ed4529;
+    background-color: #fff;
+    color: #ed4529;
+}
+
+
+/*科室疾病*/
+.apartment-container {
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:30%;
+    float: left;
+    width: 70%;
+    padding: 0 1rem 1em;
+    overflow: auto;
+}
+
+.apartment-detail{
+    float: left;
+}
+
+.apartment-detail-title {
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.apartment-detail-content {
+    float: left;
+    padding-top: 1rem;
+}
+
+.illness-name {
+    display: block;
+    float: left;
+    margin: .5rem .2rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 5rem;
+    padding: .3rem .8rem;
+    color: #717171;
+}
+
+.illness-name-act{
+    color: #fff;
+    background-color: #ed4529;
+    border-color: #ed4529;
+}
+
+.body-apartment{
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 5rem;
+    text-align: center;
+    background-color: #a5cca1;
+}
+
+.body-apartment a{
+    width: 90%;
+    color: #fff;
+}
+
+.apartment-1{
+    top:5%;
+    left:5%;
+}
+
+.apartment-2{
+    top: 20%;
+    left: 5%;
+}
+
+.apartment-3{
+    top: 35%;
+    left: 5%;
+}
+
+.apartment-4{
+    top: 50%;
+    left: 5%;
+}
+.apartment-5{
+    top: 65%;
+    left: 5%;
+}
+.apartment-6{
+    top: 80%;
+    left: 5%;
+}
+.apartment-7{
+    top:5%;
+    right:6%;
+}
+.apartment-8{
+    top:20%;
+    right:6%;
+}
+.apartment-9{
+    top:35%;
+    right:6%;
+}
+.apartment-10{
+    top:50%;
+    right:6%;
+}
+
+.apartment-11{
+    top:65%;
+    right:6%;
+}
+
+.apartment-12{
+    top:80%;
+    right:6%;
+}

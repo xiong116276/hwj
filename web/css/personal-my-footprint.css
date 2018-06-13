@@ -1,0 +1,45 @@
+/*内容区域*********************/
+.footprint-content{
+    width:100%;
+    max-width: 640px;
+}
+.footprint-content-item{
+    height:8rem;
+    background-color: #fff;
+    position: relative;
+}
+.footprint-content-item:not(:last-child){
+    border-bottom:1px solid #E6E6E6;
+}
+.footprint-item-img{
+    width:6rem;
+    left: 1rem;
+}
+.footprint-item-text{
+    left:8rem;
+}
+.footprint-item-name{
+    font-size: 1.2rem;
+}
+.footprint-item-guige{
+    margin: 0.3rem 0;
+}
+.footprint-item-price{
+    color:#ed4529;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

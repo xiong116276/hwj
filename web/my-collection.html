@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <title>我的收藏</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/personal-my-collection.css">
+</head>
+<body>
+<!--头部header-->
+<header class="collection-header">
+    <i class="icon-back vertical_center"></i>
+    <p class="header-text horizontal_center">
+        <a href="" class="header-text-active" title="collection-medicinal">药品</a>
+        <a href="" title="collection-shops">店铺</a>
+    </p>
+</header>
+<!--中间内容-->
+<div class="collection-content">
+    <div class="collection-medicinal">
+        <p class="header-btn-clear">清空</p>
+        <div class="collection-medicinal-item">
+            <div class="collection-medicinal-item-img vertical_center">
+                <img src="images/zhongxi_01.jpg" alt="">
+            </div>
+            <div class="collection-medicinal-item-text vertical_center">
+                <p class="collection-medicinal-item-name">尤得盼 玛咖片 (1.3g*30片)</p>
+                <p class="collection-medicinal-item-guige">规格: 盒</p>
+                <p class="collection-medicinal-item-price">￥59.5</p>
+            </div>
+        </div>
+        <div class="collection-medicinal-item">
+            <div class="collection-medicinal-item-img vertical_center">
+                <img src="images/zhongxi_02.png" alt="">
+            </div>
+            <div class="collection-medicinal-item-text vertical_center">
+                <p class="collection-medicinal-item-name">尤得盼 玛咖片 (1.3g*30片)</p>
+                <p class="collection-medicinal-item-guige">规格: 盒</p>
+                <p class="collection-medicinal-item-price">￥59.5</p>
+            </div>
+        </div>
+        <div class="collection-medicinal-item">
+            <div class="collection-medicinal-item-img vertical_center">
+                <img src="images/zhongxi_01.jpg" alt="">
+            </div>
+            <div class="collection-medicinal-item-text vertical_center">
+                <p class="collection-medicinal-item-name">尤得盼 玛咖片 (1.3g*30片)</p>
+                <p class="collection-medicinal-item-guige">规格: 盒</p>
+                <p class="collection-medicinal-item-price">￥59.5</p>
+            </div>
+        </div>
+        <div class="collection-medicinal-item">
+            <div class="collection-medicinal-item-img vertical_center">
+                <img src="images/zhongxi_02.png" alt="">
+            </div>
+            <div class="collection-medicinal-item-text vertical_center">
+                <p class="collection-medicinal-item-name">尤得盼 玛咖片 (1.3g*30片)</p>
+                <p class="collection-medicinal-item-guige">规格: 盒</p>
+                <p class="collection-medicinal-item-price">￥59.5</p>
+            </div>
+        </div>
+    </div>
+    <div class="collection-shops hide">
+        <p class="header-btn-clear">清空</p>
+        <div class="collection-shops-item">
+            <div class="collection-shops-item-img vertical_center">
+                <img src="images/detail/kangmei_logo.png" alt="">
+            </div>
+            <div class="collection-shops-item-text vertical_center">
+                <p class="collection-shops-item-name">康美大药房</p>
+                <div class="collection-shops-item-sale">
+                    <div class="collection-shops-item-icon vertical_center">
+                        <img src="images/personal/icon-forSale.png" alt="">
+                    </div>
+                    <p class="collection-shops-item-saleData vertical_center">在售药品数1000</p>
+                </div>
+            </div>
+        </div>
+        <div class="collection-shops-item">
+            <div class="collection-shops-item-img vertical_center">
+                <img src="images/detail/kangmei_logo.png" alt="">
+            </div>
+            <div class="collection-shops-item-text vertical_center">
+                <p class="collection-shops-item-name">天字号大药房</p>
+                <div class="collection-shops-item-sale">
+                    <div class="collection-shops-item-icon vertical_center">
+                        <img src="images/personal/icon-forSale.png" alt="">
+                    </div>
+                    <p class="collection-shops-item-saleData vertical_center">在售药品数1000</p>
+                </div>
+            </div>
+        </div>
+        <div class="collection-shops-item">
+            <div class="collection-shops-item-img vertical_center">
+                <img src="images/detail/kangmei_logo.png" alt="">
+            </div>
+            <div class="collection-shops-item-text vertical_center">
+                <p class="collection-shops-item-name">爱国康大药房</p>
+                <div class="collection-shops-item-sale">
+                    <div class="collection-shops-item-icon vertical_center">
+                        <img src="images/personal/icon-forSale.png" alt="">
+                    </div>
+                    <p class="collection-shops-item-saleData vertical_center">在售药品数1000</p>
+                </div>
+            </div>
+        </div>
+        <div class="collection-shops-item">
+            <div class="collection-shops-item-img vertical_center">
+                <img src="images/detail/kangmei_logo.png" alt="">
+            </div>
+            <div class="collection-shops-item-text vertical_center">
+                <p class="collection-shops-item-name">大参林连锁大药房</p>
+                <div class="collection-shops-item-sale">
+                    <div class="collection-shops-item-icon vertical_center">
+                        <img src="images/personal/icon-forSale.png" alt="">
+                    </div>
+                    <p class="collection-shops-item-saleData vertical_center">在售药品数1000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+//    切换药品和店铺收藏
+    $(".header-text a").on("click",function (e) {
+        e.preventDefault();
+        $(this).addClass("header-text-active").siblings("a").removeClass("header-text-active");
+        var collected = $(this).attr("title");
+        $("."+collected).removeClass("hide").siblings().addClass("hide");
+    });
+//    清空按钮
+    $(".header-btn-clear").on("click",function (e) {
+        e.preventDefault();
+        $(this).siblings("div").remove();
+    })
+</script>
+</body>
+</html>

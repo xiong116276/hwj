@@ -1,0 +1,219 @@
+/*头部5tab部分*/
+.tab-header {
+    position: fixed;
+    width: 100%;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    max-width: 640px;
+    text-align: center;
+    background-color: #fff;
+    z-index: 900;
+}
+
+.tab-elm {
+    width: 20%;
+    float: left;
+}
+
+.tab-elm-active {
+    color: #ed4529;
+    font-size: 1.2rem;
+}
+
+.tab-container{
+    width: 100%;
+    max-width: 640px;
+    overflow-x: hidden ;
+    position: absolute;
+    top:3.5rem;
+    bottom:0;
+}
+.tab-content{
+    position: absolute;
+    overflow: hidden;
+    left:0;
+    transition: left .5s linear;
+}
+.tab-content .tab-item{
+    float:left;
+    max-width: 640px;
+    min-height: 100px;
+}
+/*订单信息*/
+.cart-elms {
+    width: 100%;
+}
+
+.cart-elm {
+    width: 100%;
+    background-color: #fff;
+    margin-top: 0.6rem;
+}
+
+.cart-elm-top {
+    width: 100%;
+    height: 3rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.shop-name {
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 1.2rem;
+    margin-left: 2rem;
+}
+
+.icon-shop {
+    left: 5%;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url("../images/shop-icon.png") center no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+}
+
+.cart-elm-content {
+    width: 100%;
+}
+
+.cart-products {
+    width: 100%;
+    height: 100%;
+}
+
+.cart-product {
+    width: 100%;
+    height: 8rem;
+    position: relative;
+}
+
+.cart-product-content {
+    width: 100%;
+    height: 100%;
+}
+
+.cart-product-detail {
+    height: 100%;
+    position: relative;
+    border-top: 1px solid #F4F4F4;
+}
+
+.cart-product-img {
+    width: 6rem;
+    height: 6rem;
+    left: 0.5rem;
+}
+
+.cart-product-text {
+    margin-left: 7rem;
+    height: 100%;
+    padding: 1.5rem 1.5rem 1.5rem 0;
+}
+
+.cart-product-name {
+    width: 80%;
+    display: inline-block;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cart-product-guige {
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1rem;
+}
+
+.cart-product-price {
+    color: #ed4529;
+    font-size: 1rem;
+    position: absolute;
+    bottom: 1.5rem;
+}
+
+
+
+
+/*订单状态*/
+.shop-product-status {
+    width: 30%;
+    height: 3rem;
+    line-height: 3rem;
+    color: #ed4529;
+    float: right;
+    text-align: right;
+    padding-right: 1.5rem;
+}
+
+
+
+/*实付款部分*/
+.cart-product-footer {
+    width: 100%;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    border-top: 1px solid #e5e5e5;
+}
+
+.cart-product-footer-left {
+    width: 60%;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    float: left;
+    text-align: right;
+}
+
+.cart-product-footer-right {
+    width: 35%;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    float: left;
+    margin: 0 2.5%;
+}
+
+
+
+/*底部按钮*/
+.cart-btn {
+    width: 100%;
+    height: 3.5rem;
+    border-top: 1px solid #e5e5e5;
+}
+
+.left-btn {
+    float: right;
+    border: 1px solid #e5e5e5;
+    outline: none;
+    width: 6rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    margin: .5rem .8rem .5rem .4rem;
+    background-color: #fff;
+    -webkit-border-radius: 5%;
+    -moz-border-radius: 5%;
+    border-radius: 5%;
+    color: #333333;
+    font-size: 1rem;
+}
+
+.right-btn {
+    float: right;
+    border: 1px solid #ed4529;
+    outline: none;
+    width: 6rem;
+    text-align: center;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    margin: .5rem .8rem .5rem .4rem;
+    color: #ed4529;
+    background-color: #fff;
+    -webkit-border-radius: 5%;
+    -moz-border-radius: 5%;
+    border-radius: 5%;
+    font-size: 1rem;
+
+}

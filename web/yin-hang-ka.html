@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>银行卡</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/yin-hang-ka.css">
+</head>
+<body>
+
+<div class="add-bank-card">
+    <span class="add">+</span>
+    <span class="add-text">添加一张新的银行卡</span>
+</div>
+
+
+<div class="bank-content">
+    <div class="bank-card">
+        <input type="checkbox" title="selection" class="checkbox-select-false vertical_center">
+        <i class="icon-select-false vertical_center hide"></i>
+        <div class="bank-card-box bank-card-box-center ">
+            <div class="bank-card-bg1">
+                <div class="card-title">
+                    <div class="bank-icon-container"><img src="images/personal/icon-bank.png" class="" alt=""></div>
+                    <div class="card-title-text">
+                        <div class="bank-name">中国工商银行</div>
+                        <div class="card-classify">储蓄卡</div>
+                    </div>
+                </div>
+                <div class="card-num horizontal_center">
+                    <span class="hide-num">****&nbsp;</span>
+                    <span class="hide-num">****&nbsp;</span>
+                    <span class="hide-num">****&nbsp;</span>
+                    <span class="visible-num">5861</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="bank-card">
+        <input type="checkbox" title="selection" class="checkbox-select-false vertical_center">
+        <i class="icon-select-false vertical_center hide"></i>
+        <div class="bank-card-box bank-card-box-center ">
+            <div class="bank-card-bg2">
+                <div class="card-title">
+                    <div class="bank-icon-container"><img src="images/personal/icon-bank.png" class="" alt=""></div>
+                    <div class="card-title-text">
+                        <div class="bank-name">中国工商银行</div>
+                        <div class="card-classify">储蓄卡</div>
+                    </div>
+                </div>
+                <div class="card-num horizontal_center">
+                    <span class="hide-num">****&nbsp;</span>
+                    <span class="hide-num">****&nbsp;</span>
+                    <span class="hide-num">****&nbsp;</span>
+                    <span class="visible-num">5861</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="bank-card">
+        <input type="checkbox" title="selection" class="checkbox-select-false vertical_center">
+        <i class="icon-select-false vertical_center hide"></i>
+        <div class="bank-card-box bank-card-box-center">
+            <div class="bank-card-bg3">
+                <div class="card-title">
+                    <div class="bank-icon-container"><img src="images/personal/icon-bank.png" class="" alt=""></div>
+                    <div class="card-title-text">
+                        <div class="bank-name">中国工商银行</div>
+                        <div class="card-classify">储蓄卡</div>
+                    </div>
+                </div>
+                <div class="card-num horizontal_center">
+                    <span class="hide-num">****&nbsp;</span>
+                    <span class="hide-num">****&nbsp;</span>
+                    <span class="hide-num">****&nbsp;</span>
+                    <span class="visible-num">5861</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="bank-card">
+        <input type="checkbox" title="selection" class="checkbox-select-false vertical_center">
+        <i class="icon-select-false vertical_center hide"></i>
+        <div class="bank-card-box bank-card-box-center">
+            <div class="bank-card-bg4">
+                <div class="card-title">
+                    <div class="bank-icon-container"><img src="images/personal/icon-bank.png" class="" alt=""></div>
+                    <div class="card-title-text">
+                        <div class="bank-name">中国工商银行</div>
+                        <div class="card-classify">储蓄卡</div>
+                    </div>
+                </div>
+                <div class="card-num horizontal_center">
+                    <span class="hide-num">****&nbsp;</span>
+                    <span class="hide-num">****&nbsp;</span>
+                    <span class="hide-num">****&nbsp;</span>
+                    <span class="visible-num">5861</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+<footer class="footer">
+    <div class="footer-btn-bind">解除绑定</div>
+    <div class="footer-btn footer-btn-cancel fl hide">取消</div>
+    <div class="footer-btn footer-btn-clean-bind fl hide">解绑</div>
+</footer>
+
+
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+    $(function () {
+        $('.footer-btn-bind').on('click',function () {
+            $('.footer-btn-bind').addClass('hide');
+            $('.footer-btn').removeClass('hide');
+            $('.bank-card-box').removeClass('bank-card-box-center');
+            $('.icon-select-false').removeClass('hide');
+        });
+
+        $('.footer-btn-clean-bind,.footer-btn-cancel').on('click',function () {
+            $('.footer-btn-bind').removeClass('hide');
+            $('.footer-btn').addClass('hide');
+            $('.bank-card-box').addClass('bank-card-box-center');
+            $('.icon-select-false').addClass('hide');
+            $('.icon-select-true').addClass('icon-select-false').removeClass('icon-select-true');
+        });
+
+
+    });
+
+
+    //点击切换checkbox状态
+    $(function () {
+        $(".checkbox-select-false").on('click',function () {
+            $(this).siblings("i[class~='icon-select-false']").toggleClass('icon-select-true')
+        });
+
+    });
+</script>
+</body>
+</html>

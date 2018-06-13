@@ -1,0 +1,251 @@
+@charset "UTF-8";
+body {
+  max-width: 750px; }
+
+.sign-top {
+  width: 100%;
+  position: relative; }
+
+.btn-active-rule {
+  position: absolute;
+  top: 0.24rem;
+  right: 0.42rem;
+  bottom: auto;
+  left: auto;
+  color: #fff;
+  padding-right: 0.28rem;
+  font-size: 0.25rem;
+  background-image: url("../images/sign-in/icon-question-mark@2x.png");
+  background-repeat: no-repeat;
+  background-position: right 0.07rem;
+  -webkit-background-size: 0.22rem;
+  background-size: 0.22rem; }
+
+.top-bar {
+  width: 100%;
+  height: 1.6rem;
+  background-color: #fff;
+  font-family: "苹方 中等";
+  font-size: 0.3rem;
+  padding-top: 0.52rem;
+  position: relative; }
+  .top-bar .num {
+    color: #ff2a1d; }
+  .top-bar .text {
+    color: #222; }
+  .top-bar div {
+    text-align: center; }
+
+.my-integral {
+  width: 35%; }
+
+.purse-img {
+  width: 43%;
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: 0.1rem;
+  left: 27%;
+  bottom: 0.1rem; }
+  .purse-img .purse-img-text {
+    position: absolute;
+    top: auto;
+    right: 37%;
+    bottom: 0.55rem;
+    left: auto;
+    font-family: "苹方 粗体";
+    font-size: 0.34rem;
+    color: #fff;
+    width: 30%; }
+  .purse-img .purse-img-text-signed {
+    color: #b71306; }
+
+.my-sign {
+  width: 45%; }
+
+.integral-shop {
+  margin-top: 0.32rem;
+  width: 100%;
+  height: 4.1rem; }
+  .integral-shop .fl {
+    width: 3.19rem;
+    border-right: 0.02rem solid #ececec; }
+  .integral-shop .fr {
+    width: 4.31rem; }
+
+.fr-top {
+  border-bottom: 0.02rem solid #ececec; }
+
+.more-activity {
+  width: 100%;
+  height: 4.5rem;
+  margin-bottom: 0.34rem; }
+  .more-activity .top-text {
+    font-family: "苹方 粗体";
+    width: 100%;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+    font-size: 0.36rem;
+    color: #222; }
+
+.activity-content {
+  width: 100%;
+  height: 3.3rem; }
+  .activity-content .fl {
+    width: 3.8rem;
+    border-right: 0.02rem solid #ececec; }
+  .activity-content .fr {
+    width: 3.7rem; }
+
+.sign-activity-rule, .signed-screen {
+  position: fixed;
+  max-width: 750px;
+  top: 0;
+  right: auto;
+  bottom: 0;
+  left: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%; }
+
+.bomb-screen-img {
+  width: 80%; }
+
+.bomb-screen-text {
+  position: absolute;
+  top: 3.25rem;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  width: 100%;
+  padding-left: 0.28rem; }
+  .bomb-screen-text .text-item {
+    font-family: "苹方 中等";
+    font-size: 0.24rem;
+    color: #040404;
+    margin-bottom: 0.05rem;
+    padding: 0 0.1rem 0 0.3rem;
+    position: relative; }
+    .bomb-screen-text .text-item span {
+      position: absolute;
+      top: 0.035rem;
+      right: auto;
+      bottom: auto;
+      left: 0;
+      width: 0.24rem;
+      height: 0.24rem;
+      line-height: 0.24rem;
+      text-align: center;
+      color: #fff;
+      background-color: #000;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%; }
+
+.btn-bomb-screen {
+  width: 80%;
+  bottom: 0.05rem; }
+
+.btn-text {
+  font-family: "苹方 粗体";
+  font-size: 0.36rem;
+  color: #fe854e;
+  bottom: 0.4rem;
+  width: 100%;
+  text-align: center; }
+
+.icon-close {
+  position: absolute;
+  top: -0.8rem;
+  right: 0;
+  bottom: auto;
+  left: auto;
+  width: 0.5rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  text-align: center;
+  color: #fff;
+  background-color: transparent;
+  background-image: url("../images/sign-in/close-button@2x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: contain;
+  background-size: contain; }
+
+.signed-screen-content {
+  width: 80%; }
+
+.signed-days {
+  top: 1.8rem;
+  width: 37%; }
+
+.signed-days-text {
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: 0.45rem;
+  left: auto;
+  width: 100%;
+  text-align: center;
+  font-size: 0.24rem;
+  color: #fff; }
+  .signed-days-text span {
+    color: #facb47; }
+
+.signed-prompt {
+  font-family: "苹方 中等";
+  font-size: 0.25rem;
+  color: #999;
+  top: 3.8rem;
+  width: 100%;
+  text-align: center; }
+
+.signed-list {
+  top: 4.3rem;
+  width: 90%; }
+  .signed-list .signed-list-item {
+    float: left;
+    width: 0.68rem;
+    height: 0.8rem;
+    font-family: "苹方 粗体";
+    font-size: 0.25rem;
+    color: #333;
+    text-align: center; }
+    .signed-list .signed-list-item:not(:last-child) {
+      margin-right: 0.1rem; }
+  .signed-list .default {
+    background-image: url("../images/sign-in/Gold@2x.png");
+    background-repeat: no-repeat;
+    background-position: center 0.4rem;
+    -webkit-background-size: 0.4rem;
+    background-size: 0.4rem; }
+    .signed-list .default:last-child {
+      background-image: url("../images/sign-in/gift@2x.png");
+      background-repeat: no-repeat;
+      background-position: center 0.43rem;
+      -webkit-background-size: 0.3rem;
+      background-size: 0.3rem; }
+  .signed-list .active {
+    background-color: #f6c62f;
+    -webkit-border-radius: 0.1rem;
+    -moz-border-radius: 0.1rem;
+    border-radius: 0.1rem;
+    background-image: url("../images/sign-in/icon-signed@2x.png");
+    background-repeat: no-repeat;
+    background-position: center 0.45rem;
+    -webkit-background-size: 0.3rem;
+    background-size: 0.3rem; }
+
+.signed-screen-bottom {
+  width: 100%;
+  bottom: 0.15rem; }
+
+.signed-screen-symbol {
+  width: 30%;
+  margin: 0 auto -0.4rem; }
+
+.signed-screen-btn {
+  width: 80%;
+  margin: 0 auto; }
+
+/*# sourceMappingURL=sign-in.css.map */

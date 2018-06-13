@@ -1,0 +1,36 @@
+@charset "UTF-8";
+body {
+  max-width: 750px; }
+
+/*****积分兑换结果*******/
+.integral-change-result {
+  position: fixed;
+  max-width: 750px;
+  top: 0;
+  right: auto;
+  bottom: 0;
+  left: auto;
+  width: 100%;
+  background-color: #fff;
+  font-family: "苹方 常规"; }
+  .integral-change-result .change-result-img {
+    width: 35%;
+    margin: 15% auto 0.5rem; }
+  .integral-change-result .change-result-text {
+    text-align: center;
+    margin-bottom: 0.94rem; }
+    .integral-change-result .change-result-text p:nth-child(1) {
+      font-size: 0.4rem;
+      color: #2f2f2f;
+      margin-bottom: 0.24rem; }
+    .integral-change-result .change-result-text p:nth-child(2) {
+      font-size: 0.28rem;
+      color: #6f6f6f; }
+  .integral-change-result .change-result-btn {
+    width: 4.84rem;
+    font-size: 0.32rem;
+    color: #fff;
+    margin: 0 auto;
+    position: relative; }
+
+/*# sourceMappingURL=change-result.css.map */

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <title>幸运抽奖</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/draw.css">
+</head>
+<body>
+<!--中奖记录-->
+<div class="draw-data">
+  <div class="draw-data-content hide">
+    <!--<div class="draw-data-item">-->
+      <!--<i class="icon-integra vertical_center"></i>-->
+      <!--<div class="item-content after">-->
+        <!--<div class="draw-data-item-images fl">-->
+          <!--<images class="center_elm" src="images/draw/integral-25.png" alt="">-->
+        <!--</div>-->
+        <!--<div class="draw-data-item-text fl">-->
+          <!--<p>您抽中了25积分</p>-->
+          <!--<p>2017-09-1 13:14:52</p>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  </div>
+  <div class="draw-data-empty hide">
+    <div class="draw-empty-img horizontal_center">
+      <img src="images/draw/draw-empty@2x.png" alt="">
+    </div>
+    <div class="draw-empty-btn horizontal_center">
+      <img src="images/draw/Button1@2x.png" alt="">
+    </div>
+  </div>
+</div>
+<script src="http://m.360hwj.com/js/jquery/jquery-1.11.3.js"></script>
+<script>
+  window.onload = function () {
+    judgeData();
+  };
+  //判断抽奖记录是否为空
+  var judgeData = function () {
+    if($(".draw-data-content div").length > 0){
+      $(".draw-data-content").removeClass("hide");
+      $(".draw-data-empty").addClass("hide");
+      $(".draw-data").css("background-color","rgb(232,232,232)");
+    }else{
+      $(".draw-data-content").addClass("hide");
+      $(".draw-data-empty").removeClass("hide");
+      $(".draw-data").css("background-color","#fff");
+    }
+  };
+  $(".draw-empty-btn").on("click",function () {
+    window.location.href = "draw.html";
+  })
+</script>
+</body>
+</html>

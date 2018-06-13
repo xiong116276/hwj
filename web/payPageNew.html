@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0"/>
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <title>支付方式</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/payPage.css">
+  <style>
+    /*test*/
+    .pay_set_form{
+      position: relative;
+      height: 5rem;
+    }
+    .input{
+      height:100%;
+      opacity: 0;
+      z-index: 100;
+      margin-left: -100%;
+      width: 200%;
+    }
+    .input-box{
+      width: 100%;
+      position: absolute;
+    }
+    .input-box i{
+      float: left;
+      width:13%;
+      height:3rem;
+      border:1px solid #F27965;
+      margin: 0 1.5%;
+      position: relative;
+    }
+    .input-active{
+      background: url("https://t.alipayobjects.com/images/rmsweb/T1nYJhXalXXXXXXXXX.gif") no-repeat center;
+      -webkit-background-size: 7% 78%;
+      background-size: 7% 78%;
+    }
+
+    .input-box i b{
+      display: none;
+      width:10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #000;
+    }
+  </style>
+</head>
+<body>
+<header class="header">
+  <p class="header-top">
+        <span class="header-back" onclick="history.go(-1)">
+            <img src="images/icon_left.png" alt="">
+        </span>
+    支付方式
+  </p>
+</header>
+
+<div class="content">
+  <!--支付方式-->
+  <div class="pay-way">
+    <div class="icon"><i class="icon-WeChat center_elm"></i></div>
+    <div class="pay-way-name">微信支付</div>
+  </div>
+
+  <div class="pay-way">
+    <div class="icon"><i class="icon-alipay center_elm"></i></div>
+    <div class="pay-way-name">支付宝支付</div>
+  </div>
+
+  <div class="pay-way">
+    <div class="icon"><i class="icon-UnionPay center_elm"></i></div>
+    <div class="pay-way-name">银联支付</div>
+  </div>
+
+  <div class="pay-way nomal-pay">
+    <div class="icon"><i class="icon-nomal-pay center_elm"></i></div>
+    <div class="pay-way-name">余额支付</div>
+    <div class="pay-num">￥1600.0</div>
+  </div>
+
+</div>
+
+
+<!--设置支付密码界面-->
+<div class="modal_page hide set-pwd">
+  <div class="pay_mould">
+    <div class="pay_mould_top">
+      <a class="pay_top_text fl pay_cancel" href="#">取消</a>
+      <p class="center_elm">
+        <em class="pay_lock">
+          <img src="images/pay/Password_icon@3x.png" alt="">
+        </em>
+        输入支付密码
+      </p>
+      <a class="pay_top_text fr pay-top-next" href="#">确认</a>
+    </div>
+    <div class="pay_input_group">
+      <form class="after  pay_set_form" action="#">
+        <input type="tel" maxlength="6" minlength="6" class="input">
+        <div class="input-box center_elm">
+          <i><b class="center_elm"></b></i>
+          <i><b class="center_elm"></b></i>
+          <i><b class="center_elm"></b></i>
+          <i><b class="center_elm"></b></i>
+          <i><b class="center_elm"></b></i>
+          <i><b class="center_elm"></b></i>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="http://m.360hwj.com/js/jquery/jquery-1.11.3.js"></script>
+<script>
+  $(function () {
+    var pay_key = "";
+    var m = 0;
+
+    $(".nomal-pay").on("click",function () {
+      $(".set-pwd").removeClass("animation2").removeClass("hide").addClass("animation");
+      $(".input").focus();
+      $($(".input-box i")[0]).addClass("input-active");
+       setTimeout(function(){
+           $(".pay_input_group")[0].scrollIntoView(false);
+       },100);
+    });
+
+    $(".pay-top-next").on("click",function () {
+      if($(".input").val().length==6){
+        alert("密码为:"+$(".input").val());
+
+        $(".set-pwd").removeClass("animation").addClass("hide");
+        $(".input").val("");
+        m = 0;
+        $(".input-box i").children("b").css("display","none");
+        $(".input-box i").removeClass("input-active");
+      }
+    });
+
+    $(".input").on("click",function () {
+      $(this).focus();
+      setTimeout(function(){
+        $(".pay_input_group")[0].scrollIntoView(false);
+      },100);
+    });
+
+    $(document).keyup(function(event){
+      if(((event.keyCode <= 57)&&(event.keyCode >= 48))||((event.keyCode <= 105)&&(event.keyCode >= 96))){
+        if(m<6){
+          m++;
+          $($(".input-box i")[m]).addClass("input-active").siblings("[class~='input-active']").removeClass("input-active");
+          $($(".input-box i")[m-1]).children("b").css("display","block");
+          pay_key = $(".input").val();
+          console.log(pay_key);
+        }else{
+          m=6;
+        }
+      }else if(event.keyCode !== 8){
+        alert("请输入数字！或用别的浏览器打开");
+        m="";
+        $(".input").val("");
+
+        $(".input-box i").children("b").css("display","none");
+        $($(".input-box i")[0]).addClass("input-active").siblings("[class~='input-active']").removeClass("input-active");
+      }
+      if(event.keyCode === 8) {
+        if(m>0){
+          m--;
+          $($(".input-box i")[m]).children("b").css("display","none");
+          $($(".input-box i")[m]).addClass("input-active").siblings("[class~='input-active']").removeClass("input-active");
+          pay_key = $(".input").val();
+          console.log(pay_key);
+          $(".input").focus();
+        }else {
+          m=0;
+        }
+      }
+    });
+  })
+</script>
+
+
+</body>
+</html>

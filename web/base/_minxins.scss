@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+//position定位
+@mixin position-template ($type,$top,$right,$bottom,$left){
+  position: $type;
+  @if $type == "fixed" {
+    max-width: 750px;
+  }
+  top:$top;
+  right: $right;
+  bottom:$bottom;
+  left:$left;
+}
+
+//背景图片
+@mixin bg-img ($url,$repeat,$position,$size){
+  background-image: url($url);
+  background-repeat: $repeat;
+  background-position: $position;
+  -webkit-background-size: $size;
+  background-size: $size;
+}
+
+//transform
+@mixin transfrom-elm ($type){
+  position: absolute;
+  $left : 0;$top :0;$x : 0;$y : 0;
+  @if $type =="center"{
+    $left : 50%;
+    $top : 50%;
+    $x : -50%;
+    $y : -50%;
+  }@else if $type =="horizontal"{
+    $left : 50%;
+    $top :auto;
+    $x : -50%;
+    $y : 0;
+  }@else if $type =="vertical"{
+    $left : auto;
+    $top :50%;
+    $x : 0;
+    $y : -50%;
+  }
+  left: $left;
+  top: $top;
+  -webkit-transform: translate($x,$y);
+  -moz-transform: translate($x,$y);
+  -ms-transform: translate($x,$y);
+  -o-transform: translate($x,$y);
+  transform: translate($x,$y);
+}
+
+//圆角
+@mixin border-radius ($data){
+  -webkit-border-radius: $data;
+  -moz-border-radius: $data;
+  border-radius: $data;
+}
+
+//圆点
+@mixin round ($size,$color,$bg-color){
+  width: $size;
+  height: $size;
+  line-height: $size;
+  text-align: center;
+  color: $color;
+  background-color: $bg-color;
+}
+
+//文字
+@mixin fontSet ($family,$size,$color){
+  font-family: $family;
+  font-size: $size;
+  color: $color;
+}
+
+@mixin placeholder-color($color){
+  :-moz-placeholder{ /* Mozilla Firefox 4 to 18 */
+    color: $color; opacity:1;
+    text-align: center;
+  }
+  ::-moz-placeholder{ /* Mozilla Firefox 19+ */
+    color: $color;opacity:1;
+    text-align: center;
+  }
+  input:-ms-input-placeholder{
+    color: $color;opacity:1;
+    text-align: center;
+  }
+  input::-webkit-input-placeholder{
+    color: $color;opacity:1;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
