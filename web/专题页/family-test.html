@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <title>家庭常用备药</title>
+  <link rel="stylesheet" href="css/common.min.css">
+  <link rel="stylesheet" href="css/male-area.min.css">
+</head>
+<body>
+  <div class="top-box">
+    <div class="male-top">
+      <!--导航栏-->
+      <div class="family-top-box after"></div>
+    </div>
+    <!--箭头-->
+    <i class="male-top-arrow"></i>
+  </div>
+
+  <div class="family-content">
+    <!--头部详情背景-->
+    <div class="male-detail-item">
+      <div class="male-item-img">
+        <img src="images/family-standing/top-01.png" alt="">
+      </div>
+    </div>
+
+    <!--专区分类-->
+    <div class="adult-content-classify">
+      <img class="top-banner" src="images/family-standing/top-02.png" alt="区域跳转" usemap="#area">
+      <map name="area" id="area"></map>
+    </div>
+
+    <div class="container"></div>
+  </div>
+  <!--返回顶部按钮-->
+  <div id="gotoTop"><i class="icon-gotoTop center_elm"></i></div>
+
+  <script src="http://m.360hwj.com/js/jquery/jquery-1.11.3.js"></script>
+  <script src="http://m.360hwj.com/js/lazyload/jquery.lazyload.min.js"></script>
+  <script src="js/family-set-area.min.js"></script>
+  <script src="js/common-area.min.js"></script>
+  <script>
+    window.onload=function () {
+      goods.init({
+        jsonname:"family-test",
+        goodsdata:"data",
+        //导航栏
+        navtopcontainer:"male-top",
+        navtopbox:"family-top-box",
+        navtopitem:"family-top-items",
+        navtopitemwidth:7,
+        navcoordinatebox:"male-top-content",
+        coordinate:"family-top-coordinate",
+        //area
+        areashape:"rect",
+        //goods
+        goodsitem:"family-items-content",
+        goodspicturefile:"family-standing",
+        goodsitemheader:"adult-items-header1",
+        goodsheaderpicture:"family-standing-items",
+        goodsitembox:"female-items-box",
+        goodsbtn:"family-items-btn",
+        //返回顶部按钮
+        minheight:500,
+        gotopbtn:"6, 133, 237,0.8"
+      });
+    }
+  </script>
+</body>
+</html>

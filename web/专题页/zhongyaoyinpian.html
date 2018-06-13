@@ -1,0 +1,3387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <title>中药饮片</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/male-area.css">
+  	<style>
+        #gotoTop{
+            position: fixed;
+            right: 7%;
+            bottom:7%;
+            width: 3rem;
+            height: 3rem;
+            background-color: rgba(179, 90, 84, 0.8);
+            border:0;
+            -webkit-border-radius:50%;
+            -moz-border-radius:50%;
+            border-radius:50%;
+			display:none;
+        }
+
+        .icon-gotoTop{
+            width: 1rem;
+            height: 1rem;
+            background: url("images/arrow_up_white@2x.png") center no-repeat;
+            -webkit-background-size:contain;
+            background-size:contain;
+        }
+    </style>
+</head>
+<body>
+<div class="top-box">
+  <div class="male-top">
+    <!--导航栏-->
+    <div class="male-top-box after">
+      <div class="male-top-item"><div class="male-top-content"><i class="male-top-coordinate hide"></i>解表药</div></div>
+      <div class="male-top-item"><div class="male-top-content"><i class="male-top-coordinate hide"></i>清热药</div></div>
+      <div class="male-top-item"><div class="male-top-content"><i class="male-top-coordinate hide"></i>泻下药</div></div>
+      <div class="male-top-item"><div class="male-top-content"><i class="male-top-coordinate hide"></i>祛风湿药</div></div>
+      <div class="male-top-item"><div class="male-top-content"><i class="male-top-coordinate hide"></i>化湿药</div></div>
+      <div class="male-top-item"><div class="male-top-content"><i class="male-top-coordinate hide"></i>利水渗湿药</div></div>
+      <div class="male-top-item"><div class="male-top-content"><i class="male-top-coordinate hide"></i>温里药</div></div>
+      <div class="male-top-item"><div class="male-top-content"><i class="male-top-coordinate hide"></i>理气药</div></div>
+      <div class="male-top-item"><div class="male-top-content"><i class="male-top-coordinate hide"></i>消食药</div></div>
+      <div class="male-top-item"><div class="male-top-content"><i class="male-top-coordinate hide"></i>驱虫药</div></div>
+      <div class="male-top-item"><div class="male-top-content"><i class="male-top-coordinate hide"></i>止血药</div></div>
+      <div class="male-top-item"><div class="male-top-content"><i class="male-top-coordinate hide"></i>活血化瘀药</div></div>
+      <div class="male-top-item"><div class="male-top-content"><i class="male-top-coordinate hide"></i>化痰止咳药</div></div>
+      <div class="male-top-item"><div class="male-top-content"><i class="male-top-coordinate hide"></i>安神药</div></div>
+      <div class="male-top-item"><div class="male-top-content"><i class="male-top-coordinate hide"></i>平肝熄风药</div></div>
+      <div class="male-top-item"><div class="male-top-content"><i class="male-top-coordinate hide"></i>开窍药</div></div>
+      <div class="male-top-item"><div class="male-top-content"><i class="male-top-coordinate hide"></i>补虚药</div></div>
+      <div class="male-top-item"><div class="male-top-content"><i class="male-top-coordinate hide"></i>收涩药</div></div>
+      <div class="male-top-item hide"><div class="male-top-content"><i class="male-top-coordinate hide"></i>涌吐药</div></div>
+    </div>
+  </div>
+  <!--箭头-->
+  <i class="male-top-arrow"></i>
+</div>
+
+<div class="medical-content">
+  <!--头部详情背景-->
+
+  <div class="male-detail-item">
+    <div class="male-item-img">
+      <img src="images/chinese-medical/top-01.png" alt="">
+    </div>
+  </div>
+
+
+  <!--专区分类-->
+  <div class="chinese-content-classify">
+    <img src="images/chinese-medical/top-02.png" alt="">
+    <img class="top-banner" src="images/chinese-medical/top-03.png" alt="区域跳转" usemap="#area">
+    <map name="area" id="area">
+      <area class="area" shape="circle" coords="5,5,20"  alt="解表药" href="#jiebiao">
+      <area class="area" shape="circle" coords="5,5,20"  alt="清热药" href="#qingre">
+      <area class="area" shape="circle" coords="5,5,20"  alt="泻下药" href="#xiexia">
+      <area class="area" shape="circle" coords="5,5,20"  alt="祛风湿药" href="#qufeng">
+      <area class="area" shape="circle" coords="5,5,20"  alt="化湿药" href="#huashi">
+      <area class="area" shape="circle" coords="5,5,20"  alt="利水渗湿药" href="#lishui">
+      <area class="area" shape="circle" coords="5,5,20"  alt="温里药" href="#wenli">
+      <area class="area" shape="circle" coords="5,5,20"  alt="理气药" href="#liqi">
+      <area class="area" shape="circle" coords="5,5,20"  alt="消食药" href="#xiaoshi">
+      <area class="area" shape="circle" coords="5,5,20"  alt="驱虫药" href="#quchong">
+      <area class="area" shape="circle" coords="5,5,20"  alt="止血药" href="#zhixue">
+      <area class="area" shape="circle" coords="5,5,20"  alt="活血化瘀药" href="#huoxue">
+      <area class="area" shape="circle" coords="5,5,20"  alt="化痰止咳药" href="#huachuan">
+      <area class="area" shape="circle" coords="5,5,20"  alt="安神药" href="#anshen">
+      <area class="area" shape="circle" coords="5,5,20"  alt="平肝熄风药" href="#pinggan">
+      <area class="area" shape="circle" coords="5,5,20"  alt="开窍药" href="#kaiqiao">
+      <area class="area" shape="circle" coords="5,5,20"  alt="补虚药" href="#buxu">
+      <area class="area" shape="circle" coords="5,5,20"  alt="收涩药" href="#shouse">
+      <area class="area hide" shape="circle" coords="5,5,20"  alt="涌吐药" href="#yongtu">
+      <area class="area" shape="circle" coords="5,5,20"  alt="其它" href="http://m.360hwj.com/shop/category/311">
+    </map>
+  </div>
+
+  <div class="container">
+    <!--分类内容-->
+    <div id="jiebiao" class="medical-items-content">
+      <div class="female-items-header1">
+        <img src="images/chinese-medical/medical-items-01.png" alt="">
+
+        <div class="more-medical vertical_center">
+          <a href="http://m.360hwj.com/shop/list/314"><img src="images/chinese-medical/more-medical.png" alt=""></a>
+        </div>
+      </div>
+
+      <div class="female-items-box after">
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/5028">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/05/J2zAA1mAQo-AJ-9cAAFzhGa3DY4724.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">汇群堂 菊花 100g</div>
+              <div class="items-goods-price">
+                <small>￥</small>20.00
+              </div>
+              <div class="medical-items-btn">
+                <img src="images/chinese-medical/click-cheek.png" alt="">
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/5029">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/1B/J2zAA1mBeMCANtz2AAEYnjXjQGs794.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">制古集 菊花 40克</div>
+              <div class="items-goods-price">
+                <small>￥</small>29.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/5033">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/17/J2zAA1mBeC6ABkG0AAFRmK6ghRM345.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">制古集 菊花(贡菊) 40克</div>
+              <div class="items-goods-price">
+                <small>￥</small>19.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/5036">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/10/J2zAA1mBdyGAQ8FGAAGJmZEpPPk229.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 菊花(胎菊) 50g</div>
+              <div class="items-goods-price">
+                <small>￥</small>16.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/8298">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/0F/J2zAA1mBdviALOQrAAE57lkWCCc875.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 胎菊 50g</div>
+              <div class="items-goods-price">
+                <small>￥</small>16.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/4061">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/0E/J2zAA1mBdsCAC5j4AAE46ICSFyE101.jpg" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 杭白菊 50g</div>
+              <div class="items-goods-price">
+                <small>￥</small>11.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/1864">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/26/J2zAA1mNgOaAIWLTAAG6lmKDK4M214.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 柴胡 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>90.00
+              </div>
+              <div class="medical-items-btn">
+                <img src="images/chinese-medical/click-cheek.png" alt="">
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/4005">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/87/J2zAA1mGkUaAQkf3AAF-r4VZQHA330.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">瑞博 桂枝 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>10.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/2719">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/A2/J2zAA1mRZoKAYtzLAAHsooDfouk397.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">时珍 防风 家种 g</div>
+              <div class="items-goods-price">
+                <small>￥</small>0.39
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/4943">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/36/J2zAA1mNgveAd2mdAAEgJAwoBfA021.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 荆芥 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>25.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/12728">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/94/J2zAA1mGkz6AWsBBAAGZAdgGeJE654.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">瑞博 薄荷 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>20.39
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/11645">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/17/J2zAA1mNfpOAYXl1AAHLnzTQeu8539.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 紫苏叶 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>15.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/9481">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/8D/J2zAA1mRYjeAW0pqAAHTkrsTch4336.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 香薷 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>15.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/9422">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/14/J2zAA1mNfiGAcE1qAAH8P1qL02Y825.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 细辛 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>75.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="qingre" class="medical-items-content">
+      <div class="female-items-header1">
+        <img src="images/chinese-medical/medical-items-02.png" alt="">
+        <div class="more-medical vertical_center">
+          <a href="http://m.360hwj.com/shop/list/312"><img src="images/chinese-medical/more-medical.png" alt=""></a>
+        </div>
+      </div>
+
+      <div class="female-items-box after">
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/7447">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/05/J2zAA1mAQomACGcrAAFQPRi60GU607.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">汇群堂 山银花 60g</div>
+              <div class="items-goods-price">
+                <small>￥</small>16.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/4891">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/0F/J2zAA1mBdwmAXSWHAAFy3MJCANc194.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 金银花 50g</div>
+              <div class="items-goods-price">
+                <small>￥</small>16.50
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/6482">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/14/J2zAA1mBd6iAGW3iAAEANFKEx4w095.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 胖大海 150g</div>
+              <div class="items-goods-price">
+                <small>￥</small>70.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/6180">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/08/J2zAA1mAQt-ATqLrAAEyfJ3nkM8608.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">汇群堂 木蝴蝶 30g</div>
+              <div class="items-goods-price">
+                <small>￥</small>4.80
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/9289">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/1C/J2zAA1mBePyACjamAAE0ij7qgH4499.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">制古集 无花果 200克</div>
+              <div class="items-goods-price">
+                <small>￥</small>22.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/10590">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/1B/J2zAA1mBeMyAVzmeAAEXzd5A01g162.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">制古集 洋甘菊 60克</div>
+              <div class="items-goods-price">
+                <small>￥</small>28.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/5473">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/1B/J2zAA1mNfzWARKL9AAG3-2CRn6g819.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 连翘 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>50.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/1348">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/1C/J2zAA1mNf6OAIWJNAAHO_3mM6Gw186.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 板蓝根 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>20.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/4376">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/22/J2zAA1mNgGiAN9diAAG0xekqW9k698.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 黄芩 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>30.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/3905">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/2B/J2zAA1mNgYuAbu4iAAGlXb6T6Fw207.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 关黄柏 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>50.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/4331">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/0F/J2zAA1mNfWGAZLXpAAGzAqq55Vo181.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 黄连 250g</div>
+              <div class="items-goods-price">
+                <small>￥</small>67.50
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/11363">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/10/J2zAA1mNfZ2AVzpFAAHTLnrESxo629.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 知母 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>25.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/6160">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/31/J2zAA1mNgi2AMofLAAG-c9_qL30516.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 牡丹皮 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>35.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/2360">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/1A/J2zAA1mNfwqAbfEMAAH8RRObso0044.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 地骨皮 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>45.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="xiexia" class="medical-items-content">
+      <div class="female-items-header1">
+        <img src="images/chinese-medical/medical-items-03.png" alt="">
+        <div class="more-medical vertical_center">
+          <a href="http://m.360hwj.com/shop/list/316"><img src="images/chinese-medical/more-medical.png" alt=""></a>
+        </div>
+      </div>
+
+      <div class="female-items-box after">
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/12716">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/92/J2zAA1mGkxKAdSBEAAFNQ11oeRU239.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">瑞博 大黄 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>20.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/5004">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/57/J2zAA1mNiKWAVsqFAAGNIbnEeI4312.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 酒大黄 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>20.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/2715">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/8C/J2zAA1mRYiKAVJkiAAHBPVWVVzM054.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 番泻叶 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>15.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/5994">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/6A/J2zAA1mNi6CASBkhAAEah--DQ5U578.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">鑫鑫 芒硝 g</div>
+              <div class="items-goods-price">
+                <small>￥</small>0.01
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/4426">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/91/J2zAA1mRYziAeVBuAAHUcmff0Mc624.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">时珍 火麻仁 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>15.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/5750">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/58/J2zAA1mNiMaARsVPAAGW4OJeGUM893.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 芦荟 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>15.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/11166">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/78/J2zAA1mGjymAU8DdAAGeVqoBI_0109.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">瑞博 郁李仁 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>60.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/10308">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/4D/J2zAA1mNhymAQ9NvAAHFxaQtBlE524.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 亚麻子 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>10.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/6712">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/93/J2zAA1mRY4CAYcZ2AAG3gONjgbc228.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 牵牛子 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>10.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/1572">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/87/J2zAA1mRBVCAeGxXAAHKpywrjm4704.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">时珍 蓖麻子 统</div>
+              <div class="items-goods-price">
+                <small>￥</small>0.02
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="qufeng" class="medical-items-content">
+      <div class="female-items-header1">
+        <img src="images/chinese-medical/medical-items-04.png" alt="">
+        <div class="more-medical vertical_center">
+          <a href="http://m.360hwj.com/shop/list/315"><img src="images/chinese-medical/more-medical.png" alt=""></a>
+        </div>
+      </div>
+
+      <div class="female-items-box after">
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/13749">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/07/B4/J2zAA1man_-AVBPyAAF7kstHrtQ961.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">东方汇群 桑枝（一等） g</div>
+              <div class="items-goods-price">
+                <small>￥</small>0.02
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/6176">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/77/J2zAA1mGjvqAGEIcAAFpdglFb9Y450.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">瑞博 木瓜 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>20.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/12738">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/97/J2zAA1mGk7mAcCLXAAFpmFOAFw8503.jpg" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">瑞博 槲寄生 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>25.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/9013">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/A6/J2zAA1mRZySAKcBDAAGtx4i_QdU935.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">时珍 威灵仙 g</div>
+              <div class="items-goods-price">
+                <small>￥</small>0.09
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/9414">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/75/J2zAA1mGjsiAMVWjAAFofI1SpKs420.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">瑞博 豨莶草 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>10.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/6710">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/8E/J2zAA1mGklmAUCaeAAFvmTxOohc452.jpg" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">瑞博 千年健 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>15.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/9306">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/A6/J2zAA1mRZyyAcW62AAHBeBKoezA791.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">时珍 五加皮 g</div>
+              <div class="items-goods-price">
+                <small>￥</small>0.09
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/7630">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/32/J2zAA1mNglGAEQsvAAHGrfIalio753.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 伸筋草 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>10.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/3788">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/77/J2zAA1mGjwqAE8jIAAFea7llxd8040.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">瑞博 狗脊 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>10.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/2511">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/74/J2zAA1mGjrCAWHeMAAFnPOOrFko780.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">瑞博 独活 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>20.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="huashi" class="medical-items-content">
+      <div class="female-items-header1">
+        <img src="images/chinese-medical/medical-items-05.png" alt="">
+        <div class="more-medical vertical_center">
+          <a href="http://m.360hwj.com/shop/list/327"><img src="images/chinese-medical/more-medical.png" alt=""></a>
+        </div>
+      </div>
+
+      <div class="female-items-box after">
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/1840">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/79/J2zAA1mGj1KAL1bOAAGMTOV97Hc508.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">瑞博 苍术 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>80.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/2907">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/54/J2zAA1mNiDuAElYgAAG8D23WrgM273.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 麸炒苍术 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>90.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/4215">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/2B/J2zAA1mNgYSAHhrWAAGkKQGm2BM412.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 厚朴 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>15.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/4728">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/56/J2zAA1mNiHaALyjNAAGLNHFlfVQ415.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 姜厚朴 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>15.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/6508">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/AF/J2zAA1mRaKmAQUWLAAGd5bNSdEk713.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">时珍 佩兰 g  统</div>
+              <div class="items-goods-price">
+                <small>￥</small>0.02
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/6507">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/0E/J2zAA1mNfOyANbf8AAG1iIotjfc109.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 佩兰 500</div>
+              <div class="items-goods-price">
+                <small>￥</small>10.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/2507">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/30/J2zAA1mNgh6AAO_bAAF9pD_RO8U599.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 豆蔻 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>50.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/1843">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/40/J2zAA1mNhH2AEvcJAAG2GShScoo359.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 草豆蔻 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>20.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/7423">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/90/J2zAA1mRYxeAXxbXAAIWeAQ2dOU812.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 砂仁 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>70.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/3933">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/7B/J2zAA1mGj3-ADyALAAGRS46-e0g682.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">瑞博 广藿香 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>15.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="lishui" class="medical-items-content">
+      <div class="female-items-header1">
+        <img src="images/chinese-medical/medical-items-06.png" alt="">
+        <div class="more-medical vertical_center">
+          <a href="http://m.360hwj.com/shop/list/317"><img src="images/chinese-medical/more-medical.png" alt=""></a>
+        </div>
+      </div>
+
+      <div class="female-items-box after">
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/10971">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/06/J2zAA1mAQqKAWHmUAAF3x9mOCAU656.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">汇群堂 薏苡仁 250g</div>
+              <div class="items-goods-price">
+                <small>￥</small>14.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/10968">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/18/J2zAA1mBeHeACt0kAAEqqOm2lKw064.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">制古集 薏苡仁 250克</div>
+              <div class="items-goods-price">
+                <small>￥</small>18.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/2926">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/04/J2zAA1mAQkGAFQYNAAFVv7yjezQ343.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">汇群堂 茯苓 200g</div>
+              <div class="items-goods-price">
+                <small>￥</small>25.40
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/11259">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/A9/J2zAA1mRZ9SAWa_7AAFhIesgV3I223.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">时珍 泽泻 g/统</div>
+              <div class="items-goods-price">
+                <small>￥</small>0.03
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/11568">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/24/J2zAA1mNgLWACuViAAFyqJD_3cA973.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 猪苓 250g</div>
+              <div class="items-goods-price">
+                <small>￥</small>137.50
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/1940">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/8A/J2zAA1mRBc6AdSF4AAINysl7L8Y765.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">时珍 车前子 g</div>
+              <div class="items-goods-price">
+                <small>￥</small>0.04
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/7789">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/30/J2zAA1mNggmAGspoAAHPsPo7hWA221.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 石韦 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>20.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/5081">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/8E/J2zAA1mRYsCAE867AAHzZyuAtho616.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 瞿麦 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>20.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/3937">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/79/J2zAA1mGj0eAdquuAAFwzXpHNnM072.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">瑞博 广金钱草 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>15.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/1600">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/3D/J2zAA1mNhA2AUC9AAAH0a-C5Ilw034.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 萹蓄 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>10.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="wenli" class="medical-items-content">
+      <div class="female-items-header1">
+        <img src="images/chinese-medical/medical-items-07.png" alt="">
+        <div class="more-medical vertical_center">
+          <a href="http://m.360hwj.com/shop/list/332"><img src="images/chinese-medical/more-medical.png" alt=""></a>
+        </div>
+      </div>
+
+      <div class="female-items-box after">
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/9987">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/AD/J2zAA1mRaGeAQsICAAFGz9XtygM344.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">时珍 小茴香 g  统</div>
+              <div class="items-goods-price">
+                <small>￥</small>0.02
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/9296">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/A4/J2zAA1mRZtWAIrsRAAG0kz7gNlA429.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">时珍 吴茱萸 g</div>
+              <div class="items-goods-price">
+                <small>￥</small>0.38
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/7155">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/17/J2zAA1mNfpqAPNn9AAGG27Ew0T8197.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 肉桂 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>15.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/3526">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/09/J2zAA1mNe_WADz0mAAGxXnjuwuo279.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 干姜 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>25.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/4223">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/86/J2zAA1mRBQSAZaf9AAIwYdpcBAU283.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">时珍 胡椒 g</div>
+              <div class="items-goods-price">
+                <small>￥</small>0.15
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/1231">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/3F/J2zAA1mNhGOARSVQAAGl-5jKvys801.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 白胡椒 250g</div>
+              <div class="items-goods-price">
+                <small>￥</small>40.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/4257">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/08/J2zAA1mNe8KAMCtjAAIW1nYbBM0395.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 花椒 250g</div>
+              <div class="items-goods-price">
+                <small>￥</small>40.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/4117">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/55/J2zAA1mNiGWALdLtAAGdwbrQRns674.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 红豆蔻 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>30.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/1569">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/40/J2zAA1mNhG-AGniNAAHvaEr0q_o609.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 荜茇 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>50.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/1217">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/3F/J2zAA1mNhFqAdkKtAAFALTRjZHo095.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 菝葜 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>10.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="liqi" class="medical-items-content">
+      <div class="female-items-header1">
+        <img src="images/chinese-medical/medical-items-08.png" alt="">
+        <div class="more-medical vertical_center">
+          <a href="http://m.360hwj.com/shop/list/328"><img src="images/chinese-medical/more-medical.png" alt=""></a>
+        </div>
+      </div>
+
+      <div class="female-items-box after">
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/6012">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/08/J2zAA1mAQuOASeNUAAFu9naPZqA547.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">汇群堂 玫瑰花 50g</div>
+              <div class="items-goods-price">
+                <small>￥</small>16.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/6015">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/19/J2zAA1mBeJOADPJ-AAEBoit3Lg4063.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">制古集 玫瑰花 100克</div>
+              <div class="items-goods-price">
+                <small>￥</small>24.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/6013">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/12/J2zAA1mBd1GAZpQcAAE59VbjiRo830.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 玫瑰花 65g</div>
+              <div class="items-goods-price">
+                <small>￥</small>18.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/6154">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/14/J2zAA1mBd56ADAUSAAEqOgGatso147.jpg" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 茉莉花 40g</div>
+              <div class="items-goods-price">
+                <small>￥</small>14.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/6153">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/1C/J2zAA1mBeQKAZa7rAAEzsucxmvE229.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">制古集 茉莉花 50克</div>
+              <div class="items-goods-price">
+                <small>￥</small>17.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/6184">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/09/J2zAA1mNe-2AJnDwAAG-JU8Pi1s121.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 木香 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>15.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/9470">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/8E/J2zAA1mRYriAYQkQAAHqAYe4bh8205.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 香附 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>20.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/1947">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/93/J2zAA1mRY4-AYoquAAHb529M-kg227.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 陈皮 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>10.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/11422">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/92/J2zAA1mRY02ACi0BAAHB3yVBGnA508.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 枳实 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>65.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/11421">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/2C/J2zAA1mNgZKAINKIAAHWCatj_EQ225.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 枳壳 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>45.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/6811">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/18/J2zAA1mNfreAYf-XAAHX_qwzNy8962.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 青皮 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>20.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/10014">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/4D/J2zAA1mNhyCAa2KJAAHRpLQEgyM277.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 薤白 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>35.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="xiaoshi" class="medical-items-content">
+      <div class="female-items-header1">
+        <img src="images/chinese-medical/medical-items-09.png" alt="">
+        <div class="more-medical vertical_center">
+          <a href="http://m.360hwj.com/shop/list/329"><img src="images/chinese-medical/more-medical.png" alt=""></a>
+        </div>
+      </div>
+
+      <div class="female-items-box after">
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/7458">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/07/J2zAA1mAQrKAcxf9AAFF0_SpbGQ033.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">汇群堂 山楂 150g</div>
+              <div class="items-goods-price">
+                <small>￥</small>13.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/7455">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/17/J2zAA1mBeFOAdaQfAAECnomZfBs970.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">制古集 山楂 120克</div>
+              <div class="items-goods-price">
+                <small>￥</small>16.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/7457">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/0E/J2zAA1mBdtOAXHlzAAEteidnOME538.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 山楂 100g</div>
+              <div class="items-goods-price">
+                <small>￥</small>14.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/6785">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/18/J2zAA1mBeGuADJ0zAAFt9XAD-Ug898.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">制古集 荞麦 150克</div>
+              <div class="items-goods-price">
+                <small>￥</small>18.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/1920">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/82/J2zAA1mRBFKAHT7VAAJmm5xaV_Q179.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 炒麦芽 1g</div>
+              <div class="items-goods-price">
+                <small>￥</small>0.02
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/5375">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/1D/J2zAA1mNf86ANxJ2AAGP6OFcGm0114.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 莱菔子 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>15.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/1914">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/52/J2zAA1mNh8aAK8ZGAAHFpItvOyQ764.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 炒鸡内金 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>15.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/4549">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/11/J2zAA1mNfcKAaOHiAAFyTZYrGik446.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 鸡内金 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>15.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/2322">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/21/J2zAA1mNgFGAAlv5AAHOQuJ1X_o704.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 稻芽 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>10.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/5992">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/63/J2zAA1mNinCARI4pAAGkQZTaUHc014.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">时珍 芒果核 统</div>
+              <div class="items-goods-price">
+                <small>￥</small>0.03
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="quchong" class="medical-items-content">
+      <div class="female-items-header1">
+        <img src="images/chinese-medical/medical-items-010.png" alt="">
+        <div class="more-medical vertical_center">
+          <a href="http://m.360hwj.com/shop/list/330"><img src="images/chinese-medical/more-medical.png" alt=""></a>
+        </div>
+      </div>
+
+      <div class="female-items-box after">
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/7801">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/8C/J2zAA1mRYfmAEzezAAGKQBSWhNk683.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 使君子 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>20.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/5343">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/47/J2zAA1mNhVSAEABCAAIPZWxPRlY797.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 苦楝皮 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>10.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/5419">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/5E/J2zAA1mNiZuAe5HMAAI83deNeys223.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">时珍 雷丸 g</div>
+              <div class="items-goods-price">
+                <small>￥</small>0.23
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/2766">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/84/J2zAA1mRBMuAY6HxAAHQZ2igX1Y979.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">时珍 榧子 g</div>
+              <div class="items-goods-price">
+                <small>￥</small>0.35
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/1615">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/18/J2zAA1mNfqmAVlWQAAGiE7btE8I384.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 槟榔 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>20.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/1617">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/88/J2zAA1mGkZCAIzGBAAFuN5sNGXI582.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">瑞博 槟榔（家种) 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>20.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="zhixue" class="medical-items-content">
+      <div class="female-items-header1">
+        <img src="images/chinese-medical/medical-items-011.png" alt="">
+        <div class="more-medical vertical_center">
+          <a href="http://m.360hwj.com/shop/list/313"><img src="images/chinese-medical/more-medical.png" alt=""></a>
+        </div>
+      </div>
+
+      <div class="female-items-box after">
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/7318">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/19/J2zAA1mBeH2AeDgEAAEiUz-idYM791.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">制古集 三七 150克</div>
+              <div class="items-goods-price">
+                <small>￥</small>98.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/7319">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/14/J2zAA1mBd7GAT1HgAAFvxoXuQ9c971.jpg" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 三七 130g</div>
+              <div class="items-goods-price">
+                <small>￥</small>117.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/1237">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/24/J2zAA1mNgLyACiYbAAGw6FTpvrs556.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 白及 100g</div>
+              <div class="items-goods-price">
+                <small>￥</small>170.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/2371">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/0A/J2zAA1mNe_yAKhlXAAICSkoB5e4185.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 地榆 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>20.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/1030">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/3F/J2zAA1mNhFSADN0IAAGXcWJUl10666.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 艾叶炭 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>20.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/1245">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/0F/J2zAA1mNfTqASYiHAAG4bBG9Rbg314.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 白茅根 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>20.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/1858">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/9D/J2zAA1mRZb2Ae2zCAAG2nPZZ70I596.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 侧柏炭 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>10.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/6460">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/4A/J2zAA1mNhcOACkJ1AAGX8lar2p8033.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 藕节炭 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>20.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/4733">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/56/J2zAA1mNiH6AQx7sAAFXSuyw6xk066.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 姜炭 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>30.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/6739">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/A7/J2zAA1mRZzSAM44OAAGy4orDXws723.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">时珍 茜草 g/统</div>
+              <div class="items-goods-price">
+                <small>￥</small>0.24
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="huoxue" class="medical-items-content">
+      <div class="female-items-header1">
+        <img src="images/chinese-medical/medical-items-012.png" alt="">
+        <div class="more-medical vertical_center">
+          <a href="http://m.360hwj.com/shop/list/318"><img src="images/chinese-medical/more-medical.png" alt=""></a>
+        </div>
+      </div>
+
+      <div class="female-items-box after">
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/4999">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/06/J2zAA1mAQqeAYNklAAFTpLCQSXg680.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">汇群堂 酒川芎 120g</div>
+              <div class="items-goods-price">
+                <small>￥</small>15.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/2238">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/12/J2zAA1mBd2eAVKLJAAE9QR59BOg353.jpg" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 丹参 200g</div>
+              <div class="items-goods-price">
+                <small>￥</small>38.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/4121">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/14/J2zAA1mNfhCAT449AAG2LQibxjM952.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 红花 250g</div>
+              <div class="items-goods-price">
+                <small>￥</small>40.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/6364">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/32/J2zAA1mNgl6AdO0UAAGn0etZIbE554.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 牛膝 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>20.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/10884">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/AA/J2zAA1mRZ-yAHw2JAAHrVTmASBE869.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">时珍 益母草 g/统</div>
+              <div class="items-goods-price">
+                <small>￥</small>0.01
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/2167">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/2D/J2zAA1mNgbCAZzt4AAH6FH894bo396.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 醋延胡索 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>60.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/9310">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/90/J2zAA1mRYw-AVjn8AAHrm7eBAf8995.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 五灵脂 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>40.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/7306">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/15/J2zAA1mNfk2AGD8FAAFxUSCIEUM412.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 三棱 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>25.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/7211">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/27/J2zAA1mNgQiAT0ZsAAHNDp6tdy8022.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 乳香 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>25.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/6011">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/2E/J2zAA1mNgcyAMtbEAAIBh5LP_h0091.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 没药 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>20.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="huachuan" class="medical-items-content">
+      <div class="female-items-header1">
+        <img src="images/chinese-medical/medical-items-013.png" alt="">
+        <div class="more-medical vertical_center">
+          <a href="http://m.360hwj.com/shop/list/323"><img src="images/chinese-medical/more-medical.png" alt=""></a>
+        </div>
+      </div>
+
+      <div class="female-items-box after">
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/6531">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/0E/J2zAA1mNfPuAcsI3AAG8YG7qpq4256.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 枇杷叶 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>10.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/6715">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/23/J2zAA1mNgJmAGtW5AAGfNz6POGY778.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 前胡 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>90.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/5349">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/22/J2zAA1mNgHyABmGYAAG1wcQz9SI664.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 苦杏仁 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>20.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/7370">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/16/J2zAA1mNfluAVvUhAAHLLMSxF4c011.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 桑白皮 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>20.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/6544">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/72/J2zAA1mGjkOADZpaAAGAXTmtd-s139.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">瑞博 平贝母 250g</div>
+              <div class="items-goods-price">
+                <small>￥</small>250.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/11269">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/78/J2zAA1mGjzSABzLYAAF0U3heLhQ375.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">瑞博 浙贝母 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>75.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/11653">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/AD/J2zAA1mRaEuAMAyKAAHHr4UayK8753.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">时珍 紫菀 g/统</div>
+              <div class="items-goods-price">
+                <small>￥</small>0.04
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/5026">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/0B/J2zAA1mNfGiATeVsAAHPGXZZLeE651.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 桔梗 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>30.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/1280">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/0F/J2zAA1mNfU6AaBTPAAHAzeorylY356.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 百部 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>25.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/1249">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/10/J2zAA1mNfXWAD3nGAAGog4sQi9o763.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 白前 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>55.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="anshen" class="medical-items-content">
+      <div class="female-items-header1">
+        <img src="images/chinese-medical/medical-items-014.png" alt="">
+        <div class="more-medical vertical_center">
+          <a href="http://m.360hwj.com/shop/list/321"><img src="images/chinese-medical/more-medical.png" alt=""></a>
+        </div>
+      </div>
+
+      <div class="female-items-box after">
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/5558">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/09/J2zAA1mAQveAUdIcAAFWYa1DV44626.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">汇群堂 灵芝 50g</div>
+              <div class="items-goods-price">
+                <small>￥</small>38.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/5555">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/1C/J2zAA1mBePCAcgUfAAD9JyJgH1k086.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">制古集 灵芝 40克</div>
+              <div class="items-goods-price">
+                <small>￥</small>34.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/11491">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/62/J2zAA1mNij6AD0gUAAHaj_pPbuY205.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 制远志 250g</div>
+              <div class="items-goods-price">
+                <small>￥</small>50.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/1928">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/4F/J2zAA1mNh3aAYOUYAAGXN6sZ1K8521.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 炒酸枣仁 250g</div>
+              <div class="items-goods-price">
+                <small>￥</small>62.50
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/4076">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/28/J2zAA1mNgSeAVFblAAJZUlETd0U678.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 合欢皮 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>15.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/7899">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/1E/J2zAA1mNf-GAf1KQAAH9WfZ1HEI471.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 首乌藤 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>20.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/5711">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/0F/J2zAA1mNfSWAO2DWAAGNPNfo38E070.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 龙骨 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>40.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/5695">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/50/J2zAA1mNh5GAevONAAGg4auzYG8379.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 龙齿 250g</div>
+              <div class="items-goods-price">
+                <small>￥</small>72.50
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/4236">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/2E/J2zAA1mNgdOANDJWAAIMHk5aSJQ383.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 琥珀 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>35.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/2932">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/27/J2zAA1mNgQGAAKEEAAHIRnK6YzE994.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 茯神 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>25.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="pinggan" class="medical-items-content">
+      <div class="female-items-header1">
+        <img src="images/chinese-medical/medical-items-015.png" alt="">
+        <div class="more-medical vertical_center">
+          <a href="http://m.360hwj.com/shop/list/322"><img src="images/chinese-medical/more-medical.png" alt=""></a></div>
+      </div>
+
+      <div class="female-items-box after">
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/8438">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/1A/J2zAA1mBeLOARMArAAERAyOutrk908.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">制古集 天麻 100克</div>
+              <div class="items-goods-price">
+                <small>￥</small>38.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/8437">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/15/J2zAA1mBd-mAUKQfAAErRrz6wuc218.jpg" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 天麻 80g</div>
+              <div class="items-goods-price">
+                <small>￥</small>43.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/1916">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/4F/J2zAA1mNh22Aa2DHAAGp51H8ygs974.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 炒僵蚕 250g</div>
+              <div class="items-goods-price">
+                <small>￥</small>50.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/7083">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/2F/J2zAA1mNgeiARyBKAAHnrxo26Tk488.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 全蝎 100g</div>
+              <div class="items-goods-price">
+                <small>￥</small>250.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/9299">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/A5/J2zAA1mRZwCADLOxAAFvEXNYcoE685.jpg" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">时珍 蜈蚣(中) 条</div>
+              <div class="items-goods-price">
+                <small>￥</small>3.50
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/2362">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/A0/J2zAA1mRZiuAYTMBAAHdIMcspsY926.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">时珍 地龙 g</div>
+              <div class="items-goods-price">
+                <small>￥</small>0.40
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/3784">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/13/J2zAA1mNffiAbbiFAAFSVKJWPYE048.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 钩藤 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>60.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/4569">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/1F/J2zAA1mNgBqAbEhPAAHRdzYHDhA417.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 蒺藜 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>30.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/2555">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/11/J2zAA1mNfbOAHUKwAAGYjSSmpJU115.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 煅牡蛎 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>10.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/7777">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/28/J2zAA1mNgR6AWDimAAGBuEVnRvI071.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 石决明 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>10.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="kaiqiao" class="medical-items-content">
+      <div class="female-items-header1">
+        <img src="images/chinese-medical/medical-items-016.png" alt="">
+        <div class="more-medical vertical_center">
+          <a href="http://m.360hwj.com/shop/list/326"><img src="images/chinese-medical/more-medical.png" alt=""></a>
+        </div>
+      </div>
+
+      <div class="female-items-box after">
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/7761">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/8E/J2zAA1mGkk-AFl8fAAH538nvhBs489.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">瑞博 石菖蒲 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>55.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/7762">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/0E/J2zAA1mNfN6AL4IVAAGPlFcsNAo212.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 石菖蒲 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>55.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/7760">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/A6/J2zAA1mRZxWAZ38xAAHjHvJDntg375.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">时珍 石菖蒲 g</div>
+              <div class="items-goods-price">
+                <small>￥</small>0.11
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/4986">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/75/J2zAA1mGjtSACUI0AAF3-9byICI710.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">瑞博 九节菖蒲 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>115.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/2233">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/83/J2zAA1mRBJuAcSxwAAFyD5BnCEE714.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">时珍 大皂角 g</div>
+              <div class="items-goods-price">
+                <small>￥</small>0.02
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/6076">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/19/J2zAA1mBeI2AaF5rAAEyrizyLbA882.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">制古集 迷迭香 80克</div>
+              <div class="items-goods-price">
+                <small>￥</small>24.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="buxu" class="medical-items-content">
+      <div class="female-items-header1">
+        <img src="images/chinese-medical/medical-items-017.png" alt="">
+        <div class="more-medical vertical_center">
+          <a href="http://m.360hwj.com/shop/list/319"><img src="images/chinese-medical/more-medical.png" alt=""></a>
+        </div>
+      </div>
+
+      <div class="female-items-box after">
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/3534">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/17/J2zAA1mBeFmALwGPAAEciLxvMYw618.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">制古集 甘草 80克</div>
+              <div class="items-goods-price">
+                <small>￥</small>17.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/2317">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/06/J2zAA1mAQp2AClyfAAFqY2-WYRg813.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">汇群堂 党参 200g</div>
+              <div class="items-goods-price">
+                <small>￥</small>42.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/3800">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/05/J2zAA1mAQoCAMxpqAAFRi4JHKmM038.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">汇群堂 枸杞子(一等) 150g</div>
+              <div class="items-goods-price">
+                <small>￥</small>26.50
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/8108">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/05/J2zAA1mAQoWATvjdAAFEfqQh54w342.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">汇群堂 熟地黄 200g</div>
+              <div class="items-goods-price">
+                <small>￥</small>28.60
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/11154">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/16/J2zAA1mBd_mANHSMAAEaSsvIZAc051.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 玉竹 200g</div>
+              <div class="items-goods-price">
+                <small>￥</small>66.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/4366">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/1B/J2zAA1mBeNaAVyJ1AAEGq9tXsf0216.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">制古集 黄芪 150克</div>
+              <div class="items-goods-price">
+                <small>￥</small>36.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="shouse" class="medical-items-content">
+      <div class="female-items-header1">
+        <img src="images/chinese-medical/medical-items-018.png" alt="">
+        <div class="more-medical vertical_center">
+          <a href="http://m.360hwj.com/shop/list/320"><img src="images/chinese-medical/more-medical.png" alt=""></a>
+        </div>
+      </div>
+
+      <div class="female-items-box after">
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/6736">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/08/J2zAA1mAQtGAaN41AAENbvsSu_4043.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">汇群堂 芡实 200g</div>
+              <div class="items-goods-price">
+                <small>￥</small>44.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/6733">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/17/J2zAA1mBeDOAThOvAAEsp42obi8502.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">制古集 芡实 150克</div>
+              <div class="items-goods-price">
+                <small>￥</small>20.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/1239">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/08/J2zAA1mAQtWAb5e9AAFSOpXgGdg379.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">汇群堂 白莲子 200g</div>
+              <div class="items-goods-price">
+                <small>￥</small>44.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/4130">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/09/J2zAA1mAQvKAbyJ9AAF36plDxYI276.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">汇群堂 红莲子 200g</div>
+              <div class="items-goods-price">
+                <small>￥</small>38.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/5494">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/1A/J2zAA1mBeK2ANW1YAAEYvV_f3L4534.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">制古集 莲子 150克</div>
+              <div class="items-goods-price">
+                <small>￥</small>38.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/5495">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/11/J2zAA1mBd0GAbURNAAFSeuW9rmk531.jpg" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 莲子 150g</div>
+              <div class="items-goods-price">
+                <small>￥</small>30.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/5492">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/03/11/J2zAA1mBd0GAbURNAAFSeuW9rmk531.jpg" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 莲子 150g</div>
+              <div class="items-goods-price">
+                <small>￥</small>30.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/9274">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/34/J2zAA1mNgoyAdyrMAAGeX6HE1VA629.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 乌梅 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>25.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/9322">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/3D/J2zAA1mNhCiAEnHFAAHlRQu4Fa8624.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 五味子 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>110.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/7465">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/26/J2zAA1mNgO2ATNX8AAGygUE7xi4645.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 山茱萸 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>35.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/7391">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/35/J2zAA1mNgsOAGzGhAAFo-FJucE4728.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 桑螵蛸 250g</div>
+              <div class="items-goods-price">
+                <small>￥</small>175.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/4046">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/04/1C/J2zAA1mNf6-AdwudAAGnVmfxpVc145.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">天诚 海螵蛸 500g</div>
+              <div class="items-goods-price">
+                <small>￥</small>20.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="yongtu" class="medical-items-content hide">
+      <div class="female-items-header1">
+        <img src="images/chinese-medical/medical-items-019.png" alt="">
+        <div class="more-medical vertical_center">
+          <a href=""><img src="images/chinese-medical/more-medical.png" alt=""></a>
+        </div>
+      </div>
+
+      <div class="female-items-box after">
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/799">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/00/F5/wKgCaFkhvyOAMv0EAACTQhwz7qo196.jpg" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">毓婷 左炔诺孕酮片 0.75mg*2s</div>
+              <div class="items-goods-price">
+                <small>￥</small>16.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/11699">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/00/F6/wKgCaFkhvzOAc35sAACYJ84Yg-I557.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">金毓婷 左炔诺孕酮片 1.5mg*1片</div>
+              <div class="items-goods-price">
+                <small>￥</small>26.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/11694">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/00/F6/wKgCaFkhvy6AGcGQAADBfIQmWS0139.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">丹媚 左炔诺孕酮肠溶片 1.5mg*1片</div>
+              <div class="items-goods-price">
+                <small>￥</small>12.50
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="items-goods">
+          <a href="http://m.360hwj.com/shop/goods/11693">
+            <div class="items-goods-img">
+              <img class="lazy" data-original="http://static.360hwj.com/group1/M00/00/F5/wKgCaFkhvx-AMQAtAAC9itfyqpE003.JPG" alt="">
+            </div>
+
+            <div class="items-info">
+              <div class="items-goods-name">仙琚 左炔诺孕酮肠溶胶囊 1.5mg*1粒</div>
+              <div class="items-goods-price">
+                <small>￥</small>35.00
+              </div>
+              <div class="medical-items-btn"><img src="images/chinese-medical/click-cheek.png" alt=""></div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<div id="gotoTop"><i class="icon-gotoTop center_elm"></i></div>
+<script src="http://m.360hwj.com/js/jquery/jquery-1.11.3.js"></script>
+<script src="http://m.360hwj.com/js/lazyload/jquery.lazyload.min.js"></script>
+<script>
+  window.onload=function () {
+    var length = $(".male-top-box").children("[class='male-top-item']").length;
+    $(".male-top-box").css("width",6.3*length+"rem");
+
+    var img = getComputedStyle($(".top-banner")[0]);
+    $(".area").attr("shape","rect");
+    var width = parseFloat(img.width);
+    var height = parseFloat(img.height);
+    area(width,height);
+  };
+  var area = function (width,height) {
+    var arr = [
+      [0,0.2,0.4,0.6,0.8,1],
+      [0,0.25,0.5,0.75,1]
+    ];
+    for(var i = 0,n = 0,m = 0;i<$(".area").length;i++){
+      var a = arr[0][m]*width;
+      var b = arr[1][n]*height;
+      var c = arr[0][m+1]*width;
+      var d = arr[1][n+1]*height;
+      console.log(arr[0][m],arr[1][n],arr[0][m+1],arr[1][n+1]);
+      $($(".area")[i]).attr("coords",a+","+b+","+c+","+d);
+      if((i+1)%5!==0){
+        m++;
+      }else {
+        n++;
+        m = 0;
+      }
+    }
+  };
+  $(function () {
+    $(".area").on("click",function () {
+      var n = $(this).index();
+      $($(".male-top-item")[n]).addClass("active").siblings("[class~='active']").removeClass("active").children().children(".male-top-coordinate").addClass("hide");
+      $($(".male-top-item")[n]).children().children(".male-top-coordinate").removeClass("hide");
+
+      var width = parseFloat($(".male-top-item").css("width"));
+      $(".male-top")[0].scrollLeft=width*n;
+
+    });
+//    懒加载
+    $("img.lazy").lazyload();
+//    锚点
+    $(".male-top-item").on("click", function () {
+      var index = $(this).index();
+      $(".medical-items-content")[index].scrollIntoView();
+    });
+    $(".classify-female-items").on("click", function () {
+      var index = $(this).index();
+      $(".medical-items-content")[index].scrollIntoView();
+    });
+//    点击改变样式
+    $(".male-top-item").on("click", function () {
+      $(this).addClass("active").siblings("[class~='active']").removeClass("active").children().children(".male-top-coordinate").addClass("hide");
+      $(this).children().children(".male-top-coordinate").removeClass("hide");
+    });
+  });
+  	//返回顶部按钮
+    function gotoTop(min_height){
+        $("#gotoTop").click(
+            function(){$('html,body').animate({scrollTop:0},500);
+            }).hover(
+            function(){$(this).addClass("hover");},
+            function(){$(this).removeClass("hover");
+            });
+        min_height ? min_height = min_height : min_height = 500;
+        $(window).scroll(function(){
+            var s = $(window).scrollTop();
+            if( s > min_height){
+                $("#gotoTop").fadeIn(100);
+            }else{
+                $("#gotoTop").fadeOut(200);
+            };
+        });
+    };
+    gotoTop();
+</script>
+
+</body>
+</html>

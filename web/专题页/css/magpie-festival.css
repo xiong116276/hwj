@@ -1,0 +1,236 @@
+.fix-header{
+    position: fixed;
+    top:0;
+    width: 100%;
+    max-width: 640px;
+    z-index: 1000;
+}
+.activity-header {
+    position: absolute;
+    width: 100%;
+    height: 3rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin: 0 auto;
+    z-index: 1000;
+    background-color: #fff;
+}
+.activity-header-content {
+    height: 4rem;
+    line-height: 3rem;
+    padding-left: 1rem;
+    background-color: #fff;
+    overflow-x:scroll ;
+    overflow-y: hidden;
+    position: absolute;
+    left: 0;
+}
+
+.activity-item {
+    float: left;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.activity-item-content{
+    position: relative;
+    padding:0 1.2rem;
+}
+.male-top-box .active {
+    color: #6A2F0B;
+}
+
+/*坐标*/
+.activity-item-content-coordinate {
+    position: absolute;
+    width: .8rem;
+    height: 3rem;
+    background: url("../images/male/location@2x.png") no-repeat center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    left: 0;
+    bottom:.1rem;
+}
+
+/*右箭头*/
+.activity-arrow {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    background-image: url("../images/male/arrows@2x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #fff;
+    -webkit-background-size: 35% 45%;
+    background-size: 35% 45%;
+    top: 0;
+    right: 0;
+    border-left: 1px solid #dcdcdc;
+    border-right: 1px solid #dcdcdc;
+    z-index: 1001;
+}
+
+.activity-detail-item {
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.classify-title img {
+    width: 30%;
+}
+
+.items-header-title img {
+    width: 65% !important;
+}
+
+.activity-goods {
+    width: 48.5%;
+    background-color: #fff;
+    float: left;
+}
+
+.activity-goods:nth-child(odd) {
+    margin-bottom: .5rem;
+}
+
+.activity-goods:nth-child(even) {
+    margin-left: 3%;
+    margin-bottom: .5rem;
+}
+
+.activity-goods-img {
+    padding: 1rem;
+}
+
+.activity-goods-title{
+    width: 80%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+    background: -webkit-linear-gradient(left, #ec16fa, #ae0ed6); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #ec16fa, #ae0ed6); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #ec16fa, #ae0ed6); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right,#ec16fa, #ae0ed6); /* 标准的语法 */
+    -webkit-border-radius:0 2rem 2rem 0;
+    -moz-border-radius:0 2rem 2rem 0;
+    border-radius:0 2rem 2rem 0;
+    /*background: url("../images/magpie/activity-goods-title.png") center no-repeat;*/
+    /*-webkit-background-size:contain;*/
+    /*background-size:contain;*/
+}
+
+.activity-goods-info {
+    padding-top: .2rem
+}
+
+.activity-goods-name {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    height: 3rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    white-space: normal;
+    padding: .2rem .5rem;
+    color: #343434;
+    margin-bottom: .2rem;
+	font-size: 14px;
+}
+
+.activity-goods-price-discount{
+    word-spacing: .2rem;
+    font-size: .9rem;
+}
+.activity-price-tips{
+    letter-spacing: -2px;
+    font-weight:600;
+	font-size: 12px;
+}
+
+.activity-goods-price-discount sup{
+    position: absolute;
+    font-weight: 600;
+    left: 45%;
+    top: -10px;
+}
+
+
+.activity-goods-price-discount span{
+    display: inline-block;
+    margin: 0 .3rem 0 0;
+}
+
+.activity-goods-price-discount strong{
+    font-size: 1.1rem;
+}
+
+.activity-goods-price-original{
+    position: absolute;
+    left: 50%;
+    bottom: 15%;
+    font-size: .8rem;
+    color: #808080;
+    font-weight: normal;
+}
+
+.activity-goods-price {
+    position: relative;
+    height: 2rem;
+    font-size: 1.2rem;
+    color: #950ce2;
+    padding: .2rem;
+    font-weight: 600;
+}
+
+.activity-goods-price s small{
+    letter-spacing: -6px;
+}
+
+.activity-goods-price s {
+    font-size: .8rem;
+    color: #545454;
+}
+
+.lazy{
+    width: 100%;
+    background: url("../images/male/pic_empty@2x.png") center no-repeat;
+    -webkit-background-size: 50% 50%;
+    background-size: 50% 50%;
+}
+
+
+
+
+.activity-goods-box {
+    width: 100%;
+    padding: .2rem 3%;
+}
+
+
+
+.activity-container {
+    width: 100%;
+    background-color: #831fee;
+}
+
+.activity-items-content {
+    width: 100%;
+    margin-top: -3rem;
+    padding-top: 3rem;
+}
+
+.activity-goods-btn{
+    right: .5rem;
+    width: 2.6rem;
+    height: 1.5rem;
+    background: url("../images/magpie/btn-go.png") center no-repeat;
+    -webkit-background-size:contain;
+    background-size:contain;
+}
+
+.activity-items-header{
+    margin-top: -3.1rem;
+    padding-top: 3.1rem;
+}
+

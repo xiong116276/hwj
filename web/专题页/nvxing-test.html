@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <title>女性专区</title>
+  <link rel="stylesheet" href="css/common.min.css">
+  <link rel="stylesheet" href="css/male-area.min.css">
+</head>
+<body>
+<div class="top-box">
+  <div class="male-top">
+    <!--导航栏-->
+    <div class="male-top-box after"></div>
+  </div>
+  <!--箭头-->
+  <i class="male-top-arrow"></i>
+</div>
+<div class="female-content">
+  <!--头部详情背景-->
+
+  <div class="male-detail-item">
+    <div class="male-item-img">
+      <img src="images/female/female-top-bg.png" alt="">
+    </div>
+  </div>
+
+  <!--专区分类-->
+  <div class="female-content-classify">
+
+    <div class="female-classify-title">
+      <div class="female-classify-title-roll">
+        <div class="female-classify-title-roll-img center_elm">
+          <img src="images/female/female-area-text.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="female-box">
+      <div class="classify-female-container after">
+        <div class="classify-female-items">
+          <img src="images/female/female-classify-01.png" alt="">
+        </div>
+
+        <div class="classify-female-items">
+          <img src="images/female/female-classify-02.png" alt="">
+        </div>
+
+        <div class="classify-female-items">
+          <img src="images/female/female-classify-03.png" alt="">
+        </div>
+
+        <div class="classify-female-items">
+          <img src="images/female/female-classify-04.png" alt="">
+        </div>
+
+        <div class="classify-female-items">
+          <img src="images/female/female-classify-05.png" alt="">
+        </div>
+
+        <div class="classify-female-items">
+          <img src="images/female/female-classify-06.png" alt="">
+        </div>
+
+        <div class="classify-female-items">
+          <img src="images/female/female-classify-07.png" alt="">
+        </div>
+
+        <div class="classify-female-items">
+          <img src="images/female/female-classify-08.png" alt="">
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container"></div>
+</div>
+<div id="gotoTop"><i class="icon-gotoTop center_elm"></i></div>
+<script src="http://m.360hwj.com/js/jquery/jquery-1.11.3.js"></script>
+<script src="http://m.360hwj.com/js/lazyload/jquery.lazyload.min.js"></script>
+<script src="js/common-area.min.js"></script>
+<script>
+  window.onload=function () {
+    goods.init({
+      jsonname:"nvxing",
+      goodsdata:"data",
+      //导航栏
+      navtopcontainer:"male-top",
+      navtopbox:"male-top-box",
+      navtopitem:"male-top-item",
+      navtopitemwidth:7.5,
+      navcoordinatebox:"male-top-content",
+      coordinate:"male-top-coordinate",
+      //area锚点
+      areashape:"rect",
+      topclassify:"classify-female-items",
+      //goods
+      goodsitem:"female-items-content",
+      goodspicturefile:"female",
+      goodsitemheader:"female-items-header1",
+      goodsheaderpicture:"female-items",
+      goodsitembox:"female-items-box",
+      goodsbtn:"female-items-btn",
+      //返回顶部按钮
+      minheight:500,
+      gotopbtn:"255, 122, 198, 0.8"
+    });
+  }
+</script>
+
+</body>
+</html>

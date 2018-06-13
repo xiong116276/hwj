@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <title>男性专区</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/male-area.css">
+</head>
+<body>
+<div class="top-box">
+  <div class="male-top">
+    <!--导航栏-->
+    <div class="male-top-box after"></div>
+  </div>
+  <!--箭头-->
+  <i class="male-top-arrow"></i>
+</div>
+<div class="male-content">
+  <!--头部详情背景-->
+  <div class="male-detail-box">
+    <div class="male-detail-item">
+      <div class="male-item-img">
+        <img src="images/male/man-top.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!--专区分类-->
+  <div class="content-classify">
+    <div class="classify-title"><img src="images/male/male-area-text.png" class="center_elm" alt=""></div>
+    <div class="classify-container after">
+      <div class="classify-items">
+        <img class="lazy" src="images/male/male-classify-01.png" alt="">
+      </div>
+      <div class="classify-items">
+        <img class="lazy" src="images/male/male-classify-02.png" alt="">
+      </div>
+      <div class="classify-items">
+        <img class="lazy" src="images/male/male-classify-03.png" alt="">
+      </div>
+      <div class="classify-items">
+        <img class="lazy" src="images/male/male-classify-04.png" alt="">
+      </div>
+      <div class="classify-items">
+        <img class="lazy" src="images/male/male-classify-05.png" alt="">
+      </div>
+      <div class="classify-items">
+        <img class="lazy" src="images/male/male-classify-06.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="container"></div>
+</div>
+</div>
+<div id="gotoTop"><i class="icon-gotoTop center_elm"></i></div>
+<script src="http://m.360hwj.com/js/jquery/jquery-1.11.3.js"></script>
+<script src="http://m.360hwj.com/js/lazyload/jquery.lazyload.min.js"></script>
+<script src="js/common-area.min.js"></script>
+<script>
+  window.onload=function () {
+    goods.init({
+      jsonname:"nanxing",
+      goodsdata:"data",
+      //导航栏
+      navtopcontainer:"male-top",
+      navtopbox:"male-top-box",
+      navtopitem:"male-top-item",
+      navtopitemwidth:7.5,
+      navcoordinatebox:"male-top-content",
+      coordinate:"male-top-coordinate",
+      //area锚点
+      areashape:"rect",
+      topclassify:"classify-items",
+      //goods
+      goodsitem:"items-content",
+      goodspicturefile:"male",
+      goodsitemheader:"items-header",
+      goodsheaderpicture:"title",
+      goodsitembox:"items-box",
+      goodsbtn:"items-btn",
+      //返回顶部按钮
+      minheight:500,
+      gotopbtn:"3, 2, 3, 0.8"
+    });
+  }
+</script>
+
+</body>
+</html>

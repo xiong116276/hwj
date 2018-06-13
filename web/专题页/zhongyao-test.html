@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <title>中药饮片</title>
+  <link rel="stylesheet" href="css/common.min.css">
+  <link rel="stylesheet" href="css/male-area.min.css">
+</head>
+<body>
+<div class="top-box">
+  <div class="male-top">
+    <!--导航栏-->
+    <div class="male-top-box after"></div>
+  </div>
+  <!--箭头-->
+  <i class="male-top-arrow"></i>
+</div>
+
+<div class="medical-content">
+  <!--头部详情背景-->
+  <div class="male-detail-item">
+    <div class="male-item-img">
+      <img src="images/chinese-medical/top-01.png" alt="">
+    </div>
+  </div>
+
+  <!--专区分类-->
+  <div class="chinese-content-classify">
+    <img src="images/chinese-medical/top-02.png" alt="">
+    <img class="top-banner" src="images/chinese-medical/top-03.png" alt="区域跳转" usemap="#area">
+    <map name="area" id="area"></map>
+  </div>
+
+  <div class="container"></div>
+</div>
+<!--返回顶部按钮-->
+<div id="gotoTop"><i class="icon-gotoTop center_elm"></i></div>
+
+<script src="http://m.360hwj.com/js/jquery/jquery-1.11.3.js"></script>
+<script src="http://m.360hwj.com/js/lazyload/jquery.lazyload.min.js"></script>
+<script src="js/zhongyao-set-areas.min.js"></script>
+<script src="js/common-area.min.js"></script>
+<script>
+  window.onload=function () {
+   goods.init({
+     jsonname:"zhongyao",
+     goodsdata:"data",
+     //导航栏
+     navtopcontainer:"male-top",
+     navtopbox:"male-top-box",
+     navtopitem:"male-top-item",
+     navtopitemwidth:6.3,
+     navcoordinatebox:"male-top-content",
+     coordinate:"male-top-coordinate",
+     //area
+     areashape:"rect",
+     //goods
+     goodsitem:"medical-items-content",
+     goodspicturefile:"chinese-medical",
+     goodsitemheader:"female-items-header1",
+     goodsheaderpicture:"medical-items",
+     goodsitembox:"female-items-box",
+     goodsbtn:"medical-items-btn",
+     //返回顶部按钮
+     minheight:500,
+     gotopbtn:"226,193,121,0.8"
+   })
+  }
+</script>
+</body>
+</html>

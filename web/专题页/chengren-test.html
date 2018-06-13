@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <title>成人专区</title>
+  <link rel="stylesheet" href="css/common.min.css">
+  <link rel="stylesheet" href="css/male-area.min.css">
+</head>
+<body>
+<div class="top-box">
+  <div class="male-top">
+    <!--导航栏-->
+    <div class="male-top-box after"></div>
+  </div>
+  <!--箭头-->
+  <i class="male-top-arrow"></i>
+</div>
+<div class="adult-content">
+  <!--头部详情背景-->
+  <div class="male-detail-item">
+    <div class="male-item-img">
+      <img src="images/adult/top-01.png" alt="">
+    </div>
+  </div>
+  <!--专区分类-->
+  <div class="adult-content-classify">
+    <img class="top-banner" src="images/adult/top-02.png" alt="区域跳转" usemap="#area">
+    <map name="area" id="area"></map>
+  </div>
+  <div class="container">
+    <!--分类内容-->
+  </div>
+
+</div>
+<div id="gotoTop"><i class="icon-gotoTop center_elm"></i></div>
+<script src="http://m.360hwj.com/js/jquery/jquery-1.11.3.js"></script>
+<script src="http://m.360hwj.com/js/lazyload/jquery.lazyload.min.js"></script>
+<script src="js/chengren-set-area.min.js"></script>
+<script src="js/common-area.min.js"></script>
+<script>
+  window.onload=function () {
+    goods.init({
+      jsonname:"chengren",
+      goodsdata:"data",
+      //导航栏
+      navtopcontainer:"male-top",
+      navtopbox:"male-top-box",
+      navtopitem:"male-top-item",
+      navtopitemwidth:7.5,
+      navcoordinatebox:"male-top-content",
+      coordinate:"male-top-coordinate",
+      //area锚点
+      areashape:"circle",
+      topclassify:"classify-female-items",
+      //goods
+      goodsitem:"adult-items-content",
+      goodspicturefile:"adult",
+      goodsitemheader:"adult-items-header1",
+      goodsheaderpicture:"adult-items",
+      goodsitembox:"female-items-box",
+      goodsbtn:"adult-items-btn",
+      //返回顶部按钮
+      minheight:500,
+      gotopbtn:"124, 59, 227, 0.8"
+    });
+  }
+</script>
+
+</body>
+</html>
